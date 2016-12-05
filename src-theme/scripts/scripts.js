@@ -1,3 +1,21 @@
+$(window).on('load',function() {
+
+  var $body = 'header, #page, footer';
+  var tailleEcranX = window.screen.width;
+  var tailleEcranY = window.screen.height;
+  // alert('x:'+tailleEcranX+' y:'+tailleEcranY);
+  if(tailleEcranY>530 ){
+
+// ----------------------------FADE-IN-OUT--------------------------------
+ 
+    $($body).animate({opacity: 1}, 1000, "easeInExpo");
+  }
+  else{
+    $($body).css({opacity: 1});
+  }
+});
+
+
 $('document').ready(function(){ 
 
   var $body = 'header, #page, footer';

@@ -10,4 +10,5 @@
 =            WEBSITE INCLUDES            =
 ========================================*/
 
+@@include( 'fullpageSlide.js')
 @@include( 'scripts.js')

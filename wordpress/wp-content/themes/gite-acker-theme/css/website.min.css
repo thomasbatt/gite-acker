@@ -14,26 +14,90 @@ Author: thomas Batt & Faress Hank
 Author URI: http://thomasbatt.fr;
 Tags: js, jquery
 */
-html {
-  max-height: 100%;
-  max-width: 100%; }
-  html body {
-    font-family: AvantGarde;
-    font-weight: 400;
-    font-style: normal; }
-    html body header, html body #page, html body footer {
-      display: block;
-      opacity: 1; }
-    html body .transition {
-      transition: all 0.5s; }
-    html body .display {
-      display: block !important; }
-    html body .no-display {
-      opacity: 0 !important;
-      transition: 1s opacity;
-      display: none !important; }
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+html body {
+  overflow: hidden;
+  margin: 0; }
+  html body header, html body #page, html body footer {
+    display: block;
+    opacity: 0; }
+  html body .transition {
+    transition: all 0.5s; }
+  html body .display {
+    display: block !important; }
+  html body .no-display {
+    opacity: 0 !important;
+    transition: 1s opacity;
+    display: none !important; }
 
-.header {
-  width: 100%;
-  position: relative !important;
-  z-index: 40; }
+#page {
+  /* Set stacking context of slides */ }
+  #page .background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    will-change: transform;
+    backface-visibility: hidden;
+    height: 130vh;
+    position: fixed;
+    width: 100%;
+    transform: translateY(30vh);
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1); }
+    #page .background:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3); }
+    #page .background:first-child {
+      background-image: url(../img/833.jpg?v=yfM%2B1TErGm2O1esVH6RmKg%3D%3D);
+      transform: translateY(-15vh); }
+      #page .background:first-child .content-wrapper {
+        transform: translateY(15vh); }
+    #page .background:nth-child(2) {
+      background-image: url(../img/834.jpg?v=%2F9bFZoPdUN6qUbMKG1pT7A%3D%3D); }
+    #page .background:nth-child(3) {
+      background-image: url(../img/835.jpg?v=QOqxVue7iytT0gfetWh8nA%3D%3D); }
+  #page .background:nth-child(1) {
+    z-index: 3; }
+  #page .background:nth-child(2) {
+    z-index: 2; }
+  #page .background:nth-child(3) {
+    z-index: 1; }
+  #page .content-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column nowrap;
+    color: #fff;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    transform: translateY(40vh);
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1); }
+  #page .content-title {
+    font-size: 12vh;
+    line-height: 1.4; }
+  #page .background.up-scroll {
+    transform: translate3d(0, -15vh, 0); }
+    #page .background.up-scroll .content-wrapper {
+      transform: translateY(15vh); }
+    #page .background.up-scroll + .background {
+      transform: translate3d(0, 30vh, 0); }
+      #page .background.up-scroll + .background .content-wrapper {
+        transform: translateY(30vh); }
+  #page .background.down-scroll {
+    transform: translate3d(0, -130vh, 0); }
+    #page .background.down-scroll .content-wrapper {
+      transform: translateY(40vh); }
+    #page .background.down-scroll + .background:not(.down-scroll) {
+      transform: translate3d(0, -15vh, 0); }
+      #page .background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+        transform: translateY(15vh); }

@@ -1,0 +1,36 @@
+{
+  "name": "website",
+  "homepage": "https://github.com/thomasbatt/gite-acker",
+  "authors": [
+    "thomasbatt <thomasbatt@gmail.com>"
+  ],
+  "description": "Bootstrap-sass for Sites project Wordpress.",
+  "main": "index.php",
+  "keywords": [
+    "Wordpress"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery-ui": "^1.12.0",
+    "font-awesome": "fontawesome#^4.6.3",
+    "wow": "wowjs#^1.1.2",
+    "animate-sass": "^0.6.6"
+  },
+  "root": {
+    "bowerPath": "bower_components",
+    "srcPath": "src-theme",
+    "urlAssets": "wordpress/wp-content/themes/gite-acker-theme",
+    "urlApps": ".",
+    "urlViews": "wordpress/wp-content/themes/gite-acker-theme",
+    "urlWP": "http://wordpress.org/latest"
+  }
+}

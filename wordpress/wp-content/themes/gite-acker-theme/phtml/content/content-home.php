@@ -2,8 +2,9 @@
 	<div class="pagecontainer">
 	  <section id="accueil" class="background">
 	    <div class="content-wrapper">
-	      <p class="content-title">GITES ACKER</p>
-	      <p class="content-subtitle">Labellisé Gîtes de France depuis 2003</p>
+	      <p class="content-title"><?php bloginfo( 'name' ); ?></p>
+	      <p class="content-subtitle"><?php bloginfo('description'); ?></p>
+	      <p><?php var_dump(get_option('giteacker_footer_text')); ?></p>
 	    </div>
 	  </section>
 	  <section id="about" class="background">

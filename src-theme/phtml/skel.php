@@ -1,6 +1,5 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
-
 	<head>
 	    <meta charset="UTF-8">
 	    <title><?php bloginfo('name') ?> - <?php the_title(); ?></title>

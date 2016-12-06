@@ -9,6 +9,8 @@ var totalSlideNumber = $(".background").length;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
+	
+	// console.log('evt', evt);
   if (isFirefox) {
     //Set delta for Firefox
     delta = evt.detail * (-120);
@@ -19,6 +21,7 @@ function parallaxScroll(evt) {
     //Set delta for all other browsers
     delta = evt.wheelDelta;
   }
+    // console.log('delta', delta);
 
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {

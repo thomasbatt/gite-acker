@@ -1,3 +1,71 @@
 .header{
+	// @import "compass/css3";
+	z-index: $header-zindex;
+	position: relative;
+	padding: 0.5% 10%;
+/*	border: 1px solid orange;*/
+	background-color: #cfcfcf;
+	&:after{
+		content: "";
+		clear: both;
+	}
+	.header-logo{
+			display: inline-block;
+		a{
+			display: block;
+			img{
+				width: 60%;
+			}
+		}
+	}
+	.header-links{
+		display: inline-block;
+		position: absolute;
+		right: 10%;
+		top: 25%;
+		ul{
+			display: block;
+			list-style:none;
+			font-family:'Trebuchet MS';
+			font-size:1.7rem;
+			padding: 0;
+			margin: 0;
+			li{
+				display:inline-block;
+				a{
+					text-decoration:none;
+					color:#303030;
+					display:inline-block;
+					padding:10px 30px;
+					&:hover {
+						color: #FFF;
+					}
+/*					$:hover ~ span {
+						animation:ul 0.3s ease-out;
+						background:#fff;
+					}*/
+				}
+				span{
+					display:block;
+				/*	width:calc(100% - 23px);*/
+					height:2px;
+					background:$blue-base;
+					position:absolute;
+					left:10px;
+					bottom:2px;
+				}
+			}
+		}
+	}
 
+
+
+/*	@keyframes ul {
+	 	0% { 
+	    width:0;
+	  }
+	  100% { 
+	    width:calc(100% - 23px);
+	  }
+	}*/
 }

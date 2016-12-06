@@ -33,6 +33,7 @@ html body {
 #page {
   /* Set stacking context of slides */ }
   #page .background {
+    user-select: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

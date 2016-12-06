@@ -29,11 +29,19 @@ $('document').ready(function(){
 
 // ----------------------------SMOOTH SCROLL--------------------------------
     
-    $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
         var page = $(this).attr('href'); // Page cible
-        var speed = 1500; // Durée de l'animation (en ms)
-        $('html, body').animate( { scrollTop: $(page).offset().top }, speed , "easeInOutCubic" ); // Go
-        return false;
+        var direction = 1;
+        if( page=='#accueil')
+          direction = -1;
+
+        evt.detail = direction;
+        evt.deltaY = -direction;
+        evt.wheelDelta = direction;
+        parallaxScroll(evt);
+        // var speed = 1500; // Durée de l'animation (en ms)
+        // $('html, body').animate( { scrollTop: $(page).offset().top }, speed , "easeInOutCubic" ); // Go
+        // return false;
     });
 
 // ----------------------------WOW JS--------------------------------

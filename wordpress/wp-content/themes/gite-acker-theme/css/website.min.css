@@ -15,20 +15,63 @@ Author URI: http://thomasbatt.fr;
 Tags: js, jquery
 */
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-html body {
-  overflow: hidden;
-  margin: 0; }
-  html body header, html body #page, html body footer {
+html {
+  font-size: 10px; }
+  html body {
+    overflow: hidden;
+    margin: 0; }
+    html body header, html body #page, html body footer {
+      display: block;
+      opacity: 0; }
+    html body .transition {
+      transition: all 0.5s; }
+    html body .display {
+      display: block !important; }
+    html body .no-display {
+      opacity: 0 !important;
+      transition: 1s opacity;
+      display: none !important; }
+
+.header {
+  z-index: 40;
+  position: relative; }
+  .header ul {
+    position: fixed;
+    list-style: none;
+    font-family: 'Trebuchet MS';
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #171717;
+    margin: 0; }
+  .header li {
+    position: relative;
+    display: inline; }
+  .header li a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px; }
+  .header span {
     display: block;
-    opacity: 0; }
-  html body .transition {
-    transition: all 0.5s; }
-  html body .display {
-    display: block !important; }
-  html body .no-display {
-    opacity: 0 !important;
-    transition: 1s opacity;
-    display: none !important; }
+    width: calc(100% - 23px);
+    height: 2px;
+    background: #5eb1ff;
+    position: absolute;
+    left: 10px;
+    bottom: -10px; }
+  .header li a:hover {
+    color: #5eb1ff; }
+  .header li a:hover ~ span {
+    animation: ul 0.3s ease-out;
+    background: #fff; }
+
+@keyframes ul {
+  0% {
+    width: 0; }
+  100% {
+    width: calc(100% - 23px); } }
 
 #page {
   /* Set stacking context of slides */ }
@@ -70,6 +113,7 @@ html body {
   #page .background:nth-child(3) {
     z-index: 1; }
   #page .content-wrapper {
+    font-size: 2.1rem;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -85,6 +129,14 @@ html body {
   #page .content-title {
     font-size: 12vh;
     line-height: 1.4; }
+  #page #about .content-subtitle {
+    padding: 50px;
+    margin: 0 200px;
+    font-size: 1.5rem;
+    color: #303030;
+    background-color: rgba(255, 255, 255, 0.7); }
+    #page #about .content-subtitle .wrapper-images {
+      padding-top: 10px; }
   #page .background.up-scroll {
     transform: translate3d(0, -15vh, 0); }
     #page .background.up-scroll .content-wrapper {
@@ -101,3 +153,23 @@ html body {
       transform: translate3d(0, -15vh, 0); }
       #page .background.down-scroll + .background:not(.down-scroll) .content-wrapper {
         transform: translateY(15vh); }
+
+.footer {
+  z-index: 10;
+  position: relative; }
+  .footer section {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+    color: #fff; }
+    .footer section a {
+      color: rgba(94, 177, 255, 0.9);
+      text-decoration: none; }
+      .footer section a:hover {
+        color: #5eb1ff; }

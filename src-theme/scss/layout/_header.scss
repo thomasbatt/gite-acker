@@ -1,3 +1,56 @@
 .header{
+	// @import "compass/css3";
+	z-index: $header-zindex;
+	position: relative;
+	ul {
+	  position: fixed;
+	  list-style:none;
+	  font-family:'Trebuchet MS';
+	  font-size:1.7rem;
+	  text-align:center;
+	  padding:10px;
+	  width: 100%;
+	  background-color: #171717;
+	  margin: 0;
+	}
 
+	li {
+	  position:relative;
+	  display:inline;
+	}
+
+	li a {
+	  text-decoration:none;
+	  color:#fff;
+	  display:inline-block;
+	  padding:10px;
+	}
+
+	span {
+	  display:block;
+	  width:calc(100% - 23px);
+	  height:2px;
+	  background:$blue-base;
+	  position:absolute;
+	  left:10px;
+	  bottom:-10px;
+	}
+
+	li a:hover {
+	 	color:$blue-base;
+	}
+
+	li a:hover ~ span {
+	 	 animation:ul 0.3s ease-out;
+	   background:#fff;
+	}
+
+	@keyframes ul {
+	 	0% { 
+	    width:0;
+	  }
+	  100% { 
+	    width:calc(100% - 23px);
+	  }
+	}
 }

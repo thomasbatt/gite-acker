@@ -1,5 +1,5 @@
 #page{
-
+	// z-index: $content-zindex;
 	// ------------- MIXINS ------------- //
 	@mixin transition($time, $property: all, $easing: ease-in) {
 	    transition: $property $time $easing;
@@ -52,6 +52,7 @@
 
 	.content {
 	  &-wrapper {
+	  font-size: 2.1rem;
 	  height: 100vh;
 	  display: flex;
 	  justify-content: center;
@@ -70,6 +71,22 @@
 	    line-height: 1.4;
 	  }
 	}
+	#about{
+		.content{
+		  &-subtitle{
+		  	padding: 50px;
+		  	margin: 0 200px;
+	  		font-size: 1.5rem;
+		  	color: #303030;
+		  	background-color: rgba(255,255,255,0.7);
+		  	.wrapper-images{
+		  		padding-top: 10px
+		  	}
+		  }
+		}
+	}
+
+
 
 	// ------------- SET TRANSFORM VALUES ------------- //
 

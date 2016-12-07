@@ -1,56 +1,74 @@
 .header{
 	// @import "compass/css3";
 	z-index: $header-zindex;
-	position: relative;
-	ul {
-	  position: fixed;
-	  list-style:none;
-	  font-family:'Trebuchet MS';
-	  font-size:1.7rem;
-	  text-align:center;
-	  padding:10px;
-	  width: 100%;
-	  background-color: #171717;
-	  margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1% $header-padding;
+	/*background-color: #efefef;*/
+	&:after{
+		content: "";
+		clear: both;
+	}
+	.header-logo{
+			display: inline-block;
+		a{
+			display: block;
+			img{
+				width: 70%;
+			}
+		}
+	}
+	.header-links{
+		display: inline-block;
+		position: absolute;
+		right: $header-padding;
+		top: 25%;
+		ul{
+			display: block;
+			list-style:none;
+			font-family:'Trebuchet MS';
+			font-size:1.7rem;
+			padding: 0;
+			margin: 0;
+			li{
+				display:inline-block;
+				a{
+					font-family: 'Rubik';
+					text-decoration:none;
+					color:#fff;
+					display:inline-block;
+					padding:10px 30px;
+					&:hover {
+						color: #FFF;
+					}
+/*					$:hover ~ span {
+						animation:ul 0.3s ease-out;
+						background:#fff;
+					}*/
+				}
+				span{
+					display:block;
+				/*	width:calc(100% - 23px);*/
+					height:2px;
+					background:$blue-base;
+					position:absolute;
+					left:10px;
+					bottom:2px;
+				}
+			}
+		}
 	}
 
-	li {
-	  position:relative;
-	  display:inline;
-	}
 
-	li a {
-	  text-decoration:none;
-	  color:#fff;
-	  display:inline-block;
-	  padding:10px;
-	}
 
-	span {
-	  display:block;
-	  width:calc(100% - 23px);
-	  height:2px;
-	  background:$blue-base;
-	  position:absolute;
-	  left:10px;
-	  bottom:-10px;
-	}
-
-	li a:hover {
-	 	color:$blue-base;
-	}
-
-	li a:hover ~ span {
-	 	 animation:ul 0.3s ease-out;
-	   background:#fff;
-	}
-
-	@keyframes ul {
+/*	@keyframes ul {
 	 	0% { 
 	    width:0;
 	  }
 	  100% { 
 	    width:calc(100% - 23px);
 	  }
-	}
+	}*/
 }

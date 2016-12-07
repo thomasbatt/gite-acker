@@ -15,11 +15,16 @@ Author URI: http://thomasbatt.fr;
 Tags: js, jquery
 */
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Rubik);
+* {
+  box-sizing: border-box; }
+
 html {
   font-size: 10px; }
   html body {
     overflow: hidden;
-    margin: 0; }
+    margin: 0;
+    font-family: 'Rubik'; }
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
@@ -34,48 +39,68 @@ html {
 
 .header {
   z-index: 40;
-  position: relative; }
-  .header ul {
-    position: fixed;
-    list-style: none;
-    font-family: 'Trebuchet MS';
-    font-size: 1.7rem;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    background-color: #171717;
-    margin: 0; }
-  .header li {
-    position: relative;
-    display: inline; }
-  .header li a {
-    text-decoration: none;
-    color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1% 3%;
+  /*background-color: #efefef;*/
+  /*	@keyframes ul {
+	 	0% { 
+	    width:0;
+	  }
+	  100% { 
+	    width:calc(100% - 23px);
+	  }
+	}*/ }
+  .header:after {
+    content: "";
+    clear: both; }
+  .header .header-logo {
+    display: inline-block; }
+    .header .header-logo a {
+      display: block; }
+      .header .header-logo a img {
+        width: 70%; }
+  .header .header-links {
     display: inline-block;
-    padding: 10px; }
-  .header span {
-    display: block;
-    width: calc(100% - 23px);
-    height: 2px;
-    background: #5eb1ff;
     position: absolute;
-    left: 10px;
-    bottom: -10px; }
-  .header li a:hover {
-    color: #5eb1ff; }
-  .header li a:hover ~ span {
-    animation: ul 0.3s ease-out;
-    background: #fff; }
-
-@keyframes ul {
-  0% {
-    width: 0; }
-  100% {
-    width: calc(100% - 23px); } }
+    right: 3%;
+    top: 25%; }
+    .header .header-links ul {
+      display: block;
+      list-style: none;
+      font-family: 'Trebuchet MS';
+      font-size: 1.7rem;
+      padding: 0;
+      margin: 0; }
+      .header .header-links ul li {
+        display: inline-block; }
+        .header .header-links ul li a {
+          font-family: 'Rubik';
+          text-decoration: none;
+          color: #fff;
+          display: inline-block;
+          padding: 10px 30px;
+          /*					$:hover ~ span {
+						animation:ul 0.3s ease-out;
+						background:#fff;
+					}*/ }
+          .header .header-links ul li a:hover {
+            color: #FFF; }
+        .header .header-links ul li span {
+          display: block;
+          /*	width:calc(100% - 23px);*/
+          height: 2px;
+          background: #5eb1ff;
+          position: absolute;
+          left: 10px;
+          bottom: 2px; }
 
 #page {
   /* Set stacking context of slides */ }
   #page .background {
+    user-select: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -86,6 +111,7 @@ html {
     position: fixed;
     width: 100%;
     transform: translateY(30vh);
+    filter: saturate(200%);
     transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1); }
     #page .background:before {
       content: "";
@@ -105,7 +131,11 @@ html {
     #page .background:nth-child(2) {
       background-image: url(../img/834.jpg?v=%2F9bFZoPdUN6qUbMKG1pT7A%3D%3D); }
     #page .background:nth-child(3) {
-      background-image: url(../img/835.jpg?v=QOqxVue7iytT0gfetWh8nA%3D%3D); }
+      filter: saturate(100%);
+      /*opacity: 0.5;*/
+      background: gray;
+      /*background-image: url(../img/bg-map.png?v=y9X4qV7%2B0GxZqPDnl5ov4Q%3D%3D);*/
+      /*background-image: url(../img/835.jpg?v=QOqxVue7iytT0gfetWh8nA%3D%3D);*/ }
   #page .background:nth-child(1) {
     z-index: 3; }
   #page .background:nth-child(2) {
@@ -120,7 +150,6 @@ html {
     text-align: center;
     flex-flow: column nowrap;
     color: #fff;
-    font-family: Montserrat;
     text-transform: uppercase;
     transform: translateY(40vh);
     will-change: transform;
@@ -131,12 +160,25 @@ html {
     line-height: 1.4; }
   #page #about .content-subtitle {
     padding: 50px;
-    margin: 0 200px;
+    margin: 0 auto;
+    width: 80%;
     font-size: 1.5rem;
     color: #303030;
     background-color: rgba(255, 255, 255, 0.7); }
     #page #about .content-subtitle .wrapper-images {
       padding-top: 10px; }
+  #page #contact .content-contact {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    padding-left: 15%; }
+    #page #contact .content-contact .img {
+      width: 330px;
+      height: 370px;
+      background-image: url(../img/map.png?v=D5nrg04xYt7h9KQSFOdr9Q%3D%3D);
+      position: absolute;
+      right: 15%;
+      top: 0; }
   #page .background.up-scroll {
     transform: translate3d(0, -15vh, 0); }
     #page .background.up-scroll .content-wrapper {

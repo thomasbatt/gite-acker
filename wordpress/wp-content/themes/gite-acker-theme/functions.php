@@ -87,57 +87,144 @@
 		/* ---------------------------------------------------------
 		General section
 		----------------------------------------------------------- */
-		array( 	"name" => "General",
-				"type" => "section"
-		),
-		array( 	"type" => "open"
-		),
+		// array( 	"name" => "General",
+		// 		"type" => "section"
+		// ),
+		// array( 	"type" => "open"
+		// ),
 
-		array( 	"name" => "Logo URL",
-				"desc" => "Enter the link to your logo image",
-				"id" => $shortname."_logo",
-				"type" => "text",
-				"std" => ""
-		),
-		array( "name" => "Custom Favicon",
-		"desc" => "A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image",
-		"id" => $shortname."_favicon",
-		"type" => "text",
-		"std" => get_bloginfo('url') ."/images/favicon.ico"),
+		// array( 	"name" => "Logo URL",
+		// 		"desc" => "Enter le lien vers l'image du logo",
+		// 		"id" => $shortname."_logo",
+		// 		"type" => "text",
+		// 		"std" => ""
+		// ),
+		// array( 	"name" => "Custom Favicon",
+		// 		"desc" => "Une favicone a 16x16 pixel qui représente le site; colle une URL vers une image .ico que vous voulez utiliser.",
+		// 		"id" => $shortname."_favicon",
+		// 		"type" => "text",
+		// 		"std" => get_bloginfo('url') ."/img/favicon.ico"
+		// ),
 
-		array( "type" => "close"),
+		// array( 	"type" => "close"
+		// ),
 
 		/* ---------------------------------------------------------
 		Home section
 		----------------------------------------------------------- */
-		array( "name" => "Homepage",
-		"type" => "section"),
-		array( "type" => "open"),
+		// array( 	"name" => "Homepage",
+		// 		"type" => "section"),
+		// array( 	"type" => "open"),
 
-		array( "name" => "Homepage Featured",
-		"desc" => "Choose a category from which featured posts are drawn",
-		"id" => $shortname."_feat_cat",
-		"type" => "select",
-		"options" => $all_cats,
-		"std" => "Select a category"),
+		// array( 	"name" => "Homepage Featured",
+		// 		"desc" => "Choose a category from which featured posts are drawn",
+		// 		"id" => $shortname."_feat_cat",
+		// 		"type" => "select",
+		// 		"options" => $all_cats,
+		// 		"std" => "Select a category"),
 
-		array( "type" => "close"),
+		// array( "type" => "close"),
 
 		/* ---------------------------------------------------------
 		Footer section
 		----------------------------------------------------------- */
-		array( "name" => "Footer",
-		"type" => "section"),
-		array( "type" => "open"),
+		// array( 	"name" => "Footer",
+		// 		"type" => "section"),
+		// array( 	"type" => "open"),
 
-		array( "name" => "Footer Credit",
-		"desc" => "You can customize footer credit on footer area her.",
-		"id" => $shortname."_footer_text",
-		"type" => "text",
-		"std" => ""),
+		// array( 	"name" => "Footer Credit",
+		// 		"desc" => "You can customize footer credit on footer area her.",
+		// 		"id" => $shortname."_footer_text",
+		// 		"type" => "text",
+		// 		"std" => ""),
 
-		array( "type" => "close")
+		// array( 	"type" => "close")
 
+		/* ---------------------------------------------------------
+		Menu section
+		----------------------------------------------------------- */
+		array( 	"name" => "Menu",
+				"type" => "section"
+		),
+		array( 	"type" => "open"
+		),
+		array( 	"name" => "Item 1",
+				"desc" => "vous pouvez personaler le titres 1 du menu.",
+				"id" => $shortname."_menu_item1",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"name" => "Item 2",
+				"desc" => "vous pouvez personaler le titres 2 du menu.",
+				"id" => $shortname."_menu_item2",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"name" => "Item 3",
+				"desc" => "vous pouvez personaler le titres 3 du menu.",
+				"id" => $shortname."_menu_item3",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"type" => "close"
+		),
+		/* ---------------------------------------------------------
+		Description section
+		----------------------------------------------------------- */
+		array( 	"name" => "Description",
+				"type" => "section"
+		),
+		array( 	"type" => "open"
+		),
+		array( 	"name" => "Titre",
+				// "desc" => "You can customize contact credit on contact area her.",
+				"id" => $shortname."_description_title",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"name" => "Contenu",
+				// "desc" => "You can customize contact credit on contact area her.",
+				"id" => $shortname."_description_content",
+				"type" => "textarea",
+				"std" => ""
+		),
+		array( 	"type" => "close"
+		),
+
+		/* ---------------------------------------------------------
+		Contact section
+		----------------------------------------------------------- */
+		array( 	"name" => "Contact",
+				"type" => "section"
+		),
+		array( 	"type" => "open"
+		),
+		array( 	"name" => "Titre",
+				// "desc" => "You can customize contact credit on contact area her.",
+				"id" => $shortname."_contact_title",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"name" => "Nom et prenom",
+				// "desc" => "You can customize contact credit on contact area her.",
+				"id" => $shortname."_contact_name",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"name" => "Tel fixe",
+				// "desc" => "You can customize contact credit on contact area her.",
+				"id" => $shortname."_contact_phone_fixe",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"name" => "Tel portable",
+				// "desc" => "You can customize contact credit on contact area her.",
+				"id" => $shortname."_contact_phone_cell",
+				"type" => "text",
+				"std" => ""
+		),
+		array( 	"type" => "close"
+		)
 	);
 
 	/*---------------------------------------------------

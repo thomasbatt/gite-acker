@@ -4,14 +4,13 @@
 	    <div class="content-wrapper">
 	      <p class="content-title"><?php bloginfo( 'name' ); ?></p>
 	      <p class="content-subtitle"><?php bloginfo('description'); ?></p>
-	      <p><?php var_dump(get_option('giteacker_footer_text')); ?></p>
 	    </div>
 	  </section>
 	  <section id="about" class="background">
 	    <div class="content-wrapper">
-			<p class="content-title">Description</p>
+			<p class="content-title"><?php echo get_settings('giteacker_description_title'); ?></p>
 			<div class="content-subtitle text-justify">
-				<p>Gîte aménagé à l'étage de la maison du propriétaire située en périphérie de village. 1 ch (3 lits 1p), séjour avec accès direct sur balcon couvert (1 lit 2p, prise TV), petite cuisine (micro-ondes), salle de bain avec wc. Chauffage central inclus. Location de draps. Présence du G714 sur la propriété. En commun : Lave-linge au sous-sol, jardin, mobilier de jardin, bac à sable, barbecue, ping-pong, parking dans cour. Supplément animaux: 5€/jour/animal.</p>
+				<p><?php echo get_settings('giteacker_description_content'); ?></p>
 	    		<div class="wrapper-images row ">
 					<?php
 				    $actus = get_posts(array(
@@ -46,12 +45,15 @@
 	  </section>
 	  <section id="contact" class="background">
 	    <div class="content-wrapper">
-	      <p class="content-title">Information propriétaire</p>
-	      <p class="content-subtitle">
-	        <p>Antoine ACKER</p>
-	      	<p>Tél :  03 88 80 06 19</p>
-	      	<p>Tél: 06 41 77 04 31 </p>
-		  </p>
+			<div class="content-contact">
+				<p class="content-title"><?php echo get_settings('giteacker_contact_title'); ?></p>
+				<p class="content-subtitle">
+				<p><?php echo get_settings('giteacker_contact_name'); ?></p>
+				<p><?php echo get_settings('giteacker_contact_phone_fixe'); ?></p>
+				<p><?php echo get_settings('giteacker_contact_phone_cell'); ?></p>
+				</p>
+				<div class="img"></div>
+			</div>
 	    </div>
 	  </section>
 	</div>

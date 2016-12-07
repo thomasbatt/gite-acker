@@ -17,7 +17,7 @@
 	  position: fixed;
 	  width: 100%;
 	  transform: translateY($parallax-offset);
-filter: saturate(200%) contrast(2);
+filter: saturate(200%);
 	  @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
 	  &:before {
 	    content: "";
@@ -41,7 +41,10 @@ filter: saturate(200%) contrast(2);
 	    background-image: url(../img/834.jpg);
 	  }
 	  &:nth-child(3) {
+	    filter: saturate(100%);
+	    /*opacity: 0.5;*/
 	  	background: gray;
+	  	/*background-image: url(../img/bg-map.png);*/
 	    /*background-image: url(../img/835.jpg);*/
 	  }
 	}
@@ -62,7 +65,6 @@ filter: saturate(200%) contrast(2);
 	  text-align: center;
 	  flex-flow: column nowrap;
 	  color: #fff;
-	  font-family: Montserrat;
 	  text-transform: uppercase;
 	  transform: translateY($content-offset);
 	  will-change: transform;

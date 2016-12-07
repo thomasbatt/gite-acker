@@ -20,7 +20,8 @@ html {
   font-size: 10px; }
   html body {
     overflow: hidden;
-    margin: 0; }
+    margin: 0;
+    font-family: 'Rubik'; }
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
@@ -73,7 +74,7 @@ html {
       .header .header-links ul li {
         display: inline-block; }
         .header .header-links ul li a {
-          font-family: Rubik;
+          font-family: 'Rubik';
           text-decoration: none;
           color: #fff;
           display: inline-block;
@@ -95,8 +96,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ad438f400c0'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ad438f400c0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ad643948b60'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ad643948b60'/>
 	</head>
 
 	<body>
@@ -107,6 +108,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ad438f400c0'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ad438f400c0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ad643948b60'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ad643948b60'></script>
 </html>

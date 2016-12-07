@@ -15,7 +15,7 @@ Author URI: http://thomasbatt.fr;
 Tags: js, jquery
 */
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Rubik?v=2016-12-07);
+@import url(http://fonts.googleapis.com/css?family=Rubik);
 * {
   box-sizing: border-box; }
 
@@ -23,7 +23,8 @@ html {
   font-size: 10px; }
   html body {
     overflow: hidden;
-    margin: 0; }
+    margin: 0;
+    font-family: 'Rubik'; }
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
@@ -76,7 +77,7 @@ html {
       .header .header-links ul li {
         display: inline-block; }
         .header .header-links ul li a {
-          font-family: Rubik;
+          font-family: 'Rubik';
           text-decoration: none;
           color: #fff;
           display: inline-block;
@@ -110,7 +111,7 @@ html {
     position: fixed;
     width: 100%;
     transform: translateY(30vh);
-    filter: saturate(200%) contrast(2);
+    filter: saturate(200%);
     transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1); }
     #page .background:before {
       content: "";
@@ -130,7 +131,10 @@ html {
     #page .background:nth-child(2) {
       background-image: url(../img/834.jpg?v=OuL1zDXaX47Ed9VTRYw81g%3D%3D); }
     #page .background:nth-child(3) {
+      filter: saturate(100%);
+      /*opacity: 0.5;*/
       background: gray;
+      /*background-image: url(../img/bg-map.png?v=OyEiW9I9wufLlYo2YGQe2g%3D%3D);*/
       /*background-image: url(../img/835.jpg?v=6fL370uIXjXftyzHo4TsVw%3D%3D);*/ }
   #page .background:nth-child(1) {
     z-index: 3; }
@@ -146,7 +150,6 @@ html {
     text-align: center;
     flex-flow: column nowrap;
     color: #fff;
-    font-family: Montserrat;
     text-transform: uppercase;
     transform: translateY(40vh);
     will-change: transform;

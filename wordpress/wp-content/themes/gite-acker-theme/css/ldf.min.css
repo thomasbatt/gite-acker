@@ -9,7 +9,8 @@ html {
   font-size: 10px; }
   html body {
     overflow: hidden;
-    margin: 0; }
+    margin: 0;
+    font-family: 'Rubik'; }
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
@@ -62,7 +63,7 @@ html {
       .header .header-links ul li {
         display: inline-block; }
         .header .header-links ul li a {
-          font-family: Rubik;
+          font-family: 'Rubik';
           text-decoration: none;
           color: #fff;
           display: inline-block;

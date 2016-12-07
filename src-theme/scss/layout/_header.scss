@@ -1,10 +1,12 @@
 .header{
 	// @import "compass/css3";
 	z-index: $header-zindex;
-	position: relative;
-	padding: 0.5% 10%;
-/*	border: 1px solid orange;*/
-	background-color: #cfcfcf;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1% $header-padding;
+	/*background-color: #efefef;*/
 	&:after{
 		content: "";
 		clear: both;
@@ -14,14 +16,14 @@
 		a{
 			display: block;
 			img{
-				width: 60%;
+				width: 70%;
 			}
 		}
 	}
 	.header-links{
 		display: inline-block;
 		position: absolute;
-		right: 10%;
+		right: $header-padding;
 		top: 25%;
 		ul{
 			display: block;
@@ -34,7 +36,7 @@
 				display:inline-block;
 				a{
 					text-decoration:none;
-					color:#303030;
+					color:#fff;
 					display:inline-block;
 					padding:10px 30px;
 					&:hover {

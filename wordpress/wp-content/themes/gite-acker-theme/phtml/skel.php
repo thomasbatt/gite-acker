@@ -35,10 +35,12 @@ html {
 
 .header {
   z-index: 40;
-  position: relative;
-  padding: 0.5% 10%;
-  /*	border: 1px solid orange;*/
-  background-color: #cfcfcf;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1% 3%;
+  /*background-color: #efefef;*/
   /*	@keyframes ul {
 	 	0% { 
 	    width:0;
@@ -55,11 +57,11 @@ html {
     .header .header-logo a {
       display: block; }
       .header .header-logo a img {
-        width: 60%; }
+        width: 70%; }
   .header .header-links {
     display: inline-block;
     position: absolute;
-    right: 10%;
+    right: 3%;
     top: 25%; }
     .header .header-links ul {
       display: block;
@@ -72,7 +74,7 @@ html {
         display: inline-block; }
         .header .header-links ul li a {
           text-decoration: none;
-          color: #303030;
+          color: #fff;
           display: inline-block;
           padding: 10px 30px;
           /*					$:hover ~ span {
@@ -92,8 +94,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ac727bf8d18'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ac727bf8d18'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ad38c46dd20'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ad38c46dd20'/>
 	</head>
 
 	<body>
@@ -104,6 +106,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ac727bf8d18'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ac727bf8d18'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ad38c46dd20'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ad38c46dd20'></script>
 </html>

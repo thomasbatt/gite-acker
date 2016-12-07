@@ -53,7 +53,8 @@
 						<p>Tél: 03 88 80 06 19</p>
 						<p>Tél: 06 41 77 04 31 </p>
 					</p>
-					<img src="../src-theme/img/map.png" alt="">
+					<!-- <img src="./wp-content/themes/gite-acker-theme/img/map.png" alt=""> -->
+					<div class="img"></div>
 				</div>
 			</div>
 		</section>

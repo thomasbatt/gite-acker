@@ -17,6 +17,11 @@
 	  position: fixed;
 	  width: 100%;
 	  transform: translateY($parallax-offset);
+filter: saturate(200%);
+-webkit-filter: saturate(200%);
+-moz-filter: saturate(200%);
+-o-filter: saturate(200%);
+-ms-filter: saturate(200%);
 	  @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
 	  &:before {
 	    content: "";
@@ -40,7 +45,8 @@
 	    background-image: url(../img/834.jpg);
 	  }
 	  &:nth-child(3) {
-	    background-image: url(../img/835.jpg);
+	  	background: gray;
+	    /*background-image: url(../img/835.jpg);*/
 	  }
 	}
 
@@ -93,10 +99,13 @@
 				position: relative;
 				display: inline-block;
 				text-align: left;
-				padding-left: 10%;
-				img{
+				padding-left: $page-padding;
+				.img{
+					width: 330px;
+					height: 370px;
+					background-image: url('../img/map.png');
 					position: absolute;
-					right: 10%;
+					right: $page-padding;
 					top: 0;
 				}
 			}

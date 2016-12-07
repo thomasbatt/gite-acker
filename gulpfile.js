@@ -47,7 +47,7 @@ gulp.task('sass', function() {
     scssGulp(srcPath+'/scss/app.scss','website.min.css',urlAssets+'/css',40);
     if ($dev){scssGulp(srcPath+'/scss/vendors/app.scss','vendors.min.css',urlAssets+'/css',40);}
 
-    gulp.src(srcPath+'/**.{{css,js}') 
+    gulp.src(srcPath+'/**.{css,js}') 
         .pipe(gulp.dest(urlAssets)); 
 
 });

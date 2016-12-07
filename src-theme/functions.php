@@ -66,7 +66,7 @@
 	add settings page to menu
 	----------------------------------------------------*/
 	function add_settings_page() {
-	add_menu_page( __( 'Gites ACKER' .' Theme Panel' ), __( 'Gites ACKER' .' Theme Panel' ), 'manage_options', 'settings', 'theme_settings_page');
+	add_menu_page( __( 'Gites ACKER' .'' ), __( 'Gites ACKER' .'' ), 'manage_options', 'settings', 'theme_settings_page');
 	}
 
 	/*---------------------------------------------------
@@ -152,19 +152,19 @@
 				"desc" => "vous pouvez personaler le titres 1 du menu.",
 				"id" => $shortname."_menu_item1",
 				"type" => "text",
-				"std" => ""
+				"std" => "Accueil"
 		),
 		array( 	"name" => "Item 2",
 				"desc" => "vous pouvez personaler le titres 2 du menu.",
 				"id" => $shortname."_menu_item2",
 				"type" => "text",
-				"std" => ""
+				"std" => "Le Gîte"
 		),
 		array( 	"name" => "Item 3",
 				"desc" => "vous pouvez personaler le titres 3 du menu.",
 				"id" => $shortname."_menu_item3",
 				"type" => "text",
-				"std" => ""
+				"std" => "Contact"
 		),
 		array( 	"type" => "close"
 		),
@@ -180,13 +180,13 @@
 				// "desc" => "You can customize contact credit on contact area her.",
 				"id" => $shortname."_description_title",
 				"type" => "text",
-				"std" => ""
+				"std" => "Description"
 		),
 		array( 	"name" => "Contenu",
 				// "desc" => "You can customize contact credit on contact area her.",
 				"id" => $shortname."_description_content",
 				"type" => "textarea",
-				"std" => ""
+				"std" => "Gîte aménagé à l'étage de la maison du propriétaire située en périphérie de village. 1 ch (3 lits 1p), séjour avec accès direct sur balcon couvert (1 lit 2p, prise TV), petite cuisine (micro-ondes), salle de bain avec wc. Chauffage central inclus. Location de draps. Présence du G714 sur la propriété. En commun : Lave-linge au sous-sol, jardin, mobilier de jardin, bac à sable, barbecue, ping-pong, parking dans cour. Supplément animaux: 5€/jour/animal."
 		),
 		array( 	"type" => "close"
 		),
@@ -203,25 +203,25 @@
 				// "desc" => "You can customize contact credit on contact area her.",
 				"id" => $shortname."_contact_title",
 				"type" => "text",
-				"std" => ""
+				"std" => "Contact"
 		),
 		array( 	"name" => "Nom et prenom",
 				// "desc" => "You can customize contact credit on contact area her.",
 				"id" => $shortname."_contact_name",
 				"type" => "text",
-				"std" => ""
+				"std" => "Antoine ACKER"
 		),
 		array( 	"name" => "Tel fixe",
 				// "desc" => "You can customize contact credit on contact area her.",
 				"id" => $shortname."_contact_phone_fixe",
 				"type" => "text",
-				"std" => ""
+				"std" => "03 88 80 06 19"
 		),
 		array( 	"name" => "Tel portable",
 				// "desc" => "You can customize contact credit on contact area her.",
 				"id" => $shortname."_contact_phone_cell",
 				"type" => "text",
-				"std" => ""
+				"std" => "06 41 77 04 31"
 		),
 		array( 	"type" => "close"
 		)
@@ -334,7 +334,7 @@
 						<div class="input_title">
 							
 							<h3><img src="<?php echo get_template_directory_uri();?>/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?></h3>
-							<span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Save changes" /></span>
+							<span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Sauvegarder" /></span>
 							<div class="clearfix"></div>
 						</div>
 						<div class="all_options">
@@ -346,7 +346,7 @@
 			  </form>
 			  <form method="post">
 				  <p class="submit">
-				  <input name="reset" type="submit" value="Reset" />
+				  <input name="reset" type="submit" value="Restaurer" />
 				  <input type="hidden" name="action" value="reset" />
 				  </p>
 			  </form>

@@ -15,6 +15,7 @@ Author URI: http://thomasbatt.fr;
 Tags: js, jquery
 */
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Rubik?v=2016-12-07);
 * {
   box-sizing: border-box; }
 
@@ -75,6 +76,7 @@ html {
       .header .header-links ul li {
         display: inline-block; }
         .header .header-links ul li a {
+          font-family: Rubik;
           text-decoration: none;
           color: #fff;
           display: inline-block;
@@ -108,11 +110,7 @@ html {
     position: fixed;
     width: 100%;
     transform: translateY(30vh);
-    filter: saturate(200%);
-    -webkit-filter: saturate(200%);
-    -moz-filter: saturate(200%);
-    -o-filter: saturate(200%);
-    -ms-filter: saturate(200%);
+    filter: saturate(200%) contrast(2);
     transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1); }
     #page .background:before {
       content: "";

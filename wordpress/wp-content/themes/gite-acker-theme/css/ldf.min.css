@@ -62,6 +62,7 @@ html {
       .header .header-links ul li {
         display: inline-block; }
         .header .header-links ul li a {
+          font-family: Rubik;
           text-decoration: none;
           color: #fff;
           display: inline-block;

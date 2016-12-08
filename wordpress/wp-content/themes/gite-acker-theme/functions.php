@@ -158,7 +158,7 @@
 				"desc" => "vous pouvez personaler le titres 2 du menu.",
 				"id" => $shortname."_menu_item2",
 				"type" => "text",
-				"std" => "Le Gîte"
+				"std" => "Les Gîtes"
 		),
 		array( 	"name" => "Item 3",
 				"desc" => "vous pouvez personaler le titres 3 du menu.",

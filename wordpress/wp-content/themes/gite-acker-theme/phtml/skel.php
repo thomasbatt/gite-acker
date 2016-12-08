@@ -58,8 +58,17 @@ html {
     top: -10px;
     display: inline-block; }
     .header .header-logo a svg {
-      width: 100px;
-      height: 100px; }
+      width: 220px;
+      height: 150px;
+      cursor: pointer;
+      stroke: #FFF;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation-name: drawVectorHeader;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear; }
   .header .header-links {
     display: inline-block;
     position: absolute;
@@ -97,6 +106,19 @@ html {
           left: 10px;
           bottom: 2px; }
 
+@keyframes drawVectorHeader {
+  0% {
+    fill-opacity: 0; }
+  70% {
+    /*stroke-width: 2;*/
+    fill-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; } }
+
 @keyframes drawVectorHome {
   0% {
     fill-opacity: 0; }
@@ -112,8 +134,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1aed32d2b8d0'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1aed32d2b8d0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1aed9a2669a0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1aed9a2669a0'/>
 	</head>
 
 	<body>
@@ -124,6 +146,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1aed32d2b8d0'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1aed32d2b8d0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1aed9a2669a0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1aed9a2669a0'></script>
 </html>

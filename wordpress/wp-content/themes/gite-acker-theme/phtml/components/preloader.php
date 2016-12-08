@@ -38,7 +38,6 @@
 	    height: 100%;
 	}
 	.preloader svg path{
-		cursor: pointer;
 		stroke: #000;
 		stroke-dasharray: 1000;
 		stroke-dashoffset: 1000;

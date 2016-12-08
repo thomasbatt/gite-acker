@@ -40,7 +40,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1% 3%;
+  padding: 1% 10%;
   /*background-color: #efefef;*/
   /*	@keyframes ul {
 	 	0% { 
@@ -58,33 +58,35 @@ html {
     .header .header-logo a {
       display: block; }
       .header .header-logo a img {
-        width: 70%; }
+        width: 110%; }
   .header .header-links {
     display: inline-block;
     position: absolute;
-    right: 3%;
+    right: 10%;
     top: 25%; }
     .header .header-links ul {
       display: block;
       list-style: none;
-      font-family: 'Trebuchet MS';
-      font-size: 1.7rem;
+      font-size: 2rem;
       padding: 0;
       margin: 0; }
       .header .header-links ul li {
         display: inline-block; }
         .header .header-links ul li a {
-          font-family: 'Rubik';
+          display: inline-block;
+          margin: 10px;
+          padding: 8px 20px;
           text-decoration: none;
           color: #fff;
-          display: inline-block;
-          padding: 10px 30px;
+          border: 2px solid #FFF;
+          border-radius: 3px;
+          transition-duration: 0.2s;
           /*					$:hover ~ span {
 						animation:ul 0.3s ease-out;
 						background:#fff;
 					}*/ }
           .header .header-links ul li a:hover {
-            color: #FFF; }
+            transform: scale(1.1); }
         .header .header-links ul li span {
           display: block;
           /*	width:calc(100% - 23px);*/
@@ -96,8 +98,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ad7ac4dddb8'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ad7ac4dddb8'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ae94f0af3e0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ae94f0af3e0'/>
 	</head>
 
 	<body>
@@ -108,6 +110,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ad7ac4dddb8'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ad7ac4dddb8'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ae94f0af3e0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ae94f0af3e0'></script>
 </html>

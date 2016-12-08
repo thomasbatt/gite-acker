@@ -60,6 +60,9 @@ html {
     position: relative;
     top: -10px;
     display: inline-block; }
+    .header .header-logo a svg {
+      width: 100px;
+      height: 100px; }
   .header .header-links {
     display: inline-block;
     position: absolute;
@@ -138,15 +141,13 @@ html {
       background-color: rgba(0, 0, 0, 0.3); }
     #page .background:first-child {
       transform: translateY(-15vh);
-      background-image: url(../img/834.jpg?v=OuL1zDXaX47Ed9VTRYw81g%3D%3D); }
+      background-image: url(../img/accueil3.jpeg?v=tPObBK5o%2FFdxN34As%2Bj5sg%3D%3D); }
       #page .background:first-child .content-wrapper {
         transform: translateY(15vh); }
     #page .background:nth-child(2) {
       background-image: url(../img/833.jpg?v=H8HzzHrOzCA77BjLw22bPw%3D%3D); }
     #page .background:nth-child(3) {
-      /*filter: saturate(100%);*/
-      /*background-image: url(../img/bg-map.png?v=OyEiW9I9wufLlYo2YGQe2g%3D%3D);*/
-      background-image: url(../img/835.jpg?v=6fL370uIXjXftyzHo4TsVw%3D%3D); }
+      background-image: url(../img/contact.jpeg?v=RE6jLPVN509VaNUKlEz59A%3D%3D); }
   #page .background:nth-child(1) {
     z-index: 3; }
   #page .background:nth-child(2) {
@@ -229,18 +230,45 @@ html {
   z-index: 10;
   position: relative; }
   .footer section {
+    margin: 0 auto;
     position: fixed;
     bottom: 0;
-    right: 0;
     list-style: none;
     font-size: 1.2rem;
-    text-align: right;
-    padding: 10px;
+    padding: 10px 10%;
     width: 100%;
     margin: 0;
     color: #fff; }
+    .footer section .footer-meta-links {
+      display: inline-block;
+      float: left;
+      padding: 0;
+      width: 50%; }
+    .footer section .footer-admin-links {
+      display: inline-block;
+      float: right;
+      padding: 0;
+      text-align: right;
+      width: 50%; }
+    .footer section .footer-scrolldown-arrow {
+      position: absolute;
+      left: 50%;
+      bottom: 50px; }
+      .footer section .footer-scrolldown-arrow .glyphicon {
+        color: #ffffff;
+        font-size: 5rem;
+        animation: scrolldown 0.5s ease infinite alternate; }
+    .footer section:after {
+      clear: both;
+      content: ""; }
     .footer section a {
       color: rgba(94, 177, 255, 0.9);
       text-decoration: none; }
       .footer section a:hover {
         color: #5eb1ff; }
+
+@keyframes scrolldown {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-10px); } }

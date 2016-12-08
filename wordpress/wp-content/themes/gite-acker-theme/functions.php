@@ -13,6 +13,26 @@
 	add_action( 'wp_ajax_page_content', 'page_content' );
 	add_action( 'wp_ajax_nopriv_page_content', 'page_content' );
 
+
+
+	add_filter("login_redirect", "gkp_subscriber_login_redirect", 10, 3);
+	function gkp_subscriber_login_redirect($redirect_to, $request, $user) {
+
+	  // if(is_array($user->roles))
+	  //     if(in_array('administrator', $user->roles)) return site_url('/wp-admin/');
+
+	  return home_url();
+	}
+
+
+	// Fonction qui insere le lien vers le css qui surchargera celui d'origine
+	function custom_login_css()  {
+	    echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/style-login.css" />';
+	}
+	add_action('login_head', 'custom_login_css');
+
+
+
 	/*---------------------------------------------------
 	register settings
 	----------------------------------------------------*/

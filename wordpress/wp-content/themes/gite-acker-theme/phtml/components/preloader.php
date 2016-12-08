@@ -36,19 +36,17 @@
 		position : fixed;
 	    width: 100%;
 	    height: 100%;
-		svg{
-			path{
-				cursor: pointer;
-				stroke: #000;
-				stroke-dasharray: 1000;
-				stroke-dashoffset: 1000;
-			    animation-name: drawVectorLoader;
-			    animation-duration: 0.5s;
-			    animation-iteration-count: infinite;
-			    animation-fill-mode: forwards;
-			    animation-timing-function: linear;
-			}
-		}
+	}
+	.preloader svg path{
+		cursor: pointer;
+		stroke: #000;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	    animation-name: drawVectorLoader;
+	    animation-duration: 0.1s;
+	    animation-iteration-count: infinite;
+	    animation-fill-mode: forwards;
+	    animation-timing-function: linear;
 	}
 </style>
 

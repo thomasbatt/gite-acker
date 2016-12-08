@@ -46,6 +46,9 @@ html {
     position: relative;
     top: -10px;
     display: inline-block; }
+    .header .header-logo a svg {
+      width: 100px;
+      height: 100px; }
   .header .header-links {
     display: inline-block;
     position: absolute;

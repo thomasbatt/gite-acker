@@ -57,6 +57,9 @@ html {
     position: relative;
     top: -10px;
     display: inline-block; }
+    .header .header-logo a svg {
+      width: 100px;
+      height: 100px; }
   .header .header-links {
     display: inline-block;
     position: absolute;
@@ -109,8 +112,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1aecca077b60'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1aecca077b60'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1aed32d2b8d0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1aed32d2b8d0'/>
 	</head>
 
 	<body>
@@ -121,6 +124,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1aecca077b60'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1aecca077b60'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1aed32d2b8d0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1aed32d2b8d0'></script>
 </html>

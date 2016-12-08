@@ -125,7 +125,7 @@
 				<p><?php echo get_settings('giteacker_contact_name'); ?></p>
 				<p><?php echo get_settings('giteacker_contact_phone_fixe'); ?></p>
 				<p><?php echo get_settings('giteacker_contact_phone_cell'); ?></p>
-				<p>Tarifs et Réservations sur Gîtes de France : <a href="https://www.gites-de-france.com/location-vacances-Rittershoffen-Gite-67G714.html" target="_blank">Gîte n°1</a> / <a href="https://www.gites-de-france.com/location-vacances-Rittershoffen-Gite-67G833.html" target="_blank">Gîte n°2</a></p>
+				<p class="resa">Tarifs et Réservations sur Gîtes de France : <a href="https://www.gites-de-france.com/location-vacances-Rittershoffen-Gite-67G714.html" target="_blank">Gîte n°1</a> / <a href="https://www.gites-de-france.com/location-vacances-Rittershoffen-Gite-67G833.html" target="_blank">Gîte n°2</a></p>
 				<div class="img"></div>
 			</div>
 	    </div>

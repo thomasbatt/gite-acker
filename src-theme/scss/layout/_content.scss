@@ -38,10 +38,10 @@
 	    	}
 		}
 		&:nth-child(2) {
-			background-image: url(../img/833.jpg);
+			background-image: url(../img/description1.jpeg);
 		}
 		&:nth-child(3) {
-		    background-image: url(../img/contact.jpeg);
+		    background-image: url(../img/contact1.jpeg);
 	  }
 	}
 
@@ -124,6 +124,9 @@
 					position: absolute;
 					right: $page-padding;
 					top: -90px;
+				}
+				p.resa{
+					font-size: 1.5rem;
 				}
 			}
 		}

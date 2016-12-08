@@ -142,9 +142,9 @@ html {
       #page .background:first-child .content-wrapper {
         transform: translateY(15vh); }
     #page .background:nth-child(2) {
-      background-image: url(../img/833.jpg?v=yfM%2B1TErGm2O1esVH6RmKg%3D%3D); }
+      background-image: url(../img/description1.jpeg?v=PiN%2BwD3CS9Ct1Rc24jmt1Q%3D%3D); }
     #page .background:nth-child(3) {
-      background-image: url(../img/contact.jpeg?v=eTTIDPBcSe9HDlBALfdziA%3D%3D); }
+      background-image: url(../img/contact1.jpeg?v=DpXgl2VGX0MOGfCPatk1eg%3D%3D); }
   #page .background:nth-child(1) {
     z-index: 3; }
   #page .background:nth-child(2) {
@@ -206,6 +206,8 @@ html {
       position: absolute;
       right: 15%;
       top: -90px; }
+    #page #contact .content-contact p.resa {
+      font-size: 1.5rem; }
   #page .background.up-scroll {
     transform: translate3d(0, -15vh, 0); }
     #page .background.up-scroll .content-wrapper {

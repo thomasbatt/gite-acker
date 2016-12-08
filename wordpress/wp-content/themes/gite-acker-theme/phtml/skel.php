@@ -53,12 +53,10 @@ html {
   .header:after {
     content: "";
     clear: both; }
-  .header .header-logo {
+  .header .header-logo a {
+    position: relative;
+    top: -10px;
     display: inline-block; }
-    .header .header-logo a {
-      display: block; }
-      .header .header-logo a img {
-        width: 110%; }
   .header .header-links {
     display: inline-block;
     position: absolute;
@@ -95,11 +93,24 @@ html {
           position: absolute;
           left: 10px;
           bottom: 2px; }
+
+@keyframes drawVectorHome {
+  0% {
+    fill-opacity: 0; }
+  70% {
+    /*stroke-width: 2;*/
+    fill-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; } }
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1ae9a9493f60'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1ae9a9493f60'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1aec9461dac8'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1aec9461dac8'/>
 	</head>
 
 	<body>
@@ -110,6 +121,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1ae9a9493f60'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1ae9a9493f60'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1aec9461dac8'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1aec9461dac8'></script>
 </html>

@@ -6,54 +6,49 @@
 	}
 
 	.background {
-	  user-select: none;
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  background-position: center center;
-	  overflow: hidden;
-	  will-change: transform;
-	  backface-visibility: hidden;
-	  height: 100vh + $parallax-offset;
-	  position: fixed;
-	  width: 100%;
-	  transform: translateY($parallax-offset);
-	  filter: saturate(200%);
-	  @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
-	  &:before {
-	    content: "";
-	    position: absolute;
-	    width: 100%;
-	    height: 100%;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    background-color: rgba(0,0,0,.3);
-	  }
-	  &:first-child {
-	    transform: translateY(-$parallax-offset / 2);
-	    // background-image: url(../img/834.jpg);
-	    background-image: url(../img/accueil3.jpeg);
-	    .content-wrapper {
-	      transform: translateY($parallax-offset /2);
-	    }
-	  }
-	  &:nth-child(2) {
-	    background-image: url(../img/833.jpg);
-	  }
-	  &:nth-child(3) {
-	    /*filter: saturate(100%);*/
-	    /*opacity: 0.5;*/
-	  	/*background: gray;*/
-	  	/*background-image: url(../img/bg-map.png);*/
-	    background-image: url(../img/contact.jpeg);
+		user-select: none;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		overflow: hidden;
+		will-change: transform;
+		backface-visibility: hidden;
+		height: 100vh + $parallax-offset;
+		position: fixed;
+		width: 100%;
+		transform: translateY($parallax-offset);
+		filter: saturate(200%);
+		@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,.3);
+		}
+		&:first-child {
+			transform: translateY(-$parallax-offset / 2);
+			background-image: url(../img/accueil3.jpeg);
+			.content-wrapper {
+			transform: translateY($parallax-offset /2);
+	    	}
+		}
+		&:nth-child(2) {
+			background-image: url(../img/833.jpg);
+		}
+		&:nth-child(3) {
+		    background-image: url(../img/contact.jpeg);
 	  }
 	}
 
 	/* Set stacking context of slides */
 	@for $i from 1 to ($slide-number + 1) {
 	    .background:nth-child(#{$i}) {
-	        z-index: ($slide-number + 1) - $i; 
+		  z-index: ($slide-number + 1) - $i; 
 	    }
 	}
 
@@ -75,6 +70,19 @@
 	  &-title {
 	    font-size: 12vh;
 	    line-height: 1.4;
+		svg{
+			path{
+				cursor: pointer;
+				stroke: #fff;
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 1000;
+			    animation-name: drawVectorHome;
+			    animation-duration: 3s;
+			    animation-iteration-count: 1;
+			    animation-fill-mode: forwards;
+			    animation-timing-function: linear;
+			}
+		}
 	  }
 	}
 	#about{

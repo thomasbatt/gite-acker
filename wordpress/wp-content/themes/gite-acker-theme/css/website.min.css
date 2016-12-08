@@ -56,12 +56,10 @@ html {
   .header:after {
     content: "";
     clear: both; }
-  .header .header-logo {
+  .header .header-logo a {
+    position: relative;
+    top: -10px;
     display: inline-block; }
-    .header .header-logo a {
-      display: block; }
-      .header .header-logo a img {
-        width: 110%; }
   .header .header-links {
     display: inline-block;
     position: absolute;
@@ -99,6 +97,19 @@ html {
           left: 10px;
           bottom: 2px; }
 
+@keyframes drawVectorHome {
+  0% {
+    fill-opacity: 0; }
+  70% {
+    /*stroke-width: 2;*/
+    fill-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; } }
+
 #page {
   /* Set stacking context of slides */ }
   #page .background {
@@ -133,10 +144,6 @@ html {
     #page .background:nth-child(2) {
       background-image: url(../img/833.jpg?v=yfM%2B1TErGm2O1esVH6RmKg%3D%3D); }
     #page .background:nth-child(3) {
-      /*filter: saturate(100%);*/
-      /*opacity: 0.5;*/
-      /*background: gray;*/
-      /*background-image: url(../img/bg-map.png?v=y9X4qV7%2B0GxZqPDnl5ov4Q%3D%3D);*/
       background-image: url(../img/contact.jpeg?v=eTTIDPBcSe9HDlBALfdziA%3D%3D); }
   #page .background:nth-child(1) {
     z-index: 3; }
@@ -160,6 +167,16 @@ html {
   #page .content-title {
     font-size: 12vh;
     line-height: 1.4; }
+    #page .content-title svg path {
+      cursor: pointer;
+      stroke: #fff;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation-name: drawVectorHome;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear; }
   #page #about .content-subtitle {
     padding: 50px;
     margin: 0 auto;

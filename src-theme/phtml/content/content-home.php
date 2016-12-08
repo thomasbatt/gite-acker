@@ -24,7 +24,7 @@
 					    	setup_postdata($post); 
 		                ?>
 		                      
-		                <article class="col-xs-6 col-sm-3 col-md-2">  
+		                <article class="col-xs-6 col-sm-3 col-md-2">
 		                    <div class="post">
 		                    	<div class="img-wrapper">
 		                    		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
@@ -47,11 +47,11 @@
 	    <div class="content-wrapper">
 			<div class="content-contact">
 				<p class="content-title"><?php echo get_settings('giteacker_contact_title'); ?></p>
-				<p class="content-subtitle">
+				<p class="content-subtitle"></p>
 				<p><?php echo get_settings('giteacker_contact_name'); ?></p>
 				<p><?php echo get_settings('giteacker_contact_phone_fixe'); ?></p>
 				<p><?php echo get_settings('giteacker_contact_phone_cell'); ?></p>
-				</p>
+				<p>Tarifs et Réservations sur Gîtes de France : <a href="https://www.gites-de-france.com/location-vacances-Rittershoffen-Gite-67G714.html" target="_blank">Gîte n°1</a> / <a href="https://www.gites-de-france.com/location-vacances-Rittershoffen-Gite-67G833.html" target="_blank">Gîte n°2</a></p>
 				<div class="img"></div>
 			</div>
 	    </div>

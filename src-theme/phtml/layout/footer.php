@@ -13,11 +13,11 @@
 		        <a rel="nofollow" id="login" href="<?php bloginfo('url')?>/wp-login.php">Connexion </a>
 		    </span>
         </div>
-        <div class="footer-scrolldown-arrow">
+<!--         <div class="footer-scrolldown-arrow">
 	        <a href="#" class="js-scrollTo" data-fade="false">
 	        	<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
 	        </a>
-    	</div>
+    	</div> -->
 	</section>
 </footer>
 

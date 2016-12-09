@@ -25,16 +25,6 @@
 			    text-align: right;
 			    width: 50%;
 			}
-			&-scrolldown-arrow{
-				position: absolute;
-				left:50%;
-				bottom:50px;
-				.glyphicon {
-		    		color: #ffffff;
-		            font-size: 5rem;
-		    		animation: scrolldown 0.5s ease infinite alternate;
-		        }
-			}
 		}
 		&:after{
 			clear: both; 

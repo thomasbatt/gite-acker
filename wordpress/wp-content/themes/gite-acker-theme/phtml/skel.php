@@ -40,26 +40,17 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1% 10%;
-  /*background-color: #efefef;*/
-  /*	@keyframes ul {
-	 	0% { 
-	    width:0;
-	  }
-	  100% { 
-	    width:calc(100% - 23px);
-	  }
-	}*/ }
+  padding: 1% 10%; }
   .header:after {
     content: "";
     clear: both; }
   .header .header-logo a {
     position: relative;
-    top: -10px;
+    top: -20px;
     display: inline-block; }
     .header .header-logo a svg {
       width: 220px;
-      height: 150px;
+      height: 180px;
       cursor: pointer;
       stroke: #FFF;
       stroke-dasharray: 1000;
@@ -90,27 +81,14 @@ html {
           color: #fff;
           border: 2px solid #FFF;
           border-radius: 3px;
-          transition-duration: 0.2s;
-          /*					$:hover ~ span {
-						animation:ul 0.3s ease-out;
-						background:#fff;
-					}*/ }
+          transition-duration: 0.2s; }
           .header .header-links ul li a:hover {
             transform: scale(1.1); }
-        .header .header-links ul li span {
-          display: block;
-          /*	width:calc(100% - 23px);*/
-          height: 2px;
-          background: #5eb1ff;
-          position: absolute;
-          left: 10px;
-          bottom: 2px; }
 
 @keyframes drawVectorHeader {
   0% {
     fill-opacity: 0; }
   70% {
-    /*stroke-width: 2;*/
     fill-opacity: 0;
     stroke-dasharray: 0;
     stroke-dashoffset: 0; }
@@ -123,7 +101,6 @@ html {
   0% {
     fill-opacity: 0; }
   70% {
-    /*stroke-width: 2;*/
     fill-opacity: 0;
     stroke-dasharray: 0;
     stroke-dashoffset: 0; }
@@ -131,11 +108,18 @@ html {
     fill-opacity: 1;
     stroke-dasharray: 0;
     stroke-dashoffset: 0; } }
+
+@keyframes moveRoll {
+  0% {
+    fill-opacity: 1; }
+  100% {
+    fill-opacity: 0;
+    transform: translateY(10px); } }
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1aed9a2669a0'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1aed9a2669a0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1af85190f510'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1af85190f510'/>
 	</head>
 
 	<body>
@@ -146,6 +130,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1aed9a2669a0'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1aed9a2669a0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1af85190f510'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1af85190f510'></script>
 </html>

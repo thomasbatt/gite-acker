@@ -67,14 +67,14 @@
 				<a href="./"><?php echo get_settings('giteacker_menu_item1'); ?></a>
 				<span></span>
 			</li>
-			<li>
+<!-- 			<li>
 				<a href="#about" class="js-scrollTo" data-fade="false"><?php echo get_settings('giteacker_menu_item2'); ?></a>
 				<span></span>
 			</li>
 			<li>
 				<a href="#contact" class="js-scrollTo" data-fade="false"><?php echo get_settings('giteacker_menu_item3'); ?></a>
 				<span></span>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </header>

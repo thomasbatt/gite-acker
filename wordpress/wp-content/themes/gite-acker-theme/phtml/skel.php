@@ -115,11 +115,62 @@ html {
   100% {
     fill-opacity: 0;
     transform: translateY(10px); } }
+
+@media screen and (max-device-width: 640px) and (max-width: 640px) {
+  .header {
+    padding: 0%; }
+    .header .header-links {
+      top: 20%;
+      right: 2%; }
+  .footer section {
+    font-size: 1.5rem; }
+    .footer section .footer-meta-links {
+      width: 75%; }
+    .footer section .footer-admin-links {
+      width: 25%; }
+  #page .content-wrapper {
+    font-size: 3vw; }
+  #page .scrolldown {
+    position: relative;
+    bottom: 85px;
+    text-align: center; }
+    #page .scrolldown svg {
+      width: 100px; }
+      #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+        display: none; }
+      #page .scrolldown svg polygon[id=arrow] {
+        animation-name: moveRoll;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear; }
+  #page #acceuil .content-wrapper .content-subtitle {
+    font-size: 3vh !important; }
+  #page #about .content-title {
+    font-size: 5vh; }
+  #page #about .content-subtitle {
+    padding: 30px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #303030;
+    background-color: rgba(255, 255, 255, 0.8); }
+    #page #about .content-subtitle .wrapper-images {
+      padding-top: 10px; }
+  #page #contact .content-title {
+    font-size: 8vh; }
+  #page #contact .content-contact {
+    padding: 0 5%; }
+    #page #contact .content-contact p {
+      font-size: 3vh;
+      margin-bottom: 5px; }
+    #page #contact .content-contact .img {
+      display: none; } }
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1afaef66e888'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1afaef66e888'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b29b071b8e0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b29b071b8e0'/>
 	</head>
 
 	<body>
@@ -130,6 +181,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1afaef66e888'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1afaef66e888'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b29b071b8e0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b29b071b8e0'></script>
 </html>

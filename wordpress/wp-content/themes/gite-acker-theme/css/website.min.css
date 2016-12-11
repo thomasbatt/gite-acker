@@ -161,7 +161,7 @@ html {
   #page .background:nth-child(3) {
     z-index: 1; }
   #page .content-wrapper {
-    font-size: 2.1rem;
+    font-size: 1.5vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -177,7 +177,6 @@ html {
     font-size: 12vh;
     line-height: 1.4; }
     #page .content-title svg path {
-      cursor: pointer;
       stroke: #fff;
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
@@ -188,7 +187,7 @@ html {
       animation-timing-function: linear; }
   #page .scrolldown {
     position: relative;
-    bottom: 10px;
+    bottom: 5vh;
     text-align: center; }
     #page .scrolldown svg {
       width: 40px; }
@@ -219,7 +218,7 @@ html {
     display: inline-block;
     position: relative;
     margin-top: 20%;
-    padding-left: 15%;
+    padding-left: 10vw;
     padding-bottom: 10px;
     background: rgba(255, 255, 255, 0.8);
     text-align: left;
@@ -231,7 +230,7 @@ html {
       height: 370px;
       background-image: url(../img/map.png?v=0lRmR3DNQbXy3UnzZLGK3g%3D%3D);
       position: absolute;
-      right: 15%;
+      right: 10vw;
       top: -90px; }
   #page .background.up-scroll {
     transform: translate3d(0, -15vh, 0); }
@@ -288,3 +287,54 @@ html {
     transform: translateY(0); }
   to {
     transform: translateY(-10px); } }
+
+@media screen and (max-device-width: 640px) and (max-width: 640px) {
+  .header {
+    padding: 0%; }
+    .header .header-links {
+      top: 20%;
+      right: 2%; }
+  .footer section {
+    font-size: 1.5rem; }
+    .footer section .footer-meta-links {
+      width: 75%; }
+    .footer section .footer-admin-links {
+      width: 25%; }
+  #page .content-wrapper {
+    font-size: 3vw; }
+  #page .scrolldown {
+    position: relative;
+    bottom: 85px;
+    text-align: center; }
+    #page .scrolldown svg {
+      width: 100px; }
+      #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+        display: none; }
+      #page .scrolldown svg polygon[id=arrow] {
+        animation-name: moveRoll;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear; }
+  #page #acceuil .content-wrapper .content-subtitle {
+    font-size: 3vh !important; }
+  #page #about .content-title {
+    font-size: 5vh; }
+  #page #about .content-subtitle {
+    padding: 30px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #303030;
+    background-color: rgba(255, 255, 255, 0.8); }
+    #page #about .content-subtitle .wrapper-images {
+      padding-top: 10px; }
+  #page #contact .content-title {
+    font-size: 8vh; }
+  #page #contact .content-contact {
+    padding: 0 5%; }
+    #page #contact .content-contact p {
+      font-size: 3vh;
+      margin-bottom: 5px; }
+    #page #contact .content-contact .img {
+      display: none; } }

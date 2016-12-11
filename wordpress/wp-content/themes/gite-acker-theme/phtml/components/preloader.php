@@ -24,7 +24,9 @@
 		height: 120px;
 	}
 	.preloader svg path{
-		stroke: rgba(92, 164, 255, 0.5);
+		stroke-width: 3px;
+		/*stroke: rgba(92, 164, 255, 0.5);*/
+		stroke: #831912;
 		stroke-dasharray: 110;
 		animation-name: drawVectorLoader;
 		animation-duration: 0.7s;

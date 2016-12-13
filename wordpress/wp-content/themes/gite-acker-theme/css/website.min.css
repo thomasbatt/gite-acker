@@ -291,6 +291,12 @@ html {
   to {
     transform: translateY(-10px); } }
 
+@media screen and (max-width: 430px) {
+  #page #about .content-subtitle {
+    font-size: 1.4rem; }
+    #page #about .content-subtitle .wrapper-images {
+      display: none; } }
+
 @media (max-width: 500px) {
   .header {
     padding: 0%; }

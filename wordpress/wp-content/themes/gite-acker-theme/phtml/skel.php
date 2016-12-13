@@ -118,6 +118,12 @@ html {
     fill-opacity: 0;
     transform: translateY(10px); } }
 
+@media screen and (max-width: 430px) {
+  #page #about .content-subtitle {
+    font-size: 1.4rem; }
+    #page #about .content-subtitle .wrapper-images {
+      display: none; } }
+
 @media (max-width: 500px) {
   .header {
     padding: 0%; }
@@ -190,8 +196,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b5103e2a148'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b5103e2a148'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b5118c47488'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b5118c47488'/>
 	</head>
 
 	<body>
@@ -202,6 +208,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b5103e2a148'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b5103e2a148'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b5118c47488'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b5118c47488'></script>
 </html>

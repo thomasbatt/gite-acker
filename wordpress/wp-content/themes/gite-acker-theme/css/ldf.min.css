@@ -11,6 +11,8 @@ html {
     overflow: hidden;
     margin: 0;
     font-family: 'Rubik'; }
+    html body a:hover {
+      color: #004988; }
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
@@ -105,53 +107,61 @@ html {
     fill-opacity: 0;
     transform: translateY(10px); } }
 
-@media screen and (max-device-width: 640px) and (max-width: 640px) {
+@media screen and (max-width: 1030px) {
+  #page .content-wrapper {
+    font-size: 2vw; }
+  #page #about .content-title {
+    font-size: 5vh; }
+  #page #about .content-subtitle {
+    padding: 20px;
+    width: 100%; }
+    #page #about .content-subtitle .wrapper-images {
+      padding: 10px 5px 5px 0px; }
+      #page #about .content-subtitle .wrapper-images article {
+        padding-left: 5px; } }
+
+@media screen and (max-width: 640px) {
   .header {
     padding: 0%; }
     .header .header-links {
       top: 20%;
       right: 2%; }
-  .footer section {
-    font-size: 1.5rem; }
-    .footer section .footer-meta-links {
-      width: 75%; }
-    .footer section .footer-admin-links {
-      width: 25%; }
+  .footer {
+    display: none;
+    /*section{
+			font-size: 1.5rem;
+			.footer{
+				&-meta-links{
+					width: 75%;
+				}
+				&-admin-links{
+					width: 25%;
+				}
+			}
+		}*/ }
   #page .content-wrapper {
-    font-size: 3vw; }
+    font-size: 3.5vw; }
   #page .scrolldown {
-    position: relative;
-    bottom: 85px;
-    text-align: center; }
+    bottom: 55px; }
     #page .scrolldown svg {
       width: 100px; }
       #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
         display: none; }
-      #page .scrolldown svg polygon[id=arrow] {
-        animation-name: moveRoll;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
-        animation-timing-function: linear; }
   #page #acceuil .content-wrapper .content-subtitle {
     font-size: 3vh !important; }
   #page #about .content-title {
-    font-size: 5vh; }
+    font-size: 4vh; }
   #page #about .content-subtitle {
     padding: 30px;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 1.5rem;
-    color: #303030;
-    background-color: rgba(255, 255, 255, 0.8); }
+    width: 100%; }
     #page #about .content-subtitle .wrapper-images {
-      padding-top: 10px; }
-  #page #contact .content-title {
-    font-size: 8vh; }
+      padding: 10px 30px; }
+      #page #about .content-subtitle .wrapper-images article img {
+        width: 130px;
+        height: 130px; }
   #page #contact .content-contact {
     padding: 0 5%; }
     #page #contact .content-contact p {
-      font-size: 3vh;
-      margin-bottom: 5px; }
+      font-size: 3vh; }
     #page #contact .content-contact .img {
       display: none; } }

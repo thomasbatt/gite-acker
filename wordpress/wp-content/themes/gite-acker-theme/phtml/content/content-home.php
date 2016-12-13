@@ -4,7 +4,7 @@
 			<div class="content-wrapper">
 				<p class="content-title">
 					<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="476.587px" height="79.106px" viewBox="0 0 476.587 79.106" enable-background="new 0 0 476.587 79.106"
+		 width="80%" height="79.106px" viewBox="0 0 476.587 79.106" enable-background="new 0 0 476.587 79.106"
 		 xml:space="preserve">
 						<g>
 							<path fill="#FFF" d="M8.807,38.299c0.149-3.996-0.273-8.325,0.576-12.625c1.939-9.821,7.867-15.795,17.691-17.893
@@ -80,7 +80,6 @@
 				<p class="content-subtitle"><?php bloginfo('description'); ?></p>
 			</div>
 			<div class="scrolldown">
-				<a href="#about">
 					<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="185.667px" viewBox="0 0 80 185.667" enable-background="new 0 0 80 185.667" xml:space="preserve">
 						<g>
 							<path fill="#FFF" d="M41,5v6h0.154c7.965,0,14.03,0.462,18.559,4.835c6.028,5.821,9.123,18.766,9.123,38.352
@@ -96,7 +95,6 @@
 							c1.542,0,3,0.829,3,1.851V35.399z"
 							/>
 					</svg>
-				</a>
 			</div>
 		</section>
 		<section id="about" class="background">

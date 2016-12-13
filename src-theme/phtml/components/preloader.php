@@ -9,8 +9,8 @@
 		opacity: 0;
 	}
 	.preloader{
-		display: block ;
-		opacity: 1 ;
+		display: block;
+		opacity: 1;
 		z-index: 0;
 		position : fixed;
 		top: 40%;
@@ -25,7 +25,6 @@
 	}
 	.preloader svg path{
 		stroke-width: 3px;
-		/*stroke: rgba(92, 164, 255, 0.5);*/
 		stroke: #831912;
 		stroke-dasharray: 110;
 		animation-name: drawVectorLoader;

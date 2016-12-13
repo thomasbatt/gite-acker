@@ -34,7 +34,7 @@
 			transform: translateY(-$parallax-offset / 2);
 			background-image: url(../img/accueil3.jpeg);
 			.content-wrapper {
-			transform: translateY($parallax-offset /2);
+				transform: translateY($parallax-offset /2);
 			}
 		}
 		&:nth-child(2) {

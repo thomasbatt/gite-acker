@@ -10,7 +10,7 @@
 		content: "";
 		clear: both;
 	}
-	.header-logo{
+	&-logo{
 		a{
 			position: relative;
 			top: -20px;
@@ -30,7 +30,7 @@
 			}
 		}
 	}
-	.header-links{
+	&-links{
 		display: inline-block;
 		position: absolute;
 		right: $header-padding;

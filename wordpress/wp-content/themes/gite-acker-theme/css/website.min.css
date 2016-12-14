@@ -122,10 +122,7 @@ html {
     transform: translateY(10px); } }
 
 #page {
-  /* Set stacking context of slides */
-  /*	.row{
-		margin-left: -30px;
-	}*/ }
+  /* Set stacking context of slides */ }
   #page .background {
     user-select: none;
     background-size: cover;
@@ -137,6 +134,7 @@ html {
     height: 130vh;
     position: fixed;
     width: 100%;
+    transform: scale(1.2);
     transform: translateY(30vh);
     filter: saturate(200%);
     transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1); }
@@ -208,9 +206,19 @@ html {
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
         animation-timing-function: linear; }
+  #page #acceuil {
+    /*		.content{
+			&-wrapper{
+				.content-subtitle{
+					
+					
+				}
+			}
+		}
+*/ }
   #page #about .content-subtitle {
     padding: 50px;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 80%;
     font-size: 1.5rem;
     color: #303030;
@@ -331,21 +339,17 @@ html {
     display: none; } }
 
 @media screen and (max-width: 1250px) {
-  #page {
-    /*		.row{
-			margin-left: -1vw;
-		}*/ }
-    #page .content-wrapper {
-      font-size: 2.2vw; }
-    #page #about .content-title {
-      font-size: 5vh; }
-    #page #about .content-subtitle {
-      padding: 20px;
-      width: 100%; }
-      #page #about .content-subtitle .wrapper-images {
-        padding: 10px 5px 5px 0px; }
-        #page #about .content-subtitle .wrapper-images article {
-          padding-left: 5px; } }
+  #page .content-wrapper {
+    font-size: 2.2vw; }
+  #page #about .content-title {
+    font-size: 5vh; }
+  #page #about .content-subtitle {
+    padding: 20px;
+    width: 100%; }
+    #page #about .content-subtitle .wrapper-images {
+      padding: 10px 5px 5px 0px; }
+      #page #about .content-subtitle .wrapper-images article {
+        padding-left: 5px; } }
 
 @media screen and (max-width: 640px) {
   .header {
@@ -355,7 +359,7 @@ html {
       right: 2%; }
       .header-links ul {
         font-size: 1.7rem; }
-  .footer {
+  .footer div[class] {
     display: none; }
   #page .scrolldown svg {
     width: 100px; }

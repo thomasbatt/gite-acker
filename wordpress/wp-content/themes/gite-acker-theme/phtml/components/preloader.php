@@ -1,7 +1,7 @@
 <style>
 	@keyframes drawVectorLoader{
 		to{
-			stroke-dashoffset: 150;
+			stroke-dashoffset: 300;
 		}
 	}
 	header, #page, footer{
@@ -9,11 +9,11 @@
 		opacity: 0;
 	}
 	.preloader{
-		display: block;
-		opacity: 1;
 		z-index: 0;
+		display: block;
 		position : fixed;
 		top: 40%;
+		opacity: 1;
 		width: 100%;
 		height: 100%;
 		text-align: center;
@@ -24,11 +24,11 @@
 		height: 120px;
 	}
 	.preloader svg path{
-		stroke-width: 3px;
+		stroke-width: 2.5px;
 		stroke: #831912;
-		stroke-dasharray: 110;
+		stroke-dasharray: 150;
 		animation-name: drawVectorLoader;
-		animation-duration: 0.7s;
+		animation-duration: 3s;
 		animation-iteration-count: infinite;
 		animation-fill-mode: forwards;
 		animation-timing-function: linear;

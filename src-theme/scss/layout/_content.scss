@@ -16,6 +16,7 @@
 		height: 100vh + $parallax-offset;
 		position: fixed;
 		width: 100%;
+			transform: scale(1.2);
 		transform: translateY($parallax-offset);
 		filter: saturate(200%);
 		@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
@@ -42,7 +43,7 @@
 		}
 		&:nth-child(3) {
 			background-image: url(../img/contact_compress.jpg);
-	  }
+		}
 	}
 
 	/* Set stacking context of slides */
@@ -51,9 +52,6 @@
 			z-index: ($slide-number + 1) - $i; 
 		}
 	}
-/*	.row{
-		margin-left: -30px;
-	}*/
 	.content {
 		&-wrapper {
 			font-size: 3vh;
@@ -86,30 +84,30 @@
 			}
 		}
 	}
-	// .scrolldown{
-	// 	position: relative;
-	// 	bottom: 5vh;
-	// 	text-align: center;
-	// 	svg{
-	// 		width: 40px;
-	// 		path[id=roll]{
-	// 			animation-name: moveRoll;
-	// 			animation-duration: 1s;
-	// 			animation-iteration-count: infinite;
-	// 			animation-fill-mode: forwards;
-	// 			animation-timing-function: linear;
-	// 		}
-	// 		polygon[id=arrow]{
-	// 			animation-name: moveRoll;
-	// 			animation-duration: 1s;
-	// 			animation-iteration-count: infinite;
-	// 			animation-fill-mode: forwards;
-	// 			animation-timing-function: linear;
-	// 		}
-	// 	}
-	// }
+	.scrolldown{
+		position: relative;
+		bottom: 5vh;
+		text-align: center;
+		svg{
+			width: 40px;
+			path[id=roll]{
+				animation-name: moveRoll;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+			}
+			polygon[id=arrow]{
+				animation-name: moveRoll;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+			}
+		}
+	}
 	#acceuil{
-		.content{
+/*		.content{
 			&-wrapper{
 				.content-subtitle{
 					
@@ -117,12 +115,13 @@
 				}
 			}
 		}
+*/
 	}
 	#about{
 		.content{
 			&-subtitle{
 				padding: 50px;
-				margin: 0 auto;
+				margin: 20px auto;
 				width: 80%;
 				font-size: 1.5rem;
 				color: #303030;
@@ -162,9 +161,6 @@
 					position: absolute;
 					right: $page-padding;
 					top: -90px;
-				}
-				p.resa{
-					font-size: 1.5rem;
 				}
 			}
 		}

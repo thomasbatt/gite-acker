@@ -151,21 +151,17 @@ html {
     display: none; } }
 
 @media screen and (max-width: 1250px) {
-  #page {
-    /*		.row{
-			margin-left: -1vw;
-		}*/ }
-    #page .content-wrapper {
-      font-size: 2.2vw; }
-    #page #about .content-title {
-      font-size: 5vh; }
-    #page #about .content-subtitle {
-      padding: 20px;
-      width: 100%; }
-      #page #about .content-subtitle .wrapper-images {
-        padding: 10px 5px 5px 0px; }
-        #page #about .content-subtitle .wrapper-images article {
-          padding-left: 5px; } }
+  #page .content-wrapper {
+    font-size: 2.2vw; }
+  #page #about .content-title {
+    font-size: 5vh; }
+  #page #about .content-subtitle {
+    padding: 20px;
+    width: 100%; }
+    #page #about .content-subtitle .wrapper-images {
+      padding: 10px 5px 5px 0px; }
+      #page #about .content-subtitle .wrapper-images article {
+        padding-left: 5px; } }
 
 @media screen and (max-width: 640px) {
   .header {
@@ -175,7 +171,7 @@ html {
       right: 2%; }
       .header-links ul {
         font-size: 1.7rem; }
-  .footer {
+  .footer div[class] {
     display: none; }
   #page .scrolldown svg {
     width: 100px; }
@@ -202,8 +198,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b647f2b03c8'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b647f2b03c8'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b64c8400798'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b64c8400798'/>
 	</head>
 
 	<body>
@@ -214,6 +210,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b647f2b03c8'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b647f2b03c8'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b64c8400798'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b64c8400798'></script>
 </html>

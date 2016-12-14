@@ -41,10 +41,10 @@ $('document').ready(function(){
         var direction = 1;
         if( page=='prev')
           direction = -1;
-        console.log('click'+evt);
-        evt.detail = direction;
+        // console.log(evt);
+        evt.detail = direction*3;
         evt.deltaY = -direction;
-        evt.wheelDelta = direction;
+        evt.wheelDelta = -direction*120;
         parallaxScroll(evt);
         // var speed = 1500; // Durée de l'animation (en ms)
         // $('html, body').animate( { scrollTop: $(page).offset().top }, speed , "easeInOutCubic" ); // Go

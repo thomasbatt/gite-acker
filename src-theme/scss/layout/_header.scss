@@ -10,7 +10,7 @@
 		content: "";
 		clear: both;
 	}
-	.header-logo{
+	&-logo{
 		a{
 			position: relative;
 			top: -20px;
@@ -23,14 +23,14 @@
 				stroke-dasharray: 1000;
 				stroke-dashoffset: 1000;
 				animation-name: drawVectorHeader;
-				animation-duration: 3s;
+				animation-duration: 5s;
 				animation-iteration-count: 1;
 				animation-fill-mode: forwards;
 				animation-timing-function: linear;
 			}
 		}
 	}
-	.header-links{
+	&-links{
 		display: inline-block;
 		position: absolute;
 		right: $header-padding;

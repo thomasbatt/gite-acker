@@ -27,14 +27,14 @@ html {
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
-    html body .transition {
+    html body .transition-fast {
       transition: all 0.5s; }
+    html body .transition-slow {
+      transition: all 3s; }
     html body .display {
-      display: block !important; }
+      opacity: 1 !important; }
     html body .no-display {
-      opacity: 0 !important;
-      transition: 1s opacity;
-      display: none !important; }
+      opacity: 0 !important; }
 
 .header {
   z-index: 40;
@@ -46,11 +46,11 @@ html {
   .header:after {
     content: "";
     clear: both; }
-  .header .header-logo a {
+  .header-logo a {
     position: relative;
     top: -20px;
     display: inline-block; }
-    .header .header-logo a svg {
+    .header-logo a svg {
       width: 220px;
       height: 180px;
       cursor: pointer;
@@ -58,24 +58,24 @@ html {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation-name: drawVectorHeader;
-      animation-duration: 3s;
+      animation-duration: 5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       animation-timing-function: linear; }
-  .header .header-links {
+  .header-links {
     display: inline-block;
     position: absolute;
     right: 10%;
     top: 25%; }
-    .header .header-links ul {
+    .header-links ul {
       display: block;
       list-style: none;
       font-size: 2rem;
       padding: 0;
       margin: 0; }
-      .header .header-links ul li {
+      .header-links ul li {
         display: inline-block; }
-        .header .header-links ul li a {
+        .header-links ul li a {
           display: inline-block;
           margin: 10px;
           padding: 8px 20px;
@@ -84,7 +84,7 @@ html {
           border: 2px solid #FFF;
           border-radius: 3px;
           transition-duration: 0.2s; }
-          .header .header-links ul li a:hover {
+          .header-links ul li a:hover {
             transform: scale(1.1); }
 
 @keyframes drawVectorHeader {
@@ -118,58 +118,81 @@ html {
     fill-opacity: 0;
     transform: translateY(10px); } }
 
-@media screen and (max-width: 1030px) {
-  #page .content-wrapper {
-    font-size: 2vw; }
-  #page #about .content-title {
-    font-size: 5vh; }
+@media screen and (max-width: 430px) {
   #page #about .content-subtitle {
-    padding: 20px;
-    width: 100%; }
+    font-size: 1.4rem; }
     #page #about .content-subtitle .wrapper-images {
-      padding: 10px 5px 5px 0px; }
-      #page #about .content-subtitle .wrapper-images article {
-        padding-left: 5px; } }
+      display: none; } }
+
+@media (max-width: 550px) {
+  .header {
+    padding: 0%; }
+    .header-logo a svg {
+      width: 170px;
+      height: 140px; }
+    .header-links {
+      top: 20%;
+      right: 2%; }
+  #page .scrolldown {
+    bottom: 15vh; }
+  #page #about .content-subtitle {
+    font-size: 1.4rem; }
+    #page #about .content-subtitle .wrapper-images {
+      padding: 10px !important; }
+      #page #about .content-subtitle .wrapper-images article:nth-child(n+4) {
+        display: none; } }
+
+@media screen and (max-width: 950px) {
+  #page #about .content-subtitle {
+    font-size: 1.4rem; }
+    #page #about .content-subtitle .wrapper-images article:nth-child(n+5) {
+      display: none; }
+  #page #contact .content-contact .img {
+    display: none; } }
+
+@media screen and (max-width: 1250px) {
+  #page {
+    /*		.row{
+			margin-left: -1vw;
+		}*/ }
+    #page .content-wrapper {
+      font-size: 2.2vw; }
+    #page #about .content-title {
+      font-size: 5vh; }
+    #page #about .content-subtitle {
+      padding: 20px;
+      width: 100%; }
+      #page #about .content-subtitle .wrapper-images {
+        padding: 10px 5px 5px 0px; }
+        #page #about .content-subtitle .wrapper-images article {
+          padding-left: 5px; } }
 
 @media screen and (max-width: 640px) {
   .header {
     padding: 0%; }
-    .header .header-links {
-      top: 20%;
+    .header-links {
+      top: 10%;
       right: 2%; }
+      .header-links ul {
+        font-size: 1.7rem; }
   .footer {
-    display: none;
-    /*section{
-			font-size: 1.5rem;
-			.footer{
-				&-meta-links{
-					width: 75%;
-				}
-				&-admin-links{
-					width: 25%;
-				}
-			}
-		}*/ }
+    display: none; }
+  #page .scrolldown svg {
+    width: 100px; }
+    #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+      display: none; }
   #page .content-wrapper {
     font-size: 3.5vw; }
-  #page .scrolldown {
-    bottom: 55px; }
-    #page .scrolldown svg {
-      width: 100px; }
-      #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
-        display: none; }
   #page #acceuil .content-wrapper .content-subtitle {
     font-size: 3vh !important; }
   #page #about .content-title {
     font-size: 4vh; }
   #page #about .content-subtitle {
-    padding: 30px;
+    padding: 15px;
     width: 100%; }
-    #page #about .content-subtitle .wrapper-images {
-      padding: 10px 30px; }
-      #page #about .content-subtitle .wrapper-images article img {
-        width: 130px;
-        height: 130px; }
+    #page #about .content-subtitle .wrapper-images article img {
+      width: 130px;
+      height: 130px; }
   #page #contact .content-contact {
     padding: 0 5%; }
     #page #contact .content-contact p {
@@ -179,8 +202,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b61d9fde200'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b61d9fde200'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b647f2b03c8'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b647f2b03c8'/>
 	</head>
 
 	<body>
@@ -191,6 +214,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b61d9fde200'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b61d9fde200'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b647f2b03c8'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b647f2b03c8'></script>
 </html>

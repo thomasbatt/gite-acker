@@ -1,4 +1,9 @@
-<style>	
+<style>
+	@keyframes drawVectorLoader{
+		to{
+			stroke-dashoffset: 150;
+		}
+	}
 	header, #page, footer{
 		display: none;
 		opacity: 0;
@@ -8,51 +13,52 @@
 		opacity: 1 ;
 		z-index: 0;
 		position : fixed;
-	    width: 100%;
-	    height: 100%;
+		top: 40%;
+		width: 100%;
+		height: 100%;
+		text-align: center;
 	}
-	.preloader svg, .preloader img{
-		position: absolute;
-	  	width: 100px;
-	  	height: 100px;
-		left: 50%;
-		top: 50%;
-	  	margin: 20px;
-	  	display:inline-block;
-		transform: translateX(-65px);
+	.preloader svg{
+		display: inline-block;
+		width: 120px;
+		height: 120px;
+	}
+	.preloader svg path{
+		stroke-width: 3px;
+		/*stroke: rgba(92, 164, 255, 0.5);*/
+		stroke: #831912;
+		stroke-dasharray: 110;
+		animation-name: drawVectorLoader;
+		animation-duration: 0.7s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
 	}
 </style>
+
 <div class="preloader">
-	<img src="../src-theme/img/logo_brun.png" alt="">
-	<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-	    <defs>
-	        <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
-	            <stop stop-color="#974908" stop-opacity="0" offset="0%"/>
-	            <stop stop-color="#974908" stop-opacity=".631" offset="63.146%"/>
-	            <stop stop-color="#974908" offset="100%"/>
-	        </linearGradient>
-	    </defs>
-	    <g fill="none" fill-rule="evenodd">
-	        <g transform="translate(1 1)">
-	            <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
-	                <animateTransform
-	                    attributeName="transform"
-	                    type="rotate"
-	                    from="0 18 18"
-	                    to="360 18 18"
-	                    dur="0.9s"
-	                    repeatCount="indefinite" />
-	            </path>
-	            <circle fill="#fff" cx="36" cy="18" r="1">
-	                <animateTransform
-	                    attributeName="transform"
-	                    type="rotate"
-	                    from="0 18 18"
-	                    to="360 18 18"
-	                    dur="0.9s"
-	                    repeatCount="indefinite" />
-	            </circle>
-	        </g>
-	    </g>
+	<svg version="1.1" id="loader-leaf" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+		<g>
+			<path fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" d="M4.593,86.237c-0.126-0.367-0.26-0.732-0.378-1.102
+				c-0.352-1.106,0.019-1.835,1.147-2.153c0.19-0.054,0.389-0.128,0.579-0.116c5.886,0.353,10.646-2.487,15.092-5.725
+				c4.429-3.224,8.515-6.919,12.744-10.417c0.25-0.207,0.431-0.498,0.618-0.719c-1.937-0.889-3.897-1.587-5.65-2.633
+				c-3.844-2.292-6.581-5.543-8.342-9.734c-1.214-2.888-2.916-5.57-4.376-8.299c0.213,0.027,0.769,0.134,1.33,0.164
+				c3.331,0.178,6.457-0.464,8.317-3.469c0.825-1.333,1.077-3.149,1.169-4.769c0.085-1.499-0.29-3.053-0.638-4.541
+				c-1.291-5.515,0.269-10.087,4.502-13.745c1.897-1.639,3.939-3.11,6.161-4.85c0.261,1.186,0.435,2.025,0.63,2.859
+				c0.61,2.613,1.644,4.939,3.939,6.584c3.155,2.261,4.281,5.699,5.108,9.273c0.174,0.751,0.335,1.504,0.502,2.257
+				c0.126,0.005,0.253,0.009,0.379,0.014c0.12-0.739,0.202-1.488,0.368-2.217c0.844-3.707,1.393-7.519,2.641-11.086
+				c1.912-5.468,6.327-7.281,11.78-5.335c0.093,0.033,0.198,0.043,0.282,0.092c6.966,4.031,13.839,2.311,20.493-0.67
+				c4.358-1.953,8.435-4.533,12.706-6.87c-0.311,0.551-0.659,1.135-0.977,1.735c-2.377,4.492-5.051,8.86-7.01,13.528
+				c-1.236,2.944-1.597,6.317-1.958,9.541c-0.177,1.583,0.426,3.299,0.885,4.895c0.421,1.464,1.192,2.824,1.689,4.271
+				c1.606,4.678-0.109,9.051-4.731,10.838c-3.382,1.307-7.033,1.929-10.579,2.794c-1.191,0.291-2.429,0.389-3.695,0.864
+				c0.528,0.132,1.051,0.294,1.585,0.393c4.468,0.824,8.31,2.568,11.178,6.377c0.939,1.248,2.857,1.835,4.419,2.511
+				c1.114,0.482,2.382,0.608,3.816,0.948c-1.358,1.952-2.658,3.822-3.959,5.691c-0.771,0.771-1.541,1.541-2.312,2.312
+				c-0.181,0.069-0.4,0.095-0.539,0.214c-3.179,2.719-6.833,3.343-10.858,2.601c-2.039-0.376-4.106-0.728-6.171-0.807
+				c-2.819-0.108-4.933,1.265-6.263,3.754c-1.061,1.986-1.328,4.125-1.048,6.345c0.045,0.355,0.057,0.714,0.062,0.767
+				c-2.549-1.397-5.033-3.074-7.749-4.182c-6.44-2.629-10.575-7.267-12.872-13.709c-0.109-0.307-0.285-0.59-0.487-1.001
+				c-1.734,1.513-3.343,2.961-4.997,4.354c-6.262,5.273-12.846,10.051-20.257,13.643c-2.374,1.151-4.532,1.613-6.803,0.004
+				C5.574,87.218,5.084,86.728,4.593,86.237z"/>
+		</g>
 	</svg>
 </div>

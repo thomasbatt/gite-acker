@@ -11,6 +11,8 @@ html {
     overflow: hidden;
     margin: 0;
     font-family: 'Rubik'; }
+    html body a:hover {
+      color: #004988; }
     html body header, html body #page, html body footer {
       display: block;
       opacity: 0; }
@@ -29,23 +31,26 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1% 10%;
-  /*background-color: #efefef;*/
-  /*	@keyframes ul {
-	 	0% { 
-	    width:0;
-	  }
-	  100% { 
-	    width:calc(100% - 23px);
-	  }
-	}*/ }
+  padding: 1% 10%; }
   .header:after {
     content: "";
     clear: both; }
   .header .header-logo a {
     position: relative;
-    top: -10px;
+    top: -20px;
     display: inline-block; }
+    .header .header-logo a svg {
+      width: 220px;
+      height: 180px;
+      cursor: pointer;
+      stroke: #FFF;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation-name: drawVectorHeader;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear; }
   .header .header-links {
     display: inline-block;
     position: absolute;
@@ -67,27 +72,14 @@ html {
           color: #fff;
           border: 2px solid #FFF;
           border-radius: 3px;
-          transition-duration: 0.2s;
-          /*					$:hover ~ span {
-						animation:ul 0.3s ease-out;
-						background:#fff;
-					}*/ }
+          transition-duration: 0.2s; }
           .header .header-links ul li a:hover {
             transform: scale(1.1); }
-        .header .header-links ul li span {
-          display: block;
-          /*	width:calc(100% - 23px);*/
-          height: 2px;
-          background: #5eb1ff;
-          position: absolute;
-          left: 10px;
-          bottom: 2px; }
 
-@keyframes drawVectorHome {
+@keyframes drawVectorHeader {
   0% {
     fill-opacity: 0; }
   70% {
-    /*stroke-width: 2;*/
     fill-opacity: 0;
     stroke-dasharray: 0;
     stroke-dashoffset: 0; }
@@ -95,3 +87,81 @@ html {
     fill-opacity: 1;
     stroke-dasharray: 0;
     stroke-dashoffset: 0; } }
+
+@keyframes drawVectorHome {
+  0% {
+    fill-opacity: 0; }
+  70% {
+    fill-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; }
+  100% {
+    fill-opacity: 1;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0; } }
+
+@keyframes moveRoll {
+  0% {
+    fill-opacity: 1; }
+  100% {
+    fill-opacity: 0;
+    transform: translateY(10px); } }
+
+@media screen and (max-width: 1030px) {
+  #page .content-wrapper {
+    font-size: 2vw; }
+  #page #about .content-title {
+    font-size: 5vh; }
+  #page #about .content-subtitle {
+    padding: 20px;
+    width: 100%; }
+    #page #about .content-subtitle .wrapper-images {
+      padding: 10px 5px 5px 0px; }
+      #page #about .content-subtitle .wrapper-images article {
+        padding-left: 5px; } }
+
+@media screen and (max-width: 640px) {
+  .header {
+    padding: 0%; }
+    .header .header-links {
+      top: 20%;
+      right: 2%; }
+  .footer {
+    display: none;
+    /*section{
+			font-size: 1.5rem;
+			.footer{
+				&-meta-links{
+					width: 75%;
+				}
+				&-admin-links{
+					width: 25%;
+				}
+			}
+		}*/ }
+  #page .content-wrapper {
+    font-size: 3.5vw; }
+  #page .scrolldown {
+    bottom: 55px; }
+    #page .scrolldown svg {
+      width: 100px; }
+      #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+        display: none; }
+  #page #acceuil .content-wrapper .content-subtitle {
+    font-size: 3vh !important; }
+  #page #about .content-title {
+    font-size: 4vh; }
+  #page #about .content-subtitle {
+    padding: 30px;
+    width: 100%; }
+    #page #about .content-subtitle .wrapper-images {
+      padding: 10px 30px; }
+      #page #about .content-subtitle .wrapper-images article img {
+        width: 130px;
+        height: 130px; }
+  #page #contact .content-contact {
+    padding: 0 5%; }
+    #page #contact .content-contact p {
+      font-size: 3vh; }
+    #page #contact .content-contact .img {
+      display: none; } }

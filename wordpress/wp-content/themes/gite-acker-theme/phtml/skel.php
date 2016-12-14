@@ -58,7 +58,7 @@ html {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation-name: drawVectorHeader;
-      animation-duration: 3s;
+      animation-duration: 5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       animation-timing-function: linear; }
@@ -124,7 +124,7 @@ html {
     #page #about .content-subtitle .wrapper-images {
       display: none; } }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .header {
     padding: 0%; }
     .header-logo a svg {
@@ -142,20 +142,30 @@ html {
       #page #about .content-subtitle .wrapper-images article:nth-child(n+4) {
         display: none; } }
 
-/*@media screen and (max-width: 720px) {
-}*/
-@media screen and (max-width: 1030px) {
-  #page .content-wrapper {
-    font-size: 2vw; }
-  #page #about .content-title {
-    font-size: 5vh; }
+@media screen and (max-width: 950px) {
   #page #about .content-subtitle {
-    padding: 20px;
-    width: 100%; }
-    #page #about .content-subtitle .wrapper-images {
-      padding: 10px 5px 5px 0px; }
-      #page #about .content-subtitle .wrapper-images article {
-        padding-left: 5px; } }
+    font-size: 1.4rem; }
+    #page #about .content-subtitle .wrapper-images article:nth-child(n+5) {
+      display: none; }
+  #page #contact .content-contact .img {
+    display: none; } }
+
+@media screen and (max-width: 1250px) {
+  #page {
+    /*		.row{
+			margin-left: -1vw;
+		}*/ }
+    #page .content-wrapper {
+      font-size: 2.2vw; }
+    #page #about .content-title {
+      font-size: 5vh; }
+    #page #about .content-subtitle {
+      padding: 20px;
+      width: 100%; }
+      #page #about .content-subtitle .wrapper-images {
+        padding: 10px 5px 5px 0px; }
+        #page #about .content-subtitle .wrapper-images article {
+          padding-left: 5px; } }
 
 @media screen and (max-width: 640px) {
   .header {
@@ -167,12 +177,10 @@ html {
         font-size: 1.7rem; }
   .footer {
     display: none; }
-  #page .scrolldown {
-    /*			bottom: 55px;*/ }
-    #page .scrolldown svg {
-      width: 100px; }
-      #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
-        display: none; }
+  #page .scrolldown svg {
+    width: 100px; }
+    #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+      display: none; }
   #page .content-wrapper {
     font-size: 3.5vw; }
   #page #acceuil .content-wrapper .content-subtitle {
@@ -180,13 +188,11 @@ html {
   #page #about .content-title {
     font-size: 4vh; }
   #page #about .content-subtitle {
-    padding: 30px;
+    padding: 15px;
     width: 100%; }
-    #page #about .content-subtitle .wrapper-images {
-      padding: 10px 30px; }
-      #page #about .content-subtitle .wrapper-images article img {
-        width: 130px;
-        height: 130px; }
+    #page #about .content-subtitle .wrapper-images article img {
+      width: 130px;
+      height: 130px; }
   #page #contact .content-contact {
     padding: 0 5%; }
     #page #contact .content-contact p {
@@ -196,8 +202,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b5118c47488'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b5118c47488'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b6182103d40'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b6182103d40'/>
 	</head>
 
 	<body>
@@ -208,6 +214,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b5118c47488'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b5118c47488'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b6182103d40'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b6182103d40'></script>
 </html>

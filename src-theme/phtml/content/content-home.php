@@ -102,7 +102,7 @@
 				<p class="content-title"><?php echo get_settings('giteacker_description_title'); ?></p>
 				<div class="content-subtitle text-justify">
 					<p><?php echo get_settings('giteacker_description_content'); ?></p>
-					<div class="wrapper-images row ">
+					<div class="wrapper-images">
 						<?php
 							$actus = get_posts(array(
 								"category"=> 1,
@@ -115,7 +115,7 @@
 								setup_postdata($post); 
 							?>
 
-							<article class="col-xs-4 col-sm-2 col-md-2">
+							<article>
 								<div class="post">
 									<div class="img-wrapper">
 										<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>

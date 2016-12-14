@@ -12,7 +12,7 @@
 		}
 	}
 }
-@media (max-width: 500px){
+@media (max-width: 550px){
 	.header{
 		padding: 0%;
 		&-logo{
@@ -47,13 +47,39 @@
 		}
 	}
 }
-/*@media screen and (max-width: 720px) {
-}*/
-@media screen and (max-width:  1030px) {
+@media screen and (max-width: 950px) {
 	#page{
+		#about{
+			.content{
+				&-subtitle{
+					font-size: 1.4rem;
+					.wrapper-images{
+						article:nth-child(n+5){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		#contact{
+			.content{
+				&-contact{
+					.img{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width:  1250px) {
+	#page{
+/*		.row{
+			margin-left: -1vw;
+		}*/
 		.content {
 			&-wrapper {
-				font-size: 2vw;
+				font-size: 2.2vw;
 			}
 		}
 		#about{
@@ -92,7 +118,6 @@
 	}
 	#page{
 		.scrolldown{
-/*			bottom: 55px;*/
 			svg{
 				width: 100px;
 				path[id=roll], path{
@@ -118,10 +143,9 @@
 					font-size: 4vh;
 				}
 				&-subtitle{
-					padding: 30px;
+					padding: 15px;
 					width: 100%;
 					.wrapper-images{
-						padding: 10px 30px;
 						article{
 							img{
 								width: 130px;

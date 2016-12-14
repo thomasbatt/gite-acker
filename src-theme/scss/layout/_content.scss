@@ -51,17 +51,19 @@
 			z-index: ($slide-number + 1) - $i; 
 		}
 	}
-
+/*	.row{
+		margin-left: -30px;
+	}*/
 	.content {
 		&-wrapper {
-			font-size: 1.5vw;
+			font-size: 3vh;
 			height: 100vh;
 			display: flex;
 			justify-content: center;
 			text-align: center;
 			flex-flow: column nowrap;
 			color: #fff;
-			text-transform: uppercase;
+			/*text-transform: lowercase;*/
 			transform: translateY($content-offset);
 			will-change: transform;
 			backface-visibility: hidden;
@@ -69,14 +71,14 @@
 		}
 		&-title{
 			font-size: 12vh;
-			line-height: 1.4;
+			line-height: 1;
 			svg{
 				path{
 					stroke: #fff;
 					stroke-dasharray: 1000;
 					stroke-dashoffset: 1000;
 					animation-name: drawVectorHome;
-					animation-duration: 3s;
+					animation-duration: 5s;
 					animation-iteration-count: 1;
 					animation-fill-mode: forwards;
 					animation-timing-function: linear;
@@ -107,7 +109,14 @@
 		}
 	}
 	#acceuil{
-		
+		.content{
+			&-wrapper{
+				.content-subtitle{
+					
+					
+				}
+			}
+		}
 	}
 	#about{
 		.content{
@@ -119,7 +128,9 @@
 				color: #303030;
 				background-color: rgba(255,255,255,0.8);
 				.wrapper-images{
-					padding-top: 10px
+					display: flex;
+					justify-content: space-between;
+					padding-top: 25px
 				}
 			}
 		}
@@ -137,7 +148,10 @@
 				padding-bottom: 10px;
 				background: rgba(255,255,255, 0.8);
 				text-align: left;
-				color: #828282;
+				color: #5A5A5A;
+				p:nth-child(6){
+					font-size: 3vh;
+				}
 				p{
 					margin-bottom: 5px;
 				}

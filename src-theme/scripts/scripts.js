@@ -37,11 +37,11 @@ $('document').ready(function(){
 // ----------------------------SMOOTH SCROLL--------------------------------
     
     $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var page = $(this).attr('href'); // Page cible
+        var page = $(this).attr('target'); // Page cible
         var direction = 1;
-        if( page=='#about')
+        if( page=='prev')
           direction = -1;
-
+        console.log('click'+evt);
         evt.detail = direction;
         evt.deltaY = -direction;
         evt.wheelDelta = direction;

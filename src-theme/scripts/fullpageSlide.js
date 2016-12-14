@@ -14,15 +14,15 @@ function parallaxScroll(evt) {
   if (isFirefox) {
     //Set delta for Firefox
     delta = evt.detail * (-120);
-    console.log(evt.detail);
+    // console.log(evt.detail);
   } else if (isIe) {
     //Set delta for IE
     delta = -evt.deltaY;
-    console.log(evt.deltaY);
+    // console.log(evt.deltaY);
   } else {
     //Set delta for all other browsers
     delta = evt.wheelDelta;
-    console.log(evt.wheelDelta);
+    // console.log(evt.wheelDelta);
   }
     // console.log('delta', delta);
 

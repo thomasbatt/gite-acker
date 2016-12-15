@@ -61,7 +61,7 @@ html {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation-name: drawVectorHeader;
-      animation-duration: 5s;
+      animation-duration: 3.5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       animation-timing-function: linear; }
@@ -184,28 +184,10 @@ html {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation-name: drawVectorHome;
-      animation-duration: 5s;
+      animation-duration: 3.5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       animation-timing-function: linear; }
-  #page .scrolldown {
-    position: relative;
-    bottom: 5vh;
-    text-align: center; }
-    #page .scrolldown svg {
-      width: 40px; }
-      #page .scrolldown svg path[id=roll] {
-        animation-name: moveRoll;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
-        animation-timing-function: linear; }
-      #page .scrolldown svg polygon[id=arrow] {
-        animation-name: moveRoll;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
-        animation-timing-function: linear; }
   #page #acceuil {
     /*		.content{
 			&-wrapper{
@@ -279,25 +261,15 @@ html {
     width: 100%;
     margin: 0;
     color: #fff; }
-    .footer section .footer-meta-links {
-      display: inline-block;
-      float: left;
-      padding: 0;
-      width: 50%; }
-    .footer section .footer-admin-links {
-      display: inline-block;
-      float: right;
-      padding: 0;
-      text-align: right;
-      width: 50%; }
     .footer section .footer-scrolldown-arrow {
       position: fixed;
       bottom: 0px;
       left: 50%; }
       .footer section .footer-scrolldown-arrow svg {
-        transform: translate(-20px);
+        position: relative;
+        bottom: 0vh;
         width: 40px;
-        height: 80px; }
+        height: 100%; }
         .footer section .footer-scrolldown-arrow svg path[id=roll] {
           animation-name: moveRoll;
           animation-duration: 1s;
@@ -310,15 +282,23 @@ html {
           animation-iteration-count: infinite;
           animation-fill-mode: forwards;
           animation-timing-function: linear; }
+    .footer section .footer-meta-links {
+      display: inline-block;
+      float: left;
+      padding: 0;
+      width: 50%; }
+    .footer section .footer-admin-links {
+      display: inline-block;
+      float: right;
+      padding: 0;
+      text-align: right;
+      width: 50%; }
     .footer section:after {
       clear: both;
       content: ""; }
     .footer section a {
       color: rgba(94, 177, 255, 0.9);
-      text-decoration: none;
-      /*			&:hover{
-				color: $blue-base;
-		}*/ }
+      text-decoration: none; }
 
 @keyframes scrolldown {
   from {
@@ -341,7 +321,7 @@ html {
     .header-links {
       top: 20%;
       right: 2%; }
-  #page .scrolldown {
+  .footer svg {
     bottom: 15vh; }
   #page #about .content-subtitle {
     font-size: 1.4rem; }
@@ -379,27 +359,39 @@ html {
       right: 2%; }
       .header-links ul {
         font-size: 1.7rem; }
-  .footer div[class] {
+  .footer div[class*="links"] {
     display: none; }
-  #page .scrolldown svg {
-    width: 100px; }
-    #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+  .footer-scrolldown-arrow svg {
+    width: 160px !important;
+    left: -9vh;
+    bottom: 3vh !important; }
+    .footer-scrolldown-arrow svg path[id=roll], .footer-scrolldown-arrow svg path {
       display: none; }
-  #page .content-wrapper {
-    font-size: 3.5vw; }
-  #page #acceuil .content-wrapper .content-subtitle {
-    font-size: 3vh !important; }
-  #page #about .content-title {
-    font-size: 4vh; }
-  #page #about .content-subtitle {
-    padding: 15px;
-    width: 100%; }
-    #page #about .content-subtitle .wrapper-images article img {
-      width: 130px;
-      height: 130px; }
-  #page #contact .content-contact {
-    padding: 0 5%; }
-    #page #contact .content-contact p {
+  #page {
+    /*		#acceuil{
+			.content{
+
+			&-wrapper{
+					font-size: 3.1vh;
+				.content-subtitle{
+				}
+			}
+			}
+		}*/ }
+    #page .content-wrapper {
       font-size: 3vh; }
-    #page #contact .content-contact .img {
-      display: none; } }
+    #page #about .content-title {
+      font-size: 4vh; }
+    #page #about .content-subtitle {
+      font-size: 2.2rem;
+      padding: 30px;
+      width: 100%; }
+      #page #about .content-subtitle .wrapper-images article img {
+        width: 130px;
+        height: 130px; }
+    #page #contact .content-contact {
+      padding: 0 5%; }
+      #page #contact .content-contact p {
+        font-size: 3vh; }
+      #page #contact .content-contact .img {
+        display: none; } }

@@ -3,7 +3,9 @@
 		<section id="accueil" class="background">
 			<div class="content-wrapper">
 				<p class="content-title">
+<!-- LOGO SVG -->
 					<?php include get_template_directory() . "/phtml/components/title-svg.php"; ?>
+<!-- LOGO SVG -->
 				</p>
 				<p class="content-subtitle"><?php bloginfo('description'); ?></p>
 			</div>

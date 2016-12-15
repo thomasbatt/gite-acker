@@ -12,27 +12,15 @@
 		margin: 0;
 		color: #fff;
 		.footer{
-			&-meta-links {
-				display: inline-block;
-			    float: left;
-			    padding: 0;
-			    width: 50%;
-			}
-			&-admin-links {
-				display: inline-block;
-			    float: right;
-			    padding: 0;
-			    text-align: right;
-			    width: 50%;
-			}
 			&-scrolldown-arrow{
 				position: fixed;
 				bottom: 0px;
 				left: 50%;
 				svg{
-					transform: translate(-20px); 
+				position: relative;
+				bottom: 0vh;
 					width: 40px;
-					height: 80px;
+					height: 100%;
 					path[id=roll]{
 						animation-name: moveRoll;
 						animation-duration: 1s;
@@ -49,6 +37,19 @@
 					}
 				}
 			}
+			&-meta-links {
+				display: inline-block;
+			    float: left;
+			    padding: 0;
+			    width: 50%;
+			}
+			&-admin-links {
+				display: inline-block;
+			    float: right;
+			    padding: 0;
+			    text-align: right;
+			    width: 50%;
+			}
 		}
 		&:after{
 			clear: both; 
@@ -57,18 +58,14 @@
 		a{
 			color: $blue-darker;
 			text-decoration: none;
-/*			&:hover{
-				color: $blue-base;
-		}*/
 	  }
 	}
-
 	@keyframes scrolldown {
-    from {
-        transform: translateY(0);
-    }
-    to   { 
-        transform: translateY(-10px);
-    }
-}
+	    from {
+	        transform: translateY(0);
+	    }
+	    to   { 
+	        transform: translateY(-10px);
+	    }
+	}
 }

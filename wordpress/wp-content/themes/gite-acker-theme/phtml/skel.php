@@ -58,7 +58,7 @@ html {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation-name: drawVectorHeader;
-      animation-duration: 5s;
+      animation-duration: 3.5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       animation-timing-function: linear; }
@@ -133,7 +133,7 @@ html {
     .header-links {
       top: 20%;
       right: 2%; }
-  #page .scrolldown {
+  .footer svg {
     bottom: 15vh; }
   #page #about .content-subtitle {
     font-size: 1.4rem; }
@@ -171,35 +171,47 @@ html {
       right: 2%; }
       .header-links ul {
         font-size: 1.7rem; }
-  .footer div[class] {
+  .footer div[class*="links"] {
     display: none; }
-  #page .scrolldown svg {
-    width: 100px; }
-    #page .scrolldown svg path[id=roll], #page .scrolldown svg path {
+  .footer-scrolldown-arrow svg {
+    width: 160px !important;
+    left: -9vh;
+    bottom: 3vh !important; }
+    .footer-scrolldown-arrow svg path[id=roll], .footer-scrolldown-arrow svg path {
       display: none; }
-  #page .content-wrapper {
-    font-size: 3.5vw; }
-  #page #acceuil .content-wrapper .content-subtitle {
-    font-size: 3vh !important; }
-  #page #about .content-title {
-    font-size: 4vh; }
-  #page #about .content-subtitle {
-    padding: 15px;
-    width: 100%; }
-    #page #about .content-subtitle .wrapper-images article img {
-      width: 130px;
-      height: 130px; }
-  #page #contact .content-contact {
-    padding: 0 5%; }
-    #page #contact .content-contact p {
+  #page {
+    /*		#acceuil{
+			.content{
+
+			&-wrapper{
+					font-size: 3.1vh;
+				.content-subtitle{
+				}
+			}
+			}
+		}*/ }
+    #page .content-wrapper {
       font-size: 3vh; }
-    #page #contact .content-contact .img {
-      display: none; } }
+    #page #about .content-title {
+      font-size: 4vh; }
+    #page #about .content-subtitle {
+      font-size: 2.2rem;
+      padding: 30px;
+      width: 100%; }
+      #page #about .content-subtitle .wrapper-images article img {
+        width: 130px;
+        height: 130px; }
+    #page #contact .content-contact {
+      padding: 0 5%; }
+      #page #contact .content-contact p {
+        font-size: 3vh; }
+      #page #contact .content-contact .img {
+        display: none; } }
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b7883507690'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b7883507690'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b799ac0f650'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b799ac0f650'/>
 	</head>
 
 	<body id="body">
@@ -210,6 +222,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b7883507690'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b7883507690'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b799ac0f650'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b799ac0f650'></script>
 </html>

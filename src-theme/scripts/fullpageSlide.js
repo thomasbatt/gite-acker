@@ -24,7 +24,7 @@ function parallaxScroll(evt) {
     delta = evt.wheelDelta;
     console.log(evt.wheelDelta);
   }
-    // console.log('delta', delta);
+    console.log('delta', delta);
 
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
@@ -59,6 +59,7 @@ function slideDurationTimeout(slideDuration) {
 // ------------- ADD EVENT LISTENER ------------- //
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, parallaxScroll, false);
+window.addEventListener("touchmove", parallaxScroll, false);
 
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {

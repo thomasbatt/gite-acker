@@ -46,22 +46,22 @@ $('document').ready(function(){
         evt.deltaY = -direction;
         evt.wheelDelta = -direction*120;
         parallaxScroll(evt);
-        // var speed = 1500; // Durée de l'animation (en ms)
-        // $('html, body').animate( { scrollTop: $(page).offset().top }, speed , "easeInOutCubic" ); // Go
-        // return false;
     });
-    window.addEventListener("touchmove", function(evt){
-        evt.preventDefault() 
-        var direction = 1;
+
+    function parallaxScrollTouch(el,d){
+        evt = new Object();
+        var direction = 0;
+        if (d == 'u')
+            direction = 1;
+        if (d == 'd')
+            direction = -1;
         evt.detail = direction*3;
         evt.deltaY = -direction;
         evt.wheelDelta = -direction*120;
-
-        // alert('taagle');
-        // console.log('taagle');
-        console.log('evt', evt);
         parallaxScroll(evt);
-    }, false)
+    }
+
+    detectswipe('body',parallaxScrollTouch);
 
 // ----------------------------WOW JS--------------------------------
     

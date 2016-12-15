@@ -3,7 +3,7 @@
 	<head>
 	    <meta charset="UTF-8">
 	    <title><?php bloginfo('name') ?> - <?php the_title(); ?></title>
-		<link href="<?php bloginfo('template_url'); ?>/img/Orque.png?v=@version@" rel="shortcut icon">
+		<link href="<?php bloginfo('template_url'); ?>/img/logo.png?v=@version@" rel="shortcut icon">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no">
 
@@ -198,11 +198,11 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b76a4d67910'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b76a4d67910'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b7883507690'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b7883507690'/>
 	</head>
 
-	<body>
+	<body id="body">
 		<?php require('components/preloader.php'); ?>
 		<?php require('layout/header.php'); ?>
 		<?php require('content/content-'.$content['name'].'.php'); ?>
@@ -210,6 +210,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b76a4d67910'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b76a4d67910'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b7883507690'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b7883507690'></script>
 </html>

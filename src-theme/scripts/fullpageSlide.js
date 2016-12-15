@@ -14,17 +14,17 @@ function parallaxScroll(evt) {
   if (isFirefox) {
     //Set delta for Firefox
     delta = evt.detail * (-120);
-    // console.log(evt.detail);
+    console.log(evt.detail);
   } else if (isIe) {
     //Set delta for IE
     delta = -evt.deltaY;
-    // console.log(evt.deltaY);
+    console.log(evt.deltaY);
   } else {
     //Set delta for all other browsers
     delta = evt.wheelDelta;
-    // console.log(evt.wheelDelta);
+    console.log(evt.wheelDelta);
   }
-    // console.log('delta', delta);
+    console.log('delta', delta);
 
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
@@ -59,6 +59,7 @@ function slideDurationTimeout(slideDuration) {
 // ------------- ADD EVENT LISTENER ------------- //
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, parallaxScroll, false);
+window.addEventListener("touchmove", parallaxScroll, false);
 
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {

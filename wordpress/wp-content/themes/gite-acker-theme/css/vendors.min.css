@@ -240,8 +240,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?v=FVJ0WTrXwKxu1YPkVi20fA%3D%3D);
-  src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?v=FVJ0WTrXwKxu1YPkVi20fA%3D%3D) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?v=yDBp7NE0U3gJBXm2jT15YA%3D%3D) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?v=lm5Bw7ZketEnp6SvkupU6A%3D%3D) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?v=wyj3O8XXScKrrn1uuv5Teg%3D%3D) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular?v=9yFGaIOZhmW4eSO5LeplWw%3D%3D) format("svg"); }
+  src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?v=1B2M2Y8AsgTpgAmY7PhCfg%3D%3D);
+  src: url(../fonts/bootstrap/glyphicons-halflings-regular.eot?v=1B2M2Y8AsgTpgAmY7PhCfg%3D%3D) format("embedded-opentype"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff2?v=yDBp7NE0U3gJBXm2jT15YA%3D%3D) format("woff2"), url(../fonts/bootstrap/glyphicons-halflings-regular.woff?v=lm5Bw7ZketEnp6SvkupU6A%3D%3D) format("woff"), url(../fonts/bootstrap/glyphicons-halflings-regular.ttf?v=wyj3O8XXScKrrn1uuv5Teg%3D%3D) format("truetype"), url(../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular?v=9yFGaIOZhmW4eSO5LeplWw%3D%3D) format("svg"); }
 
 .glyphicon {
   position: relative;

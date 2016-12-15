@@ -28,9 +28,13 @@
 			right: 2%;
 		}
 	}
+	.footer{
+		svg{
+			bottom: 15vh;
+		}
+	}
 	#page{
 		.scrolldown{
-			bottom: 15vh;
 		}
 		#about{
 			.content{
@@ -111,38 +115,44 @@
 		}
 	}
 	.footer{
-		div[class]{
+		div[class*="links"]{
 			display: none;
 		}
-	}
-	#page{
-		.scrolldown{
+		&-scrolldown-arrow{
 			svg{
-				width: 100px;
+				width: 160px !important;
+				left: -9vh;
+				bottom: 3vh !important;
 				path[id=roll], path{
 					display: none;
 				}
 			}
 		}
+	}
+	#page{
 		.content {
 			&-wrapper {
-				font-size: 3.5vw;
+				font-size: 3vh;
 			}
 		}
-		#acceuil{
-			.content-wrapper{
+/*		#acceuil{
+			.content{
+
+			&-wrapper{
+					font-size: 3.1vh;
 				.content-subtitle{
-					font-size: 3vh !important;
 				}
 			}
-		}
+			}
+		}*/
 		#about{
 			.content{
 				&-title{
 					font-size: 4vh;
 				}
 				&-subtitle{
-					padding: 15px;
+					font-size: 2.2rem;
+					padding: 30px;
 					width: 100%;
 					.wrapper-images{
 						article{

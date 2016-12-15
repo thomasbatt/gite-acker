@@ -76,33 +76,11 @@
 					stroke-dasharray: 1000;
 					stroke-dashoffset: 1000;
 					animation-name: drawVectorHome;
-					animation-duration: 5s;
+					animation-duration: 3.5s;
 					animation-iteration-count: 1;
 					animation-fill-mode: forwards;
 					animation-timing-function: linear;
 				}
-			}
-		}
-	}
-	.scrolldown{
-		position: relative;
-		bottom: 5vh;
-		text-align: center;
-		svg{
-			width: 40px;
-			path[id=roll]{
-				animation-name: moveRoll;
-				animation-duration: 1s;
-				animation-iteration-count: infinite;
-				animation-fill-mode: forwards;
-				animation-timing-function: linear;
-			}
-			polygon[id=arrow]{
-				animation-name: moveRoll;
-				animation-duration: 1s;
-				animation-iteration-count: infinite;
-				animation-fill-mode: forwards;
-				animation-timing-function: linear;
 			}
 		}
 	}

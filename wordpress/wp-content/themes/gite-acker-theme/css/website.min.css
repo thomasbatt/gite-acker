@@ -208,7 +208,10 @@ html {
     #page #about .content-subtitle .wrapper-images {
       display: flex;
       justify-content: space-between;
-      padding-top: 25px; }
+      padding-top: 25px img; }
+      #page #about .content-subtitle .wrapper-images :hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease; }
   #page #contact .content-title {
     font-size: 8vh; }
   #page #contact .content-contact {

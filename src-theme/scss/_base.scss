@@ -13,22 +13,31 @@ html {
     // font-family: AvantGarde;
     // font-weight: 400;
     // font-style: normal;
+    a:hover{
+      color: #004988;
+    }
     header, #page, footer{
       display: block;
       opacity: 0;
     }
-    .transition{
+    .transition-fast{
       transition: all 0.5s;
     }
 
+    .transition-slow{
+      transition: all 3s;
+    }
+
     .display{
-      display: block !important;
+      opacity: 1 !important;
+      // transition: 4s opacity;
+      // display: block !important;
     }
 
     .no-display{
       opacity: 0 !important;
-      transition: 1s opacity;
-      display: none !important;
+      // transition: 1s opacity;
+      // display: none !important;
     }
   }
 }

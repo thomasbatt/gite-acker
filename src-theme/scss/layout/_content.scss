@@ -2,91 +2,134 @@
 	// z-index: $content-zindex;
 	// ------------- MIXINS ------------- //
 	@mixin transition($time, $property: all, $easing: ease-in) {
-	    transition: $property $time $easing;
+		transition: $property $time $easing;
 	}
 
 	.background {
-	  user-select: none;
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  background-position: center center;
-	  overflow: hidden;
-	  will-change: transform;
-	  backface-visibility: hidden;
-	  height: 100vh + $parallax-offset;
-	  position: fixed;
-	  width: 100%;
-	  transform: translateY($parallax-offset);
-filter: saturate(200%);
-	  @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
-	  &:before {
-	    content: "";
-	    position: absolute;
-	    width: 100%;
-	    height: 100%;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    background-color: rgba(0,0,0,.3);
-	  }
-	  &:first-child {
-	    transform: translateY(-$parallax-offset / 2);
-	    background-image: url(../img/834.jpg);
-	    .content-wrapper {
-	      transform: translateY($parallax-offset /2);
-	    }
-	  }
-	  &:nth-child(2) {
-	    background-image: url(../img/833.jpg);
-	  }
-	  &:nth-child(3) {
-	    /*filter: saturate(100%);*/
-	    /*opacity: 0.5;*/
-	  	/*background: gray;*/
-	  	/*background-image: url(../img/bg-map.png);*/
-	    background-image: url(../img/835.jpg);
-	  }
+		user-select: none;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		overflow: hidden;
+		will-change: transform;
+		backface-visibility: hidden;
+		height: 100vh + $parallax-offset;
+		position: fixed;
+		width: 100%;
+			transform: scale(1.2);
+		transform: translateY($parallax-offset);
+		filter: saturate(200%);
+		@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,.3);
+		}
+		&:first-child {
+			transform: translateY(-$parallax-offset / 2);
+			background-image: url(../img/accueil_compress.jpg);
+			.content-wrapper {
+				transform: translateY($parallax-offset /2);
+			}
+		}
+		&:nth-child(2) {
+			background-image: url(../img/description_compress.jpg);
+		}
+		&:nth-child(3) {
+			background-image: url(../img/contact_compress.jpg);
+		}
 	}
 
 	/* Set stacking context of slides */
 	@for $i from 1 to ($slide-number + 1) {
-	    .background:nth-child(#{$i}) {
-	        z-index: ($slide-number + 1) - $i; 
-	    }
+		.background:nth-child(#{$i}) {
+			z-index: ($slide-number + 1) - $i; 
+		}
 	}
-
 	.content {
-	  &-wrapper {
-	  font-size: 2.1rem;
-	  height: 100vh;
-	  display: flex;
-	  justify-content: center;
-	  text-align: center;
-	  flex-flow: column nowrap;
-	  color: #fff;
-	  text-transform: uppercase;
-	  transform: translateY($content-offset);
-	  will-change: transform;
-	  backface-visibility: hidden;
-	  @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
-	  }
-	  &-title {
-	    font-size: 12vh;
-	    line-height: 1.4;
-	  }
+		&-wrapper {
+			font-size: 3vh;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			flex-flow: column nowrap;
+			color: #fff;
+			/*text-transform: lowercase;*/
+			transform: translateY($content-offset);
+			will-change: transform;
+			backface-visibility: hidden;
+			@include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+		}
+		&-title{
+			font-size: 12vh;
+			line-height: 1;
+			svg{
+				path{
+					stroke: #fff;
+					stroke-dasharray: 1000;
+					stroke-dashoffset: 1000;
+					animation-name: drawVectorHome;
+					animation-duration: 5s;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+					animation-timing-function: linear;
+				}
+			}
+		}
+	}
+	.scrolldown{
+		position: relative;
+		bottom: 5vh;
+		text-align: center;
+		svg{
+			width: 40px;
+			path[id=roll]{
+				animation-name: moveRoll;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+			}
+			polygon[id=arrow]{
+				animation-name: moveRoll;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+			}
+		}
+	}
+	#acceuil{
+/*		.content{
+			&-wrapper{
+				.content-subtitle{
+					
+					
+				}
+			}
+		}
+*/
 	}
 	#about{
 		.content{
 			&-subtitle{
 				padding: 50px;
-				margin: 0 auto;
+				margin: 20px auto;
 				width: 80%;
 				font-size: 1.5rem;
 				color: #303030;
 				background-color: rgba(255,255,255,0.8);
 				.wrapper-images{
-					padding-top: 10px
+					display: flex;
+					justify-content: space-between;
+					padding-top: 25px
 				}
 			}
 		}
@@ -104,7 +147,10 @@ filter: saturate(200%);
 				padding-bottom: 10px;
 				background: rgba(255,255,255, 0.8);
 				text-align: left;
-				color: #828282;
+				color: #5A5A5A;
+				p:nth-child(6){
+					font-size: 3vh;
+				}
 				p{
 					margin-bottom: 5px;
 				}
@@ -120,35 +166,31 @@ filter: saturate(200%);
 		}
 	}
 
-
-
 	// ------------- SET TRANSFORM VALUES ------------- //
 
 	.background.up-scroll {
-	  transform: translate3d(0,-$parallax-offset / 2,0);
-	  .content-wrapper {
-	    transform: translateY($parallax-offset / 2);
-	  }
-	  + .background {
-	    transform: translate3d(0,$parallax-offset,0);
-	      .content-wrapper {
-	        transform: translateY($parallax-offset);
-	      }
-	    }
+		transform: translate3d(0,-$parallax-offset / 2,0);
+		.content-wrapper {
+			transform: translateY($parallax-offset / 2);
+		}
+		+ .background {
+			transform: translate3d(0,$parallax-offset,0);
+			.content-wrapper {
+				transform: translateY($parallax-offset);
+			}
+		}
 	}
 
 	.background.down-scroll {
-	  transform: translate3d(0,-(100vh + $parallax-offset),0);
-	  .content-wrapper {
-	    transform: translateY($content-offset);
-	  }
-	  + .background:not(.down-scroll) {
-	    transform: translate3d(0,-$parallax-offset / 2,0);
-	      .content-wrapper {
-	        transform: translateY($parallax-offset / 2);
-	      }
-	  }
+		transform: translate3d(0,-(100vh + $parallax-offset),0);
+		.content-wrapper {
+			transform: translateY($content-offset);
+		}
+		+ .background:not(.down-scroll) {
+			transform: translate3d(0,-$parallax-offset / 2,0);
+			.content-wrapper {
+				transform: translateY($parallax-offset / 2);
+			}
+		}
 	}
 }
-
-

@@ -6,21 +6,31 @@
 	left: 0;
 	width: 100%;
 	padding: 1% $header-padding;
-	/*background-color: #efefef;*/
 	&:after{
 		content: "";
 		clear: both;
 	}
-	.header-logo{
-			display: inline-block;
+	&-logo{
 		a{
-			display: block;
-			img{
-				width: 110%;
+			position: relative;
+			top: -20px;
+			display: inline-block;
+			svg{
+				width: 220px;
+				height: 180px;
+				cursor: pointer;
+				stroke: #FFF;
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 1000;
+				animation-name: drawVectorHeader;
+				animation-duration: 5s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
 			}
 		}
 	}
-	.header-links{
+	&-links{
 		display: inline-block;
 		position: absolute;
 		right: $header-padding;
@@ -45,30 +55,47 @@
 					&:hover {
 						transform: scale(1.1);
 					}
-/*					$:hover ~ span {
-						animation:ul 0.3s ease-out;
-						background:#fff;
-					}*/
-				}
-				span{
-					display:block;
-				/*	width:calc(100% - 23px);*/
-					height:2px;
-					background:$blue-base;
-					position:absolute;
-					left:10px;
-					bottom:2px;
 				}
 			}
 		}
 	}
-
-/*	@keyframes ul {
-	 	0% { 
-	    width:0;
-	  }
-	  100% { 
-	    width:calc(100% - 23px);
-	  }
-	}*/
+}
+@keyframes drawVectorHeader{
+	0%{
+		fill-opacity:0;
+	}
+	70% {
+		fill-opacity:0;
+		stroke-dasharray: 0;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		fill-opacity: 1;
+		stroke-dasharray: 0;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes drawVectorHome{
+	0%{
+		fill-opacity:0;
+	}
+	70% {
+		fill-opacity:0;
+		stroke-dasharray: 0;
+		stroke-dashoffset: 0;
+	}
+	100% {
+		fill-opacity: 1;
+		stroke-dasharray: 0;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes moveRoll{
+	0%{
+		fill-opacity: 1;
+	}
+	100%{
+		fill-opacity: 0;
+		transform: translateY(10px);
+	}
 }

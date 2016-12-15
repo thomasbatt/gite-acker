@@ -1,45 +1,4 @@
-<style>
-	@keyframes drawVectorLoader{
-		to{
-			stroke-dashoffset: 300;
-		}
-	}
-	header, #page, footer{
-		display: none;
-		opacity: 0;
-	}
-	.preloader{
-		opacity: 1 ;
-		z-index: 0;
-		display: block;
-		position : fixed;
-		top: 40%;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-	}
-	.preloader svg{
-		display: inline-block;
-		width: 120px;
-		height: 120px;
-	}
-	.preloader svg path{
-		stroke-width: 2.5px;
-		stroke: #831912;
-		stroke-dasharray: 150;
-		animation-name: drawVectorLoader;
-		animation-duration: 3s;
-		animation-iteration-count: infinite;
-		animation-fill-mode: forwards;
-		animation-timing-function: linear;
-	}
-</style>
-
-<div class="preloader">
-	<svg version="1.1" id="loader-leaf" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-		<g>
-			<path fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" d="M4.593,86.237c-0.126-0.367-0.26-0.732-0.378-1.102
+<style>@keyframes drawVectorLoader{to{stroke-dashoffset:300}}#page,footer,header{display:none;opacity:0}.preloader{opacity:1;z-index:0;display:block;position:fixed;top:40%;width:100%;height:100%;text-align:center}.preloader svg{display:inline-block;width:120px;height:120px}.preloader svg path{stroke-width:2.5px;stroke:#831912;stroke-dasharray:150;animation-name:drawVectorLoader;animation-duration:3s;animation-iteration-count:infinite;animation-fill-mode:forwards;animation-timing-function:linear}</style><div class="preloader"><svg version="1.1" id="loader-leaf" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g><path fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" d="M4.593,86.237c-0.126-0.367-0.26-0.732-0.378-1.102
 				c-0.352-1.106,0.019-1.835,1.147-2.153c0.19-0.054,0.389-0.128,0.579-0.116c5.886,0.353,10.646-2.487,15.092-5.725
 				c4.429-3.224,8.515-6.919,12.744-10.417c0.25-0.207,0.431-0.498,0.618-0.719c-1.937-0.889-3.897-1.587-5.65-2.633
 				c-3.844-2.292-6.581-5.543-8.342-9.734c-1.214-2.888-2.916-5.57-4.376-8.299c0.213,0.027,0.769,0.134,1.33,0.164
@@ -57,7 +16,4 @@
 				c-2.819-0.108-4.933,1.265-6.263,3.754c-1.061,1.986-1.328,4.125-1.048,6.345c0.045,0.355,0.057,0.714,0.062,0.767
 				c-2.549-1.397-5.033-3.074-7.749-4.182c-6.44-2.629-10.575-7.267-12.872-13.709c-0.109-0.307-0.285-0.59-0.487-1.001
 				c-1.734,1.513-3.343,2.961-4.997,4.354c-6.262,5.273-12.846,10.051-20.257,13.643c-2.374,1.151-4.532,1.613-6.803,0.004
-				C5.574,87.218,5.084,86.728,4.593,86.237z"/>
-		</g>
-	</svg>
-</div>
+				C5.574,87.218,5.084,86.728,4.593,86.237z"/></g></svg></div>

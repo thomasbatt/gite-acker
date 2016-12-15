@@ -36,15 +36,19 @@ $('document').ready(function(){
 
 // ----------------------------SMOOTH SCROLL--------------------------------
     
+    function initDirection(evt,direction){
+        evt.detail = direction*3;
+        evt.deltaY = -direction;
+        evt.wheelDelta = -direction*120;
+        return evt;
+    }
+
     $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
         var page = $(this).attr('target'); // Page cible
         var direction = 1;
         if( page=='prev')
           direction = -1;
-        // console.log(evt);
-        evt.detail = direction*3;
-        evt.deltaY = -direction;
-        evt.wheelDelta = -direction*120;
+        evt = initDirection(evt,direction);
         parallaxScroll(evt);
     });
 
@@ -55,9 +59,7 @@ $('document').ready(function(){
             direction = 1;
         if (d == 'd')
             direction = -1;
-        evt.detail = direction*3;
-        evt.deltaY = -direction;
-        evt.wheelDelta = -direction*120;
+        evt = initDirection(evt,direction);
         parallaxScroll(evt);
     }
 

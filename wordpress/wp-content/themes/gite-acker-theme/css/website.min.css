@@ -150,13 +150,13 @@ html {
       background-color: rgba(0, 0, 0, 0.3); }
     #page .background:first-child {
       transform: translateY(-15vh);
-      background-image: url(../img/accueil_compress.jpg?v=gR5A11EyGdXIbcKPo5QlPA%3D%3D); }
+      background-image: url(../img/accueil_compress.jpg?v=zR0vCy3%2Fj8%2B4O45F1Yv6hg%3D%3D); }
       #page .background:first-child .content-wrapper {
         transform: translateY(15vh); }
     #page .background:nth-child(2) {
-      background-image: url(../img/description_compress.jpg?v=wy6KQnNKYcCSNkVcXTDHrA%3D%3D); }
+      background-image: url(../img/description_compress.jpg?v=WQTypA%2BOKxHX%2BpEzGRAWqg%3D%3D); }
     #page .background:nth-child(3) {
-      background-image: url(../img/contact_compress.jpg?v=pU5N%2B6CTGYyKjp42UCDoWg%3D%3D); }
+      background-image: url(../img/contact_compress.jpg?v=TUrwrDqbftvmhK2huauiGQ%3D%3D); }
   #page .background:nth-child(1) {
     z-index: 3; }
   #page .background:nth-child(2) {
@@ -227,7 +227,7 @@ html {
     #page #contact .content-contact .img {
       width: 330px;
       height: 370px;
-      background-image: url(../img/map.png?v=dBWTr2Kq0AcGDSA984xnpw%3D%3D);
+      background-image: url(../img/map.png?v=0lRmR3DNQbXy3UnzZLGK3g%3D%3D);
       position: absolute;
       right: 10vw;
       top: -90px; }

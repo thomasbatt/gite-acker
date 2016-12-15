@@ -50,18 +50,18 @@ $('document').ready(function(){
         // $('html, body').animate( { scrollTop: $(page).offset().top }, speed , "easeInOutCubic" ); // Go
         // return false;
     });
-    // window.addEventListener("touchmove", function(evt){
-    //     evt.preventDefault() 
-    //     var direction = 1;
-    //     evt.detail = direction*3;
-    //     evt.deltaY = -direction;
-    //     evt.wheelDelta = -direction*120;
+    window.addEventListener("touchmove", function(evt){
+        evt.preventDefault() 
+        var direction = 1;
+        evt.detail = direction*3;
+        evt.deltaY = -direction;
+        evt.wheelDelta = -direction*120;
 
-    //     // alert('taagle');
-    //     // console.log('taagle');
-    //     console.log('evt', evt);
-    //     parallaxScroll(evt);
-    // }, false)
+        // alert('taagle');
+        // console.log('taagle');
+        console.log('evt', evt);
+        parallaxScroll(evt);
+    }, false)
 
 // ----------------------------WOW JS--------------------------------
     

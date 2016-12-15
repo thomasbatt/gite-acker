@@ -198,13 +198,8 @@ html {
 </style>
 
 		
-<<<<<<< HEAD
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b64d717d1b0'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b64d717d1b0'/>
-=======
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b76a4d67910'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b76a4d67910'/>
->>>>>>> develop-tb
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b76abe3dcc0'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b76abe3dcc0'/>
 	</head>
 
 	<body>
@@ -215,11 +210,6 @@ html {
 	</body>
 
 	
-<<<<<<< HEAD
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b64d717d1b0'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b64d717d1b0'></script>
-=======
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b76a4d67910'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b76a4d67910'></script>
->>>>>>> develop-tb
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b76abe3dcc0'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b76abe3dcc0'></script>
 </html>

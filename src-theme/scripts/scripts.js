@@ -31,8 +31,6 @@ $('document').ready(function(){
     // alert('x:'+tailleEcranX+' y:'+tailleEcranY);
   if(tailleEcranY>530 ){
 
-// ------------------------AJAX---------------------------
-
 
 // ----------------------------SMOOTH SCROLL--------------------------------
     
@@ -42,15 +40,6 @@ $('document').ready(function(){
         evt.wheelDelta = -direction*120;
         return evt;
     }
-
-    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var page = $(this).attr('target'); // Page cible
-        var direction = 1;
-        if( page=='prev')
-          direction = -1;
-        evt = initDirection(evt,direction);
-        parallaxScroll(evt);
-    });
 
     function parallaxScrollTouch(el,d){
         evt = new Object();
@@ -63,7 +52,17 @@ $('document').ready(function(){
         parallaxScroll(evt);
     }
 
-    detectswipe('body',parallaxScrollTouch);
+    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
+        var page = $(this).attr('target'); // Page cible
+        var direction = 1;
+        if( page=='prev')
+          direction = -1;
+        evt = initDirection(evt,direction);
+        parallaxScroll(evt);
+    });
+
+    detectScroll('body',parallaxScroll);
+    detectSwipe('page',parallaxScrollTouch);
 
 // ----------------------------WOW JS--------------------------------
     

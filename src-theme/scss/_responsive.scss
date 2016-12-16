@@ -79,6 +79,7 @@
 		#contact{
 			.content{
 				&-contact{
+					text-align: center;
 					.img{
 						display: none;
 					}
@@ -90,8 +91,10 @@
 @media screen and (max-width:  1250px) {
 	#page{
 		.content {
-			&-wrapper {
-				/*font-size: 2.2vw;*/
+			&-title{
+				svg{
+					width: 50%;
+				}
 			}
 		}
 		#about{
@@ -129,13 +132,21 @@
 		div[class*="links"]{
 			display: none;
 		}
-		&-scrolldown-arrow{
-			svg{
-				width: 160px !important;
-				left: -9vh;
-				bottom: 3vh !important;
-				path[id=roll], path{
-					display: none;
+		section{
+			.footer{
+				&-scrolldown-arrow{
+					svg{
+						display: none;
+						// width: 160px !important;
+						// left: -9vh;
+						// bottom: 3vh !important;
+						// path[id=roll], path{
+						// 	display: none;
+						// }
+					}
+					.glyphicon{
+						display: block;
+					}
 				}
 			}
 		}
@@ -149,20 +160,17 @@
 			}
 	}*/
 		.content {
+			&-title{
+				svg{
+					width: 70%;
+				}
+			}
 			&-wrapper {
 				/*font-size: 3vh;*/
 			}
 		}
-/*		#acceuil{
-			.content{
-
-			&-wrapper{
-					font-size: 3.1vh;
-				.content-subtitle{
-				}
-			}
-			}
-		}*/
+		#acceuil{
+		}
 		#about{
 			.content{
 				&-title{

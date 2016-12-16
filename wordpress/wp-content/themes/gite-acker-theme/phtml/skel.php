@@ -119,6 +119,8 @@ html {
     transform: translateY(10px); } }
 
 @media screen and (max-width: 430px) {
+  #page .content-wrapper {
+    font-size: large; }
   #page #about .content-subtitle {
     font-size: 1.4rem; }
     #page #about .content-subtitle .wrapper-images {
@@ -137,12 +139,18 @@ html {
     left: 30%; }
     .footer-scrolldown-arrow svg {
       bottom: 15vh; }
-  #page #about .content-subtitle {
-    font-size: 1.4rem; }
-    #page #about .content-subtitle .wrapper-images {
-      padding: 10px !important; }
-      #page #about .content-subtitle .wrapper-images article:nth-child(n+4) {
-        display: none; } }
+  #page {
+    /*		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}*/ }
+    #page #about .content-subtitle {
+      font-size: 1.4rem; }
+      #page #about .content-subtitle .wrapper-images {
+        padding: 10px !important; }
+        #page #about .content-subtitle .wrapper-images article:nth-child(n+4) {
+          display: none; } }
 
 @media screen and (max-width: 950px) {
   #page #about .content-subtitle {
@@ -154,7 +162,7 @@ html {
 
 @media screen and (max-width: 1250px) {
   #page .content-wrapper {
-    font-size: 2.2vw; }
+    /*font-size: 2.2vw;*/ }
   #page #about .content-title {
     font-size: 5vh; }
   #page #about .content-subtitle {
@@ -193,7 +201,7 @@ html {
 			}
 		}*/ }
     #page .content-wrapper {
-      font-size: 3vh; }
+      /*font-size: 3vh;*/ }
     #page #about .content-title {
       font-size: 4vh; }
     #page #about .content-subtitle {
@@ -213,8 +221,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b88bef69020'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b88bef69020'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b88ff5e0d00'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b88ff5e0d00'/>
 	</head>
 
 	<body id="body">
@@ -225,6 +233,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b88bef69020'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b88bef69020'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b88ff5e0d00'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b88ff5e0d00'></script>
 </html>

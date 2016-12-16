@@ -1,5 +1,10 @@
 @media screen and (max-width: 430px) {
 	#page{
+		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}
 		#about{
 			.content{
 				&-subtitle{
@@ -37,8 +42,11 @@
 		}
 	}
 	#page{
-		.scrolldown{
-		}
+/*		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}*/
 		#about{
 			.content{
 				&-subtitle{
@@ -83,7 +91,7 @@
 	#page{
 		.content {
 			&-wrapper {
-				font-size: 2.2vw;
+				/*font-size: 2.2vw;*/
 			}
 		}
 		#about{
@@ -135,7 +143,7 @@
 	#page{
 		.content {
 			&-wrapper {
-				font-size: 3vh;
+				/*font-size: 3vh;*/
 			}
 		}
 /*		#acceuil{

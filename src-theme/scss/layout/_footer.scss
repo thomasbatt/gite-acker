@@ -60,6 +60,11 @@
 			text-decoration: none;
 	  }
 	}
+	&.single{
+		.footer-scrolldown-arrow{
+			display: none;
+		}
+	}
 	@keyframes scrolldown {
 	    from {
 	        transform: translateY(0);

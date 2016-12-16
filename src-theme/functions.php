@@ -297,7 +297,7 @@
 						case "open": ?>
 
 						<div class="all_options">
-							<span>taagle</span>
+							<!-- <span>taagle</span> -->
 						<?php break;
 
 

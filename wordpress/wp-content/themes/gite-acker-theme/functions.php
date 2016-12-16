@@ -280,7 +280,7 @@
 						// echo ($value['type']);
 
 					switch ( $value['type'] ) {
-						case "open": ?> <div class="all_options"><span>taagle</span> <?php break;
+						case "open": ?> <div class="all_options"> <?php break;
 
 
 

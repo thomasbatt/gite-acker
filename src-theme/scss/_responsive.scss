@@ -91,8 +91,10 @@
 @media screen and (max-width:  1250px) {
 	#page{
 		.content {
-			&-wrapper {
-				/*font-size: 2.2vw;*/
+			&-title{
+				svg{
+					width: 50%;
+				}
 			}
 		}
 		#about{
@@ -158,20 +160,17 @@
 			}
 	}*/
 		.content {
+			&-title{
+				svg{
+					width: 70%;
+				}
+			}
 			&-wrapper {
 				/*font-size: 3vh;*/
 			}
 		}
-/*		#acceuil{
-			.content{
-
-			&-wrapper{
-					font-size: 3.1vh;
-				.content-subtitle{
-				}
-			}
-			}
-		}*/
+		#acceuil{
+		}
 		#about{
 			.content{
 				&-title{

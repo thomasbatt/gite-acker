@@ -1,15 +1,16 @@
 <div id="page">
 	<div class="pagecontainer">
+<!-- ACCEUIL -->	
 		<section id="accueil" class="background">
 			<div class="content-wrapper">
 				<p class="content-title">
-<!-- LOGO SVG -->
+		<!-- LOGO SVG -->
 					<?php include get_template_directory() . "/phtml/components/title-svg.php"; ?>
-<!-- LOGO SVG -->
+		<!-- LOGO SVG -->
 				</p>
-				<p class="content-subtitle"><?php bloginfo('description'); ?></p>
 			</div>
 		</section>
+<!-- DESCRIPTION -->
 		<section id="about" class="background no-visible">
 			<div class="content-wrapper">
 				<p class="content-title"><?php echo get_settings('giteacker_description_title'); ?></p>
@@ -46,6 +47,7 @@
 			</div>
 
 		</section>
+<!-- CONTACT -->
 		<section id="contact" class="background no-visible">
 			<div class="content-wrapper">
 				<div class="content-contact">

@@ -2,7 +2,10 @@
 	// z-index: $content-zindex;
 	// ------------- MIXINS ------------- //
 	@mixin transition($time, $property: all, $easing: ease-in) {
-		transition: $property $time $easing;
+		// transition: $property $time $easing;
+		transition-property: $property;
+		transition-duration: $time;
+		transition-timing-function: $easing;
 	}
 
 	.background {
@@ -16,10 +19,11 @@
 		height: 100vh + $parallax-offset;
 		position: fixed;
 		width: 100%;
-			transform: scale(1.2);
+		transform: scale(1.2);
 		transform: translateY($parallax-offset);
 		filter: saturate(200%);
-		@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+		@include transition($transition-speed, transform, cubic-bezier(0.22, 0.44, 0, 1));
+		// transition: opacity 0s;
 		&:before {
 			content: "";
 			position: absolute;
@@ -54,7 +58,7 @@
 	}
 	.content {
 		&-wrapper {
-			font-size: 3vh;
+			font-size: x-large;
 			height: 100vh;
 			display: flex;
 			justify-content: center;
@@ -65,7 +69,7 @@
 			transform: translateY($content-offset);
 			will-change: transform;
 			backface-visibility: hidden;
-			@include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+			@include transition($transition-speed + .5, transform, cubic-bezier(0.22, 0.44, 0, 1));
 		}
 		&-title{
 			font-size: 12vh;
@@ -85,15 +89,15 @@
 		}
 	}
 	#acceuil{
-/*		.content{
-			&-wrapper{
-				.content-subtitle{
+		// .content{
+		// 	&-wrapper{
+		// 		.content-subtitle{
 					
 					
-				}
-			}
-		}
-*/
+		// 		}
+		// 	}
+		// }
+
 	}
 	#about{
 		.content{
@@ -107,7 +111,12 @@
 				.wrapper-images{
 					display: flex;
 					justify-content: space-between;
-					padding-top: 25px
+					padding-top: 25px;
+						// opacity: 0.1;
+					img:hover{
+						transform: scale(1.1);
+						transition: all 0.5s ease;
+					}
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-<svg class="js-scrollTo" target="next" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="185.667px" viewBox="0 0 80 185.667" enable-background="new 0 0 80 185.667" xml:space="preserve"><g><path fill="#FFF" d="M41,5v6h0.154c7.965,0,14.03,0.462,18.559,4.835c6.028,5.821,9.123,18.766,9.123,38.352
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="185.667px" viewBox="0 0 80 185.667" enable-background="new 0 0 80 185.667" xml:space="preserve"><g><path fill="#FFF" d="M41,5v6h0.154c7.965,0,14.03,0.462,18.559,4.835c6.028,5.821,9.123,18.766,9.123,38.352
 			c0,19.194-3.234,32.045-9.651,38.134c-4.769,4.525-10.946,4.915-17.399,4.915l-0.969,0.006l-0.945,0.003l-0.95,0.003l-0.976,0.002
 			c-6.463,0-12.659-0.374-17.419-4.896c-6.405-6.084-9.652-18.905-9.652-38.106c0-19.491,3.146-32.487,9.351-38.38
 			C24.852,11.474,30.981,11,38.513,11h0.682h0.679h0.716h0.715L41,5.249 M41.305,5c-0.478,0-0.957,0-1.431,0c-0.45,0-0.904,0-1.361,0

@@ -1,5 +1,10 @@
 @media screen and (max-width: 430px) {
 	#page{
+		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}
 		#about{
 			.content{
 				&-subtitle{
@@ -29,13 +34,19 @@
 		}
 	}
 	.footer{
-		svg{
-			bottom: 15vh;
+		&-scrolldown-arrow{
+			left: 30%;
+			svg{
+				bottom: 15vh;
+			}
 		}
 	}
 	#page{
-		.scrolldown{
-		}
+/*		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}*/
 		#about{
 			.content{
 				&-subtitle{
@@ -68,6 +79,7 @@
 		#contact{
 			.content{
 				&-contact{
+					text-align: center;
 					.img{
 						display: none;
 					}
@@ -80,7 +92,7 @@
 	#page{
 		.content {
 			&-wrapper {
-				font-size: 2.2vw;
+				/*font-size: 2.2vw;*/
 			}
 		}
 		#about{
@@ -118,21 +130,36 @@
 		div[class*="links"]{
 			display: none;
 		}
-		&-scrolldown-arrow{
-			svg{
-				width: 160px !important;
-				left: -9vh;
-				bottom: 3vh !important;
-				path[id=roll], path{
-					display: none;
+		section{
+			.footer{
+				&-scrolldown-arrow{
+					svg{
+						display: none;
+						// width: 160px !important;
+						// left: -9vh;
+						// bottom: 3vh !important;
+						// path[id=roll], path{
+						// 	display: none;
+						// }
+					}
+					.glyphicon{
+						display: block;
+					}
 				}
 			}
 		}
 	}
 	#page{
+	/*.single{
+		.post{
+			img{
+				width: 100%;
+				height: 80%;
+			}
+	}*/
 		.content {
 			&-wrapper {
-				font-size: 3vh;
+				/*font-size: 3vh;*/
 			}
 		}
 /*		#acceuil{
@@ -151,9 +178,10 @@
 					font-size: 4vh;
 				}
 				&-subtitle{
-					font-size: 2.2rem;
-					padding: 30px;
+					font-size: 1.8rem;
+					padding: 15px;
 					width: 100%;
+					margin: 5px auto;
 					.wrapper-images{
 						article{
 							img{

@@ -59,6 +59,19 @@
 			}
 		}
 	}
+	&.single{
+		svg{
+			stroke: #250000;
+			path{
+			fill: #5F0606;
+				
+			}
+		}
+		a{
+			color: #5F0606;
+			border-color: #5F0606;
+		}
+	}
 }
 @keyframes drawVectorHeader{
 	0%{

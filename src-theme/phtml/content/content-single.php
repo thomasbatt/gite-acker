@@ -11,7 +11,7 @@
 			        <?php endwhile; ?>
 			    <?php else : ?>
 			        <p class="nothing">
-			            Aucune post à afficher !
+			            Aucune image à afficher !
 			        </p>
 			    <?php endif; ?>
 			    </div>

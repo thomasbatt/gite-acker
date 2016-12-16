@@ -31,8 +31,6 @@ $('document').ready(function(){
     // alert('x:'+tailleEcranX+' y:'+tailleEcranY);
   if(tailleEcranY>530 ){
 
-// ------------------------AJAX---------------------------
-
 
 // ----------------------------SMOOTH SCROLL--------------------------------
     

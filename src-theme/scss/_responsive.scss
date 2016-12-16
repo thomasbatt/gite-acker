@@ -79,6 +79,7 @@
 		#contact{
 			.content{
 				&-contact{
+					text-align: center;
 					.img{
 						display: none;
 					}
@@ -129,18 +130,33 @@
 		div[class*="links"]{
 			display: none;
 		}
-		&-scrolldown-arrow{
-			svg{
-				width: 160px !important;
-				left: -9vh;
-				bottom: 3vh !important;
-				path[id=roll], path{
-					display: none;
+		section{
+			.footer{
+				&-scrolldown-arrow{
+					svg{
+						display: none;
+						// width: 160px !important;
+						// left: -9vh;
+						// bottom: 3vh !important;
+						// path[id=roll], path{
+						// 	display: none;
+						// }
+					}
+					.glyphicon{
+						display: block;
+					}
 				}
 			}
 		}
 	}
 	#page{
+	/*.single{
+		.post{
+			img{
+				width: 100%;
+				height: 80%;
+			}
+	}*/
 		.content {
 			&-wrapper {
 				/*font-size: 3vh;*/

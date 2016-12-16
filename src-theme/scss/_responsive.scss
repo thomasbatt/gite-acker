@@ -63,6 +63,17 @@
 	}
 }
 @media screen and (max-width: 950px) {
+	.header{
+		&-links{
+			ul{
+				li{
+					&:not(:first-child) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 	#page{
 		#about{
 			.content{

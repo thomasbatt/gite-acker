@@ -1,0 +1,14 @@
+#page{
+	.pagecontainer.single{
+		background-color: #ccc;
+		.post{
+			text-align: center;
+			height: 100vh;
+			img{
+				width: auto;
+				height: 100%;
+				z-index: $content-zindex;
+			}
+		}
+	}
+}

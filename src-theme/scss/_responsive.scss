@@ -1,10 +1,182 @@
-@media (max-width: 500px){
-
+@media screen and (max-width: 430px) {
+	#page{
+		#about{
+			.content{
+				&-subtitle{
+					font-size: 1.4rem;
+					.wrapper-images{
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
-@media screen and (max-width: 720px) {
-
+@media (max-width: 550px){
+	.header{
+		padding: 0%;
+		&-logo{
+			a{
+				svg{
+					width: 170px;
+					height: 140px;
+				}
+			}
+		}
+		&-links{
+			top: 20%;
+			right: 2%;
+		}
+	}
+	.footer{
+		svg{
+			bottom: 15vh;
+		}
+	}
+	#page{
+		.scrolldown{
+		}
+		#about{
+			.content{
+				&-subtitle{
+					font-size: 1.4rem;
+					.wrapper-images{
+						padding: 10px !important;
+						article:nth-child(n+4){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 950px) {
+	#page{
+		#about{
+			.content{
+				&-subtitle{
+					font-size: 1.4rem;
+					.wrapper-images{
+						article:nth-child(n+5){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		#contact{
+			.content{
+				&-contact{
+					.img{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width:  1250px) {
+	#page{
+		.content {
+			&-wrapper {
+				font-size: 2.2vw;
+			}
+		}
+		#about{
+			.content{
+				&-title{
+					font-size: 5vh;
+				}
+				&-subtitle{
+					padding: 20px;
+					width: 100%;
+					.wrapper-images{
+						padding: 10px 5px 5px 0px;
+						article{
+							padding-left: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-@media screen and (max-width:  1030px) {
+@media screen and(max-width: 640px){
+	.header{
+		padding: 0%;
+		&-links{
+			top: 10%;
+			right: 2%;
+			ul{
+				font-size: 1.7rem;
+			}
+		}
+	}
+	.footer{
+		div[class*="links"]{
+			display: none;
+		}
+		&-scrolldown-arrow{
+			svg{
+				width: 160px !important;
+				left: -9vh;
+				bottom: 3vh !important;
+				path[id=roll], path{
+					display: none;
+				}
+			}
+		}
+	}
+	#page{
+		.content {
+			&-wrapper {
+				font-size: 3vh;
+			}
+		}
+/*		#acceuil{
+			.content{
 
+			&-wrapper{
+					font-size: 3.1vh;
+				.content-subtitle{
+				}
+			}
+			}
+		}*/
+		#about{
+			.content{
+				&-title{
+					font-size: 4vh;
+				}
+				&-subtitle{
+					font-size: 2.2rem;
+					padding: 30px;
+					width: 100%;
+					.wrapper-images{
+						article{
+							img{
+								width: 130px;
+								height: 130px;
+							}
+						}
+					}
+				}
+			}
+		}
+		#contact{
+			.content{
+				&-contact{
+					padding: 0 5%;
+					p{
+						font-size: 3vh;
+					}
+					.img{
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }

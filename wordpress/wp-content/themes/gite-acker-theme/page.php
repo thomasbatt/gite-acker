@@ -4,7 +4,7 @@
 	$content = $content_page;
 	
 	$uri_basename = basename($_SERVER["REQUEST_URI"]);
-	$tmpl_page = ['nouvelles','trombinoscope','les-parcours','agenda'];
+	$tmpl_page = ['accueil'];
 	
 	if( in_array($uri_basename, $tmpl_page) )
 		$content['name'] = $uri_basename;

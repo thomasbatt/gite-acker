@@ -16,6 +16,7 @@ function parallaxScroll(evt) {
   } else {
     delta = evt.wheelDelta;
   }
+
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
       //Down scroll
@@ -36,9 +37,9 @@ function parallaxScroll(evt) {
       slideDurationTimeout(slideDurationSetting);
     }
   }
+
   scaleCurrentSlideMenu();
   displayScrollarow();
-
 }
 
 // ------------- SET TIMEOUT TO TEMPORARILY "LOCK" SLIDES ------------- //
@@ -125,6 +126,4 @@ function scaleCurrentSlideMenu() {
   var selectorSlider = 'a[target="'+currentSlideNumber+'"].js-scrollTo';
   $(selectorSlider).addClass('scale');
 }
-
-
 

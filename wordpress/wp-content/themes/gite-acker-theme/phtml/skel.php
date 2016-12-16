@@ -133,8 +133,10 @@ html {
     .header-links {
       top: 20%;
       right: 2%; }
-  .footer svg {
-    bottom: 15vh; }
+  .footer-scrolldown-arrow {
+    left: 30%; }
+    .footer-scrolldown-arrow svg {
+      bottom: 15vh; }
   #page #about .content-subtitle {
     font-size: 1.4rem; }
     #page #about .content-subtitle .wrapper-images {
@@ -195,9 +197,10 @@ html {
     #page #about .content-title {
       font-size: 4vh; }
     #page #about .content-subtitle {
-      font-size: 2.2rem;
-      padding: 30px;
-      width: 100%; }
+      font-size: 1.8rem;
+      padding: 15px;
+      width: 100%;
+      margin: 5px auto; }
       #page #about .content-subtitle .wrapper-images article img {
         width: 130px;
         height: 130px; }
@@ -210,8 +213,8 @@ html {
 </style>
 
 		
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b7a252cb518'/>
-		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b7a252cb518'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/vendors.min.css?v=1b88bef69020'/>
+		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=1b88bef69020'/>
 	</head>
 
 	<body id="body">
@@ -222,6 +225,6 @@ html {
 	</body>
 
 	
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b7a252cb518'></script>
-	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b7a252cb518'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/vendors.min.js?v=1b88bef69020'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url');?>/js/website.min.js?v=1b88bef69020'></script>
 </html>

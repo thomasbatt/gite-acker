@@ -29,8 +29,11 @@
 		}
 	}
 	.footer{
-		svg{
-			bottom: 15vh;
+		&-scrolldown-arrow{
+			left: 30%;
+			svg{
+				bottom: 15vh;
+			}
 		}
 	}
 	#page{
@@ -151,9 +154,10 @@
 					font-size: 4vh;
 				}
 				&-subtitle{
-					font-size: 2.2rem;
-					padding: 30px;
+					font-size: 1.8rem;
+					padding: 15px;
 					width: 100%;
+					margin: 5px auto;
 					.wrapper-images{
 						article{
 							img{

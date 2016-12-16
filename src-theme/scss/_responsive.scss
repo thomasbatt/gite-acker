@@ -1,5 +1,10 @@
 @media screen and (max-width: 430px) {
 	#page{
+		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}
 		#about{
 			.content{
 				&-subtitle{
@@ -29,13 +34,19 @@
 		}
 	}
 	.footer{
-		svg{
-			bottom: 15vh;
+		&-scrolldown-arrow{
+			left: 30%;
+			svg{
+				bottom: 15vh;
+			}
 		}
 	}
 	#page{
-		.scrolldown{
-		}
+/*		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}*/
 		#about{
 			.content{
 				&-subtitle{
@@ -80,7 +91,7 @@
 	#page{
 		.content {
 			&-wrapper {
-				font-size: 2.2vw;
+				/*font-size: 2.2vw;*/
 			}
 		}
 		#about{
@@ -132,7 +143,7 @@
 	#page{
 		.content {
 			&-wrapper {
-				font-size: 3vh;
+				/*font-size: 3vh;*/
 			}
 		}
 /*		#acceuil{
@@ -151,9 +162,10 @@
 					font-size: 4vh;
 				}
 				&-subtitle{
-					font-size: 2.2rem;
-					padding: 30px;
+					font-size: 1.8rem;
+					padding: 15px;
 					width: 100%;
+					margin: 5px auto;
 					.wrapper-images{
 						article{
 							img{

@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer <?= $content['name'] ?>">
 	<section class="wow slideInUp" data-wow-delay="1.2s" data-wow-offset="10">
         <div class="footer-scrolldown-arrow transition display">
 <!-- LOGO SVG -->

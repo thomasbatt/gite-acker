@@ -141,6 +141,13 @@
 		}
 	}
 	#page{
+	/*.single{
+		.post{
+			img{
+				width: 100%;
+				height: 80%;
+			}
+	}*/
 		.content {
 			&-wrapper {
 				/*font-size: 3vh;*/

@@ -60,6 +60,18 @@
 			text-decoration: none;
 	  }
 	}
+	&.single{
+		.footer-meta-links, .footer-admin-links{
+			color: #5F0606;
+			a{
+				color: #0a4d5d;
+			}
+
+		}
+		.footer-scrolldown-arrow{
+			display: none;
+		}
+	}
 	@keyframes scrolldown {
 	    from {
 	        transform: translateY(0);

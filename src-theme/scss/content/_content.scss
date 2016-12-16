@@ -85,15 +85,15 @@
 		}
 	}
 	#acceuil{
-/*		.content{
-			&-wrapper{
-				.content-subtitle{
+		// .content{
+		// 	&-wrapper{
+		// 		.content-subtitle{
 					
 					
-				}
-			}
-		}
-*/
+		// 		}
+		// 	}
+		// }
+
 	}
 	#about{
 		.content{
@@ -107,7 +107,8 @@
 				.wrapper-images{
 					display: flex;
 					justify-content: space-between;
-					padding-top: 25px
+					padding-top: 25px;
+						// opacity: 0.1;
 					img:hover{
 						transform: scale(1.1);
 						transition: all 0.5s ease;

@@ -2,7 +2,10 @@
 	// z-index: $content-zindex;
 	// ------------- MIXINS ------------- //
 	@mixin transition($time, $property: all, $easing: ease-in) {
-		transition: $property $time $easing;
+		// transition: $property $time $easing;
+		transition-property: $property;
+		transition-duration: $time;
+		transition-timing-function: $easing;
 	}
 
 	.background {
@@ -19,7 +22,8 @@
 		transform: scale(1.2);
 		transform: translateY($parallax-offset);
 		filter: saturate(200%);
-		@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+		@include transition($transition-speed, transform, cubic-bezier(0.22, 0.44, 0, 1));
+		// transition: opacity 0s;
 		&:before {
 			content: "";
 			position: absolute;
@@ -65,7 +69,7 @@
 			transform: translateY($content-offset);
 			will-change: transform;
 			backface-visibility: hidden;
-			@include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+			@include transition($transition-speed + .5, transform, cubic-bezier(0.22, 0.44, 0, 1));
 		}
 		&-title{
 			font-size: 12vh;

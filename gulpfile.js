@@ -8,7 +8,7 @@ var urlbowerPath = bower.root.bowerPath,
     urlAssets = bower.root.urlAssets,
     urlViews = bower.root.urlViews;
 
-var $dev = false;
+var $dev = true;
 
 
 // -----------------------BOWER URLS--------------------------

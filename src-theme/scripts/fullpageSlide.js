@@ -9,26 +9,13 @@ var totalSlideNumber = $(".background").length;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
-    // console.log('taagle');    
-  // console.log('evt', evt);
   if (isFirefox) {
-    //Set delta for Firefox
     delta = evt.detail * (-120);
-    // console.log(evt.detail);
   } else if (isIe) {
-    //Set delta for IE
     delta = -evt.deltaY;
-    // console.log(evt.deltaY);
   } else {
-    //Set delta for all other browsers
     delta = evt.wheelDelta;
-    // console.log(evt.wheelDelta);
   }
-  // detectswipe('body');
-  // console.log('detectswipe', detectswipe('body'));
-    // console.log('evt', evt);
-    
-    // console.log('delta', delta);
 
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
@@ -50,7 +37,7 @@ function parallaxScroll(evt) {
       slideDurationTimeout(slideDurationSetting);
     }
   }
-  displayNoneScrollarow();
+  displayScrollarow();
 }
 
 // ------------- SET TIMEOUT TO TEMPORARILY "LOCK" SLIDES ------------- //
@@ -61,33 +48,13 @@ function slideDurationTimeout(slideDuration) {
 }
 
 // ------------- ADD EVENT LISTENER ------------- //
-var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
-window.addEventListener(mousewheelEvent, parallaxScroll, false);
-window.addEventListener("touchmove", parallaxScroll, false);
-
-// ------------- SLIDE MOTION ------------- //
-function nextItem() {
-  var $previousSlide = $(".background").eq(currentSlideNumber - 1);
-  $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+function detectScroll(el,func) {
+  var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
+  var ele = document.getElementById(el);
+  if(typeof func == 'function')
+    ele.addEventListener(mousewheelEvent, func, false);
 }
-
-function previousItem() {
-  var $currentSlide = $(".background").eq(currentSlideNumber);
-  $currentSlide.removeClass("down-scroll").addClass("up-scroll");
-}
-
-function displayNoneScrollarow() {
-  var $currentSlide = $(".background").eq(currentSlideNumber);
-  var $scrolldownarrow = $(".footer-scrolldown-arrow");
-  if ( $currentSlide.attr('id') == 'contact')
-    $scrolldownarrow.removeClass("display transition-slow").addClass("no-display transition-fast");
-  else 
-    $scrolldownarrow.removeClass("no-display transition-fast").addClass("display transition-slow");
-}
-
-// ------------- SWIPED DIRECTION ------------- //
-
-function detectswipe(el,func) {
+function detectSwipe(el,func) {
     // console.log('taagle');    
   swipe_det = new Object();
   swipe_det.sX = 0;
@@ -99,7 +66,7 @@ function detectswipe(el,func) {
   var min_y = 40;  //min y swipe for vertical swipe
   var max_y = 50;  //max y difference for horizontal swipe
   var direc = "";
-  ele = document.getElementById(el);
+  var ele = document.getElementById(el);
   ele.addEventListener('touchstart',function(e){
     var t = e.touches[0];
     swipe_det.sX = t.screenX; 
@@ -129,5 +96,28 @@ function detectswipe(el,func) {
     direc = "";
   },false);  
 }
+
+// ------------- SLIDE MOTION ------------- //
+function nextItem() {
+  var $previousSlide = $(".background").eq(currentSlideNumber - 1);
+  $previousSlide.removeClass("up-scroll no-display").addClass("down-scroll");
+  var $currentSlide = $(".background").eq(currentSlideNumber);
+  $currentSlide.removeClass("no-visible");
+}
+
+function previousItem() {
+  var $currentSlide = $(".background").eq(currentSlideNumber);
+  $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+}
+
+function displayScrollarow() {
+  var $currentSlide = $(".background").eq(currentSlideNumber);
+  var $scrolldownarrow = $(".footer-scrolldown-arrow");
+  if ( $currentSlide.attr('id') == 'contact')
+    $scrolldownarrow.removeClass("visible transition-slow").addClass("no-visible transition-fast");
+  else 
+    $scrolldownarrow.removeClass("no-visible transition-fast").addClass("visible transition-slow");
+}
+
 
 

@@ -43,15 +43,6 @@ $('document').ready(function(){
         return evt;
     }
 
-    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var page = $(this).attr('target'); // Page cible
-        var direction = 1;
-        if( page=='prev')
-          direction = -1;
-        evt = initDirection(evt,direction);
-        parallaxScroll(evt);
-    });
-
     function parallaxScrollTouch(el,d){
         evt = new Object();
         var direction = 0;
@@ -63,7 +54,17 @@ $('document').ready(function(){
         parallaxScroll(evt);
     }
 
-    detectswipe('body',parallaxScrollTouch);
+    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
+        var page = $(this).attr('target'); // Page cible
+        var direction = 1;
+        if( page=='prev')
+          direction = -1;
+        evt = initDirection(evt,direction);
+        parallaxScroll(evt);
+    });
+
+    detectScroll('body',parallaxScroll);
+    detectSwipe('page',parallaxScrollTouch);
 
 // ----------------------------WOW JS--------------------------------
     

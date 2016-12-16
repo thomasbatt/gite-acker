@@ -35,34 +35,62 @@ $('document').ready(function(){
 // ----------------------------SMOOTH SCROLL--------------------------------
     
     function initDirection(evt,direction){
-        evt.detail = direction*3;
-        evt.deltaY = -direction;
-        evt.wheelDelta = -direction*120;
+        if(direction==='down')
+          var d = -1;
+        else if(direction==='up')
+          var d = 1;
+        evt.detail = d*3;
+        evt.deltaY = -d;
+        evt.wheelDelta = -d*120;
         return evt;
     }
 
-    function parallaxScrollTouch(el,d){
+    function parallaxTouch(el,d){
         evt = new Object();
-        var direction = 0;
+        var direction ;
         if (d == 'u')
-            direction = 1;
-        if (d == 'd')
-            direction = -1;
+            direction = 'up';
+        else if (d == 'd')
+            direction = 'down';
         evt = initDirection(evt,direction);
         parallaxScroll(evt);
     }
 
+    function parallaxTarget(targetSlideNumber){
+        evt = new Object();
+        var n = targetSlideNumber - currentSlideNumber;
+       
+        function loopParallaxScroll(direction) {
+            evt = initDirection(evt,direction);
+            var slideDuration = 0;
+            while ( n != 0){
+                console.log(n);
+                setTimeout(function() {
+                    ticking = false;
+                    parallaxScroll(evt);
+                }, slideDuration);
+                slideDuration += slideDurationSetting/2;
+                if (n>0 && direction==='up') 
+                  n--;
+                if (n<0 && direction==='down') 
+                  n++;
+            }
+        }
+        if ( n>0 )
+          loopParallaxScroll('up');
+        else if ( n<0 )
+          loopParallaxScroll('down');
+    }
+
     $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var page = $(this).attr('target'); // Page cible
-        var direction = 1;
-        if( page=='prev')
-          direction = -1;
-        evt = initDirection(evt,direction);
-        parallaxScroll(evt);
+        var targetSlideNumber = $(this).attr('target'); // Page cible
+        if( targetSlideNumber =='next')
+            targetSlideNumber = currentSlideNumber + 1;
+        parallaxTarget(targetSlideNumber);
     });
 
     detectScroll('body',parallaxScroll);
-    detectSwipe('page',parallaxScrollTouch);
+    detectSwipe('page',parallaxTouch);
 
 // ----------------------------WOW JS--------------------------------
     

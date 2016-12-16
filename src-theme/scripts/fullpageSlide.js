@@ -16,7 +16,6 @@ function parallaxScroll(evt) {
   } else {
     delta = evt.wheelDelta;
   }
-
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
       //Down scroll
@@ -37,7 +36,9 @@ function parallaxScroll(evt) {
       slideDurationTimeout(slideDurationSetting);
     }
   }
+  scaleCurrentSlideMenu();
   displayScrollarow();
+
 }
 
 // ------------- SET TIMEOUT TO TEMPORARILY "LOCK" SLIDES ------------- //
@@ -117,6 +118,12 @@ function displayScrollarow() {
     $scrolldownarrow.removeClass("visible transition-slow").addClass("no-visible transition-fast");
   else 
     $scrolldownarrow.removeClass("no-visible transition-fast").addClass("visible transition-slow");
+}
+
+function scaleCurrentSlideMenu() {
+  $('a.js-scrollTo').removeClass('scale');
+  var selectorSlider = 'a[target="'+currentSlideNumber+'"].js-scrollTo';
+  $(selectorSlider).addClass('scale');
 }
 
 

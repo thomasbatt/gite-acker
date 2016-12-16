@@ -52,8 +52,9 @@
 					border: 2px solid #FFF;
 					border-radius: 3px;
 					transition-duration: 0.2s;
-					&:hover {
+					&:hover, &.scale{
 						transform: scale(1.1);
+						cursor: pointer;
 					}
 				}
 			}

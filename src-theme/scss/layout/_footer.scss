@@ -78,11 +78,12 @@
 	}
 	&.single{
 		.footer-meta-links, .footer-admin-links{
-			color: #5F0606;
 			a{
-				color: #0a4d5d;
+				color: #8a0606;
+				&:hover{
+					color: #f7a0a0;
+				}
 			}
-
 		}
 		.footer-scrolldown-arrow{
 			display: none;

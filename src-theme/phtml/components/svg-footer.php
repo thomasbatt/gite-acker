@@ -1,4 +1,4 @@
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="185.667px" viewBox="0 0 80 185.667" enable-background="new 0 0 80 185.667" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="185.667px" viewBox="0 0 80 185.667" enable-background="new 0 0 80 185.667" xml:space="preserve">
 	<g>
 		<path fill="#FFF" d="M41,5v6h0.154c7.965,0,14.03,0.462,18.559,4.835c6.028,5.821,9.123,18.766,9.123,38.352
 			c0,19.194-3.234,32.045-9.651,38.134c-4.769,4.525-10.946,4.915-17.399,4.915l-0.969,0.006l-0.945,0.003l-0.95,0.003l-0.976,0.002

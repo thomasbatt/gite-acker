@@ -2,7 +2,7 @@
 	<div class="header-logo">
 		<a href="<?php bloginfo('url');?>">
 <!-- LOGO SVG -->
-			<?php include get_template_directory() . "/phtml/components/header-svg.php"; ?>
+			<?php include get_template_directory() . "/phtml/components/svg-header.php"; ?>
 <!-- LOGO SVG -->
 		</a>
 	</div>

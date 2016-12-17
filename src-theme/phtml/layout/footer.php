@@ -1,7 +1,7 @@
 <footer class="footer <?= $content['name'] ?>">
 	<section class="wow slideInUp" data-wow-delay="1.2s" data-wow-offset="10">
         <div class="footer-scrolldown-arrow js-scrollTo" target="next">
-        	<?php include get_template_directory() . "/phtml/components/footer-svg.php"; ?>
+        	<?php include get_template_directory() . "/phtml/components/svg-footer.php"; ?>
         	<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
     	</div>
 	    <div class="footer-meta-links">

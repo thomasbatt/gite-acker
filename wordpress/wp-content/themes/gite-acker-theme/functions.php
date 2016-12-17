@@ -275,29 +275,45 @@
 			<p>'.$themename.' configuration sauveguardé.</strong></p></div>';
 			if ( $message=='reset' ) echo '<div class="updated settings-error" id="setting-error-settings_updated"> 
 			<p>'.$themename.' settings reset.</strong></p></div>';
-			?> <ul><li>Theme version 1.0</li></ul><div class="content_options"><form method="post"> <?php foreach ($theme_options as $value) {
+			?> <ul><li>Theme version 1.0</li></ul><div class="content_options"><form method="post"><input type="hidden" name="action" value="save"> <?php foreach ($theme_options as $value) {
 			 
+						// echo ($value['type']);
+
 					switch ( $value['type'] ) {
-				 
-						case "open": ?> <?php break;
-					 
-						case "close": ?> </form></div></div><br> <?php break;
-					 
+						case "open": ?> <div class="all_options"> <?php break;
+
+
+
+						case "close": ?> </div><br> <?php break;
+
+
+
 						case "title": ?> <div class="message"><p>© Copyright 2016 Thomas BATT & Faress Hank.</p></div> <?php break;
-					 
-						case 'text': ?> <div class="option_input option_text"><label for="<?php echo $value['id']; ?>"> <?php echo $value['name']; ?></label><input id="" type="<?php echo $value['type']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>"> <small><?php echo $value['desc']; ?></small><div class="clearfix"></div></div> <?php break;
-					 
+
+
+
+						case 'text': ?> <div class="option_input option_text"><label for="<?php echo $value['id']; ?>"> <?php echo $value['name']; ?> </label><input id="" type="<?php echo $value['type']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>"> <small><?php echo $value['desc']; ?></small><div class="clearfix"></div></div> <?php break;
+
+
+
 						case 'textarea': ?> <div class="option_input option_textarea"><label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label><textarea name="<?php echo $value['id']; ?>" rows="" cols=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea><small><?php echo $value['desc']; ?></small><div class="clearfix"></div></div> <?php break;
-					 
+
+
+
 						case 'select': ?> <div class="option_input option_select"><label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label><select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"> <?php foreach ($value['options'] as $option) { ?> <option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option> <?php } ?> </select><small><?php echo $value['desc']; ?></small><div class="clearfix"></div></div> <?php break;
-					 
+
+
+
+
 						case "checkbox": ?> <div class="option_input option_checkbox"><label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label> <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?> <input id="<?php echo $value['id']; ?>" type="checkbox" name="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> > <small><?php echo $value['desc']; ?></small><div class="clearfix"></div></div> <?php break;
-					 
+
+
+
+
 						case "section": 
-						$i++; ?> <div class="input_section"><div class="input_title"><h3><img src="<?php echo get_template_directory_uri();?>/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Sauvegarder"></span><div class="clearfix"></div></div><div class="all_options"> <?php break;
-						
+						$i++; ?> <div class="input_title"><h3><img src="<?php echo get_template_directory_uri();?>/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?> </h3><span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Sauvegarder"></span><div class="clearfix"></div></div> <?php break;
 					}
-				}?> <input type="hidden" name="action" value="save"><form method="post"><p class="submit"><input name="reset" type="submit" value="Restaurer"> <input type="hidden" name="action" value="reset"></p></form></div><div class="footer-credit"><p>Ce theme est realisé par <a title="Thomas BATT" href="http://thomasbatt.fr" target="_blank">Thomas BATT & Faress Hank</a>.</p></div></div> <?php
+				}?> </form><form method="post"><p class="submit"><input name="reset" type="submit" value="Restaurer"> <input type="hidden" name="action" value="reset"></p></form></div><div class="footer-credit"><p>Ce theme est realisé par <a title="Thomas BATT" href="http://thomasbatt.fr" target="_blank">Thomas BATT & Faress Hank</a>.</p></div></div> <?php
 		// echo 'taagle'.get_option();
 	}
 

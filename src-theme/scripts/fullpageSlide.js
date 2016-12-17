@@ -37,6 +37,8 @@ function parallaxScroll(evt) {
       slideDurationTimeout(slideDurationSetting);
     }
   }
+
+  scaleCurrentSlideMenu();
   displayScrollarow();
 }
 
@@ -119,5 +121,9 @@ function displayScrollarow() {
     $scrolldownarrow.removeClass("no-visible transition-fast").addClass("visible transition-slow");
 }
 
-
+function scaleCurrentSlideMenu() {
+  $('a.js-scrollTo').removeClass('scale');
+  var selectorSlider = 'a[target="'+currentSlideNumber+'"].js-scrollTo';
+  $(selectorSlider).addClass('scale');
+}
 

@@ -1,0 +1,13 @@
+body{
+	background-image: url(./img/accueil_compress.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	filter: saturate(200%);
+}
+.login-action-login h1{
+	display: none;
+}
+.login.login-action-login p a, .login.login-action-login p a:hover{
+	color: #fff !important;
+}

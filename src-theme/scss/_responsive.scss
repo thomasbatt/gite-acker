@@ -58,6 +58,17 @@
 	}
 }
 @media screen and (max-width: 950px) {
+	.header{
+		&-links{
+			ul{
+				li{
+					&:not(:first-child) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 	#page{
 		.pagecontainer.single{
 			.post{
@@ -105,7 +116,7 @@
 		#about{
 			.content{
 				&-title{
-					font-size: 5vh;
+					font-size: 7vh;
 				}
 				&-subtitle{
 					padding: 20px;

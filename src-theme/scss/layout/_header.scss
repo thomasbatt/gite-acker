@@ -43,6 +43,7 @@
 			margin: 0;
 			li{
 				display:inline-block;
+
 				a{
 					display:inline-block;
 					margin: 10px;
@@ -51,9 +52,10 @@
 					color:#fff;
 					border: 2px solid #FFF;
 					border-radius: 3px;
-					transition: all 0.5s ease;
-					&:hover {
-						transform: scale(1.2);
+					transition-duration: 0.2s;
+					&:hover, &.scale{
+						transform: scale(1.1);
+						cursor: pointer;
 					}
 				}
 			}
@@ -69,6 +71,9 @@
 			path{
 				fill: #8c0b0b;
 			}
+		}
+		.header-links{
+			display: none;
 		}
 		a{
 			color: #FFF;

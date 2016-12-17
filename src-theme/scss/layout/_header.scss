@@ -62,19 +62,22 @@
 		}
 	}
 	&.single{
+		padding: 0 $header-padding;
+		.header-links{
+			top: 18%;
+		}
 		svg{
 			stroke: #250000;
 			path{
-			fill: #5F0606;
-				
+				fill: #8c0b0b;
 			}
 		}
 		.header-links{
 			display: none;
 		}
 		a{
-			color: #5F0606;
-			border-color: #5F0606;
+			color: #FFF;
+			border-color: #FFF;
 		}
 	}
 }

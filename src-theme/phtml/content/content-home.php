@@ -5,7 +5,7 @@
 			<div class="content-wrapper">
 				<p class="content-title">
 		<!-- LOGO SVG -->
-					<?php include get_template_directory() . "/phtml/components/title-svg.php"; ?>
+					<?php include get_template_directory() . "/phtml/components/svg-title.php"; ?>
 		<!-- LOGO SVG -->
 				</p>
 			</div>

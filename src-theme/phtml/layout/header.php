@@ -20,6 +20,10 @@
 				<a  class="js-scrollTo" target="2" data-fade="false"><?php echo get_settings('giteacker_menu_item3'); ?></a>
 				<span></span>
 			</li>
+			<li >
+				<a href="<?php bloginfo('url');?>" class="js-scrollTo scale" target="0" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
+				<span></span>
+			</li>
 		</ul>
 	</div>
 </header>

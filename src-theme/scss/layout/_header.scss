@@ -43,7 +43,9 @@
 			margin: 0;
 			li{
 				display:inline-block;
-
+				&:last-child{
+					display: none;
+				}
 				a{
 					display:inline-block;
 					margin: 10px;
@@ -64,6 +66,18 @@
 	&.single{
 		padding: 0 $header-padding;
 		.header-links{
+			ul{
+				li{
+					&:not(:last-child){
+						display: none;
+					}
+					&:last-child{
+						display: block;
+					}
+				}
+			}
+		}
+		.header-links{
 			top: 18%;
 		}
 		svg{
@@ -71,9 +85,6 @@
 			path{
 				fill: #8c0b0b;
 			}
-		}
-		.header-links{
-			display: none;
 		}
 		a{
 			color: #FFF;

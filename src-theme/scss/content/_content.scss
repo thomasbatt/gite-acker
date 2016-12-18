@@ -104,6 +104,9 @@
 	}
 	#about{
 		.content{
+			&-title{
+				display: none;
+			}
 			&-subtitle{
 				padding: 50px;
 				margin: 20px auto;

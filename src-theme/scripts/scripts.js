@@ -55,31 +55,30 @@ $('document').ready(function(){
         evt = initDirection(evt,direction);
         parallaxScroll(evt);
     }
+       
+    function loopParallaxScroll(direction,n) {
+        evt = new Object();
+        evt = initDirection(evt,direction);
+        var slideDuration = 0;
+        while ( n != 0){
+            setTimeout(function() {
+                ticking = false;
+                parallaxScroll(evt);
+            }, slideDuration);
+            slideDuration += slideDurationSetting/2;
+            if (n>0 && direction==='up') 
+              n--;
+            if (n<0 && direction==='down') 
+              n++;
+        }
+    }
 
     function parallaxTarget(targetSlideNumber){
-        evt = new Object();
         var n = targetSlideNumber - currentSlideNumber;
-       
-        function loopParallaxScroll(direction) {
-            evt = initDirection(evt,direction);
-            var slideDuration = 0;
-            while ( n != 0){
-                console.log(n);
-                setTimeout(function() {
-                    ticking = false;
-                    parallaxScroll(evt);
-                }, slideDuration);
-                slideDuration += slideDurationSetting/2;
-                if (n>0 && direction==='up') 
-                  n--;
-                if (n<0 && direction==='down') 
-                  n++;
-            }
-        }
         if ( n>0 )
-          loopParallaxScroll('up');
+          loopParallaxScroll('up',n);
         else if ( n<0 )
-          loopParallaxScroll('down');
+          loopParallaxScroll('down',n);
     }
 
     $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément

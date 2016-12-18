@@ -48,12 +48,6 @@
 	// }
 
 	/*---------------------------------------------------
-	add actions
-	----------------------------------------------------*/
-	add_action( 'admin_init', 'theme_settings_init' );
-	add_action( 'admin_menu', 'add_settings_page' );
-
-	/*---------------------------------------------------
 	Theme Panel Output
 	----------------------------------------------------*/
 	// function theme_settings_page() {
@@ -86,7 +80,7 @@
 	add settings page to menu
 	----------------------------------------------------*/
 	function add_settings_page() {
-	add_menu_page( __( 'Gites ACKER' .'' ), __( 'Gites ACKER' .'' ), 'manage_options', 'settings', 'theme_settings_page');
+	add_menu_page( __( 'Gites ACKER' .'' ), __( 'Gites ACKER' .'' ), 'edit_posts', 'settings', 'theme_settings_page');
 	}
 
 	/*---------------------------------------------------

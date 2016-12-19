@@ -23,7 +23,7 @@
 				stroke-dasharray: 1000;
 				stroke-dashoffset: 1000;
 				animation-name: drawVectorHeader;
-				animation-duration: 5s;
+				animation-duration: 3.5s;
 				animation-iteration-count: 1;
 				animation-fill-mode: forwards;
 				animation-timing-function: linear;
@@ -43,6 +43,9 @@
 			margin: 0;
 			li{
 				display:inline-block;
+				&:last-child{
+					display: none;
+				}
 				a{
 					display:inline-block;
 					margin: 10px;
@@ -52,11 +55,40 @@
 					border: 2px solid #FFF;
 					border-radius: 3px;
 					transition-duration: 0.2s;
-					&:hover {
+					&:hover, &.scale{
 						transform: scale(1.1);
+						cursor: pointer;
 					}
 				}
 			}
+		}
+	}
+	&.single{
+		padding: 0 $header-padding;
+		.header-links{
+			ul{
+				li{
+					&:not(:last-child){
+						display: none;
+					}
+					&:last-child{
+						display: block;
+					}
+				}
+			}
+		}
+		.header-links{
+			top: 18%;
+		}
+		svg{
+			stroke: #250000;
+			path{
+				fill: #8c0b0b;
+			}
+		}
+		a{
+			color: #FFF;
+			border-color: #FFF;
 		}
 	}
 }

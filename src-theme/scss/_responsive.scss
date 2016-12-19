@@ -1,5 +1,10 @@
 @media screen and (max-width: 430px) {
 	#page{
+		.content{
+			&-wrapper{
+				font-size: large;
+			}
+		}
 		#about{
 			.content{
 				&-subtitle{
@@ -28,10 +33,15 @@
 			right: 2%;
 		}
 	}
-	#page{
-		.scrolldown{
-			bottom: 15vh;
+	.footer{
+		&-scrolldown-arrow{
+			left: 30%;
+			svg{
+				bottom: 15vh;
+			}
 		}
+	}
+	#page{
 		#about{
 			.content{
 				&-subtitle{
@@ -48,7 +58,35 @@
 	}
 }
 @media screen and (max-width: 950px) {
+	.header{
+		&-links{
+			ul{
+				li{
+					&:not(:first-child) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 	#page{
+		.pagecontainer.single{
+			.post{
+				img{
+					top: 50%;
+					transform: translateY(-50%);
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.content {
+			&-title{
+				svg{
+					width: 50vw;
+				}
+			}
+		}
 		#about{
 			.content{
 				&-subtitle{
@@ -64,6 +102,7 @@
 		#contact{
 			.content{
 				&-contact{
+					text-align: center;
 					.img{
 						display: none;
 					}
@@ -74,15 +113,10 @@
 }
 @media screen and (max-width:  1250px) {
 	#page{
-		.content {
-			&-wrapper {
-				font-size: 2.2vw;
-			}
-		}
 		#about{
 			.content{
 				&-title{
-					font-size: 5vh;
+					font-size: 7vh;
 				}
 				&-subtitle{
 					padding: 20px;
@@ -111,30 +145,40 @@
 		}
 	}
 	.footer{
-		div[class]{
+		div[class*="links"]{
 			display: none;
+		}
+		section{
+			.footer{
+				&-scrolldown-arrow{
+					svg{
+						display: none;
+						// width: 160px !important;
+						// left: -9vh;
+						// bottom: 3vh !important;
+						// path[id=roll], path{
+						// 	display: none;
+						// }
+					}
+					.glyphicon{
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	#page{
-		.scrolldown{
-			svg{
-				width: 100px;
-				path[id=roll], path{
-					display: none;
+		.content {
+			&-title{
+				svg{
+					width: 80vw;
 				}
 			}
-		}
-		.content {
 			&-wrapper {
-				font-size: 3.5vw;
+				/*font-size: 3vh;*/
 			}
 		}
 		#acceuil{
-			.content-wrapper{
-				.content-subtitle{
-					font-size: 3vh !important;
-				}
-			}
 		}
 		#about{
 			.content{
@@ -142,8 +186,10 @@
 					font-size: 4vh;
 				}
 				&-subtitle{
+					font-size: 1.8rem;
 					padding: 15px;
 					width: 100%;
+					margin: 5px auto;
 					.wrapper-images{
 						article{
 							img{

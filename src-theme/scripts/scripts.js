@@ -31,37 +31,65 @@ $('document').ready(function(){
     // alert('x:'+tailleEcranX+' y:'+tailleEcranY);
   if(tailleEcranY>530 ){
 
-// ------------------------AJAX---------------------------
-
 
 // ----------------------------SMOOTH SCROLL--------------------------------
     
-    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var page = $(this).attr('target'); // Page cible
-        var direction = 1;
-        if( page=='prev')
-          direction = -1;
-        // console.log(evt);
-        evt.detail = direction*3;
-        evt.deltaY = -direction;
-        evt.wheelDelta = -direction*120;
-        parallaxScroll(evt);
-        // var speed = 1500; // Durée de l'animation (en ms)
-        // $('html, body').animate( { scrollTop: $(page).offset().top }, speed , "easeInOutCubic" ); // Go
-        // return false;
-    });
-    window.addEventListener("touchmove", function(evt){
-        evt.preventDefault() 
-        var direction = 1;
-        evt.detail = direction*3;
-        evt.deltaY = -direction;
-        evt.wheelDelta = -direction*120;
+    function initDirection(evt,direction){
+        if(direction==='down')
+          var d = -1;
+        else if(direction==='up')
+          var d = 1;
+        evt.detail = d*3;
+        evt.deltaY = -d;
+        evt.wheelDelta = -d*120;
+        return evt;
+    }
 
-        // alert('taagle');
-        // console.log('taagle');
-        console.log('evt', evt);
+    function parallaxTouch(el,d){
+        evt = new Object();
+        var direction ;
+        if (d == 'u')
+            direction = 'up';
+        else if (d == 'd')
+            direction = 'down';
+        evt = initDirection(evt,direction);
         parallaxScroll(evt);
-    }, false)
+    }
+       
+    function loopParallaxScroll(direction,n) {
+        evt = new Object();
+        evt = initDirection(evt,direction);
+        var slideDuration = 0;
+        while ( n != 0){
+            setTimeout(function() {
+                ticking = false;
+                parallaxScroll(evt);
+            }, slideDuration);
+            slideDuration += slideDurationSetting/2;
+            if (n>0 && direction==='up') 
+              n--;
+            if (n<0 && direction==='down') 
+              n++;
+        }
+    }
+
+    function parallaxTarget(targetSlideNumber){
+        var n = targetSlideNumber - currentSlideNumber;
+        if ( n>0 )
+          loopParallaxScroll('up',n);
+        else if ( n<0 )
+          loopParallaxScroll('down',n);
+    }
+
+    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
+        var targetSlideNumber = $(this).attr('target'); // Page cible
+        if( targetSlideNumber =='next')
+            targetSlideNumber = currentSlideNumber + 1;
+        parallaxTarget(targetSlideNumber);
+    });
+
+    detectScroll('body',parallaxScroll);
+    detectSwipe('page',parallaxTouch);
 
 // ----------------------------WOW JS--------------------------------
     

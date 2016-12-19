@@ -1,0 +1,30 @@
+#page{
+	.pagecontainer.single{
+		// background-color: #F9F9F9;
+		.post{
+			padding: 100px 0;
+			text-align: center;
+			height: 100vh;
+			.bg{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-image: url(../img/description_compress.jpg);
+				filter: grayscale(70%);
+			}
+			img{
+				z-index: $content-zindex;
+				position: relative;
+				width: auto;
+				height: 100%;
+				border: 10px solid #FFF;
+				filter: saturate(140%);
+			}
+		}
+	}
+}

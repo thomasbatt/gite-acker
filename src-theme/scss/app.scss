@@ -19,11 +19,12 @@
 
 // ---------------LAYOUT------------
 @import "layout/header",
-		"layout/content",
+		"content/content",
+		"content/single",
 		"layout/footer";
 
 // // --------------COMPONENTS------------
 // @import "components/forms";
 
-// // -------------RESPONSIVE------------
+// -------------RESPONSIVE------------
 @import "responsive";

@@ -48,12 +48,6 @@
 	// }
 
 	/*---------------------------------------------------
-	add actions
-	----------------------------------------------------*/
-	add_action( 'admin_init', 'theme_settings_init' );
-	add_action( 'admin_menu', 'add_settings_page' );
-
-	/*---------------------------------------------------
 	Theme Panel Output
 	----------------------------------------------------*/
 	// function theme_settings_page() {
@@ -86,7 +80,7 @@
 	add settings page to menu
 	----------------------------------------------------*/
 	function add_settings_page() {
-	add_menu_page( __( 'Gites ACKER' .'' ), __( 'Gites ACKER' .'' ), 'manage_options', 'settings', 'theme_settings_page');
+	add_menu_page( __( 'Gites ACKER' .'' ), __( 'Gites ACKER' .'' ), 'edit_posts', 'settings', 'theme_settings_page');
 	}
 
 	/*---------------------------------------------------
@@ -286,83 +280,120 @@
 				<li>Theme version 1.0 </li>
 			</ul>
 			<div class="content_options">
-				<form method="post">
+			  <form method="post">
+			 	<input type="hidden" name="action" value="save" />
 	 
 				<?php foreach ($theme_options as $value) {
 			 
+						// echo ($value['type']);
+
 					switch ( $value['type'] ) {
-				 
 						case "open": ?>
+
+						<div class="all_options">
+							<!-- <span>taagle</span> -->
 						<?php break;
-					 
+
+
+
 						case "close": ?>
-						</div>
-						</div><br />
+
+						<!-- </div> -->
+					</div>
+					<br/>
+						
 						<?php break;
-					 
+
+
+
 						case "title": ?>
-						<div class="message">
-							<p>© Copyright 2016 Thomas BATT & Faress Hank.</p>
-						</div>
+
+					<div class="message">
+						<p>© Copyright 2016 Thomas BATT & Faress Hank.</p>
+					</div>
+						
 						<?php break;
-					 
+
+
+
 						case 'text': ?>
-						<div class="option_input option_text">
+
+					<div class="option_input option_text">
 						<label for="<?php echo $value['id']; ?>">
-						<?php echo $value['name']; ?></label>
+							<?php echo $value['name']; ?>
+						</label>
 						<input id="" type="<?php echo $value['type']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>" />
-						<small><?php echo $value['desc']; ?></small>
+							<small><?php echo $value['desc']; ?></small>
 						<div class="clearfix"></div>
-						</div>
+					</div>
+						
 						<?php break;
-					 
+
+
+
 						case 'textarea': ?>
-						<div class="option_input option_textarea">
+
+					<div class="option_input option_textarea">
 						<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 						<textarea name="<?php echo $value['id']; ?>" rows="" cols=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea>
 						<small><?php echo $value['desc']; ?></small>
 						<div class="clearfix"></div>
-						</div>
+					</div>
+						
 						<?php break;
-					 
+
+
+
 						case 'select': ?>
-						<div class="option_input option_select">
+
+					<div class="option_input option_select">
 						<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 						<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-						<?php foreach ($value['options'] as $option) { ?>
-								<option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option>
-						<?php } ?>
+							<?php foreach ($value['options'] as $option) { ?>
+									<option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option>
+							<?php } ?>
 						</select>
 						<small><?php echo $value['desc']; ?></small>
 						<div class="clearfix"></div>
-						</div>
+					</div>
+						
 						<?php break;
-					 
+
+
+
+
 						case "checkbox": ?>
-						<div class="option_input option_checkbox">
+
+					<div class="option_input option_checkbox">
 						<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
-						<?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?>
+							<?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?>
 						<input id="<?php echo $value['id']; ?>" type="checkbox" name="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /> 
 						<small><?php echo $value['desc']; ?></small>
 						<div class="clearfix"></div>
-						</div>
+					</div>
+						
 						<?php break;
-					 
+
+
+
+
 						case "section": 
 						$i++; ?>
-						<div class="input_section">
+
+					<!-- <div class="input_section2"> -->
 						<div class="input_title">
-							
-							<h3><img src="<?php echo get_template_directory_uri();?>/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?></h3>
-							<span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Sauvegarder" /></span>
+							<h3>
+								<img src="<?php echo get_template_directory_uri();?>/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?>
+							</h3>
+							<span class="submit">
+								<input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Sauvegarder" />
+							</span>
 							<div class="clearfix"></div>
 						</div>
-						<div class="all_options">
+												
 						<?php break;
-						
 					}
 				}?>
-			  <input type="hidden" name="action" value="save" />
 			  </form>
 			  <form method="post">
 				  <p class="submit">

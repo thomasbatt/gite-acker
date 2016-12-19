@@ -12,27 +12,24 @@
 		margin: 0;
 		color: #fff;
 		.footer{
-			&-meta-links {
-				display: inline-block;
-			    float: left;
-			    padding: 0;
-			    width: 50%;
-			}
-			&-admin-links {
-				display: inline-block;
-			    float: right;
-			    padding: 0;
-			    text-align: right;
-			    width: 50%;
-			}
 			&-scrolldown-arrow{
 				position: fixed;
 				bottom: 0px;
 				left: 50%;
-				svg{
-					transform: translate(-20px); 
+				transform: translateX(-20px);
+				svg, .glyphicon{
+					transition: all 0.5s ease;
 					width: 40px;
-					height: 80px;
+					&:hover{
+						transform: scale(1.2);
+						cursor: pointer;
+					}
+				}
+				svg{
+					display: block;
+					position: relative;
+					bottom: 0vh;
+					height: 100%;
 					path[id=roll]{
 						animation-name: moveRoll;
 						animation-duration: 1s;
@@ -48,6 +45,26 @@
 						animation-timing-function: linear;
 					}
 				}
+				.glyphicon{
+					text-align: center;
+					font-size: 35px;
+					padding-bottom: 20px;
+					display: none;
+					animation: scrolldown 0.5s ease infinite alternate;
+				}
+			}
+			&-meta-links {
+				display: inline-block;
+			    float: left;
+			    padding: 0;
+			    width: 50%;
+			}
+			&-admin-links {
+				display: inline-block;
+			    float: right;
+			    padding: 0;
+			    text-align: right;
+			    width: 50%;
 			}
 		}
 		&:after{
@@ -57,18 +74,27 @@
 		a{
 			color: $blue-darker;
 			text-decoration: none;
-/*			&:hover{
-				color: $blue-base;
-		}*/
 	  }
 	}
-
+	&.single{
+		.footer-meta-links, .footer-admin-links{
+			a{
+				color: #8a0606;
+				&:hover{
+					color: #f7a0a0;
+				}
+			}
+		}
+		.footer-scrolldown-arrow{
+			display: none;
+		}
+	}
 	@keyframes scrolldown {
-    from {
-        transform: translateY(0);
-    }
-    to   { 
-        transform: translateY(-10px);
-    }
-}
+	    from {
+	        transform: translateY(0);
+	    }
+	    to   { 
+	        transform: translateY(-10px);
+	    }
+	}
 }

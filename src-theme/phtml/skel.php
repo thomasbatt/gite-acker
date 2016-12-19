@@ -2,8 +2,8 @@
 <html <?php language_attributes(); ?>>
 	<head>
 	    <meta charset="UTF-8">
-	    <title><?php bloginfo('name') ?> - <?php the_title(); ?></title>
-		<link href="<?php bloginfo('template_url'); ?>/img/Orque.png?v=@version@" rel="shortcut icon">
+	    <title><?php bloginfo('name') ?> - Gîtes de France</title>
+		<link href="<?php bloginfo('template_url'); ?>/img/logo.png?v=@version@" rel="shortcut icon">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no">
 
@@ -16,7 +16,7 @@
 		<link rel='stylesheet' href='<?php bloginfo('template_url')?>/css/website.min.css?v=@version@'/>
 	</head>
 
-	<body>
+	<body id="body">
 		<?php require('components/preloader.php'); ?>
 		<?php require('layout/header.php'); ?>
 		<?php require('content/content-'.$content['name'].'.php'); ?>

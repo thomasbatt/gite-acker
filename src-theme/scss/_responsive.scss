@@ -182,14 +182,17 @@
 		}
 		#about{
 			.content{
-				&-title{
-					font-size: 4vh;
-				}
+				// &-title{
+				// 	font-size: 4vh;
+				// }
 				&-subtitle{
-					font-size: 1.8rem;
+					font-size: 1.5rem;
 					padding: 15px;
 					width: 100%;
-					margin: 5px auto;
+					margin: 100px auto 0;
+					p:nth-child(1){
+						font-size: 4vh;
+					}
 					.wrapper-images{
 						article{
 							img{

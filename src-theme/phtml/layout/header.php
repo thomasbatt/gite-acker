@@ -1,4 +1,5 @@
-<header class="header wow slideInDown <?= $content['name'] ?>" data-wow-delay="1s" data-wow-offset="10" >
+<!-- <header class="header wow slideInDown <?= $content['name'] ?>" data-wow-delay="1s" data-wow-offset="10" > -->
+<header class="header <?= $content['name'] ?>">
 	<div class="header-logo">
 		<a href="<?php bloginfo('url');?>">
 <!-- LOGO SVG -->
@@ -6,7 +7,7 @@
 <!-- LOGO SVG -->
 		</a>
 	</div>
-	<div class="header-links">
+	<div class="header-links wow slideInDown" data-wow-delay="1s" data-wow-offset="10">
 		<ul>
 			<li>
 				<a  class="js-scrollTo scale" target="0" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
@@ -21,7 +22,7 @@
 				<span></span>
 			</li>
 			<li >
-				<a href="<?php bloginfo('url');?>" class="js-scrollTo scale" target="0" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
+				<a href="<?php bloginfo('url');?>" class="js-scrollTo scale" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
 				<span></span>
 			</li>
 		</ul>

@@ -82,7 +82,7 @@ $('document').ready(function(){
     }
 
     $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var targetSlideNumber = $(this).attr('target'); // Page cible
+        var targetSlideNumber = $(this).attr('data-target'); // Page cible
         if( targetSlideNumber =='next')
             targetSlideNumber = currentSlideNumber + 1;
         parallaxTarget(targetSlideNumber);

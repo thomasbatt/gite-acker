@@ -169,6 +169,9 @@
 	}
 	#page{
 		.content {
+ 			&-wrapper{
+ 				padding-top: 100px;
+ 			}
 			&-title{
 				svg{
 					width: 80vw;
@@ -182,14 +185,17 @@
 		}
 		#about{
 			.content{
-				&-title{
-					font-size: 4vh;
-				}
 				&-subtitle{
-					font-size: 1.8rem;
+					font-size: 1.5rem;
 					padding: 15px;
 					width: 100%;
-					margin: 5px auto;
+					margin: 0 auto;
+					p:nth-child(2){
+						font-size: 3vh;
+					}
+					p:nth-child(1){
+						font-size: 5vh;
+					}
 					.wrapper-images{
 						article{
 							img{

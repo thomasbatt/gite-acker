@@ -13,8 +13,9 @@
 <!-- DESCRIPTION -->
 		<section id="about" class="background no-visible">
 			<div class="content-wrapper">
-				<p class="content-title"><?php echo get_settings('giteacker_description_title'); ?></p>
 				<div class="content-subtitle text-justify">
+					<p><?php echo get_settings('giteacker_description_title'); ?></p>
+					<p>Aménagés à l'étage de la maison du propiétaire.</p>
 					<p><?php echo get_settings('giteacker_description_content'); ?></p>
 					<div class="wrapper-images">
 						<?php

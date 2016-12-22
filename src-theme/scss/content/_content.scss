@@ -81,7 +81,7 @@
 						stroke-dasharray: 1000;
 						stroke-dashoffset: 1000;
 						animation-name: drawVectorHome;
-						animation-duration: 3s;
+						animation-duration: 2.5s;
 						animation-iteration-count: 1;
 						animation-fill-mode: forwards;
 						animation-timing-function: linear;
@@ -111,13 +111,14 @@
 				font-size: 1.5rem;
 				color: #303030;
 				background-color: rgba(255,255,255,0.8);
+				margin-top: 100px;
 				p:nth-child(1){
 					font-size: 4vh;
 					// line-height: 0;
 					margin: 0 0 -7px;
 				}
 				p:nth-child(2){
-					opacity: 0.6;
+					opacity: 0.5;
 				}
 				.wrapper-images{
 					display: flex;

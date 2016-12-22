@@ -123,7 +123,7 @@ function displayScrollarow() {
 
 function scaleCurrentSlideMenu() {
   $('a.js-scrollTo').removeClass('scale');
-  var selectorSlider = 'a[target="'+currentSlideNumber+'"].js-scrollTo';
+  var selectorSlider = 'a[data-target="'+currentSlideNumber+'"].js-scrollTo';
   $(selectorSlider).addClass('scale');
 }
 

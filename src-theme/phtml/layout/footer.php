@@ -4,8 +4,8 @@
         	<?php include get_template_directory() . "/phtml/components/svg-footer.php"; ?>
         	<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
     	</div>
-	    <div class="footer-meta-links">
-	        <a href="./">Mentions légales</a> | <a href="./">Charte de confidentialité</a><br/>    
+	    <div class="footer-meta-links js-open-legales">
+	        <a href="#" data-fade="false">Mentions légales</a> | <a href="#" data-fade="false">Charte de confidentialité</a><br/>    
 			<span>© Copyright 2016 
 				<a href="http://www.thomasbatt.fr" target="_blank">Thomas BATT</a> & 
 				<a href="http://www.faress.webatt.fr" target="_blank">Faress Hank</a>

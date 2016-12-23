@@ -20,6 +20,7 @@
 		<?php require('components/preloader.php'); ?>
 		<?php require('layout/header.php'); ?>
 		<?php require('content/content-'.$content['name'].'.php'); ?>
+		<?php require('components/mentions-legales.php'); ?>
 		<?php require('layout/footer.php'); ?>
 	</body>
 

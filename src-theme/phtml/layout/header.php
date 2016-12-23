@@ -22,7 +22,7 @@
 				<span></span>
 			</li>
 			<li >
-				<a href="<?php bloginfo('url');?>" class="js-scrollTo scale" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
+				<a href="<?php bloginfo('url');?>" class="js-scrollTo scale"><?php echo get_settings('giteacker_menu_item1'); ?></a>
 				<span></span>
 			</li>
 		</ul>

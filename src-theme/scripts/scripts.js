@@ -95,6 +95,16 @@ $('document').ready(function(){
     
     new WOW().init();
 
+// ------------------------------MODAL--------------------------------
+    $('.js-open-legales').click(function(e){
+        e.preventDefault();
+        $('.legales').fadeIn();
+    });
+    $('.modal').click(function(e){
+        e.preventDefault();
+        $('.legales').fadeOut();
+    });
+
 // ----------------------------ELSE OLD MOBILE--------------------------------
         
   }else{

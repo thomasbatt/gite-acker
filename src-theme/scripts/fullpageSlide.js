@@ -39,7 +39,8 @@ function parallaxScroll(evt) {
   }
 
   scaleCurrentSlideMenu();
-  displayScrollarow();
+  noVisibleFade(".footer-scrolldown-arrow","contact");
+  noVisibleFade("a[data-target=0]","accueil");
 }
 
 // ------------- SET TIMEOUT TO TEMPORARILY "LOCK" SLIDES ------------- //
@@ -112,10 +113,10 @@ function previousItem() {
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
 
-function displayScrollarow() {
+function noVisibleFade(selectorElement,idSlide) {
   var $currentSlide = $(".background").eq(currentSlideNumber);
-  var $scrolldownarrow = $(".footer-scrolldown-arrow");
-  if ( $currentSlide.attr('id') == 'contact')
+  var $scrolldownarrow = $(selectorElement);
+  if ( $currentSlide.attr('id') == idSlide)
     $scrolldownarrow.removeClass("visible transition-slow").addClass("no-visible transition-fast");
   else 
     $scrolldownarrow.removeClass("no-visible transition-fast").addClass("visible transition-slow");

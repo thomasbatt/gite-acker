@@ -10,7 +10,7 @@
 	<div class="header-links wow slideInDown" data-wow-delay="1s" data-wow-offset="10">
 		<ul>
 			<li>
-				<a href="#" class="js-scrollTo scale" data-target="0" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
+				<a href="#" class="js-scrollTo scale no-visible" data-target="0" data-fade="false"><?php echo get_settings('giteacker_menu_item1'); ?></a>
 				<span></span>
 			</li>
 			<li>

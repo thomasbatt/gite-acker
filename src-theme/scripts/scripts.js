@@ -34,41 +34,64 @@ $('document').ready(function(){
 
 // ----------------------------SMOOTH SCROLL--------------------------------
     
-    function initDirection(evt,direction){
-        if(direction==='down')
-          var d = -1;
-        else if(direction==='up')
-          var d = 1;
-        evt.detail = d*3;
-        evt.deltaY = -d;
-        evt.wheelDelta = -d*120;
-        return evt;
+    function parallaxMove(direction) {
+      if (ticking != true) {
+          ticking = true;
+          if (direction==='down' && currentSlideNumber !== totalSlideNumber - 1) {
+            currentSlideNumber++;
+            nextItem();
+          }
+          else if (direction==='up' && currentSlideNumber !== 0) {
+            currentSlideNumber--;
+            previousItem();
+          }
+        slideDurationTimeout(slideDurationSetting);
+      }
+      scaleCurrentSlideMenu();
+      $(".footer-scrolldown-arrow").noVisibleFade("contact");
+      $("a[data-target=0]").noVisibleFade("accueil");
     }
 
-    function parallaxTouch(el,d){
-        evt = new Object();
-        var direction ;
-        if (d == 'u')
-            direction = 'up';
-        else if (d == 'd')
-            direction = 'down';
-        evt = initDirection(evt,direction);
-        parallaxScroll(evt);
+    // ------------- ADD EVENT LISTENER ------------- //
+    function parallaxScroll(evt){
+        if (isFirefox) {
+          delta = evt.detail * (-120);
+        } else if (isIe) {
+          delta = -evt.deltaY;
+        } else {
+          delta = evt.wheelDelta;
+        }
+        if (delta <= -scrollSensitivitySetting)
+            var direction = "down";
+        else if (delta >= scrollSensitivitySetting) 
+            var direction = "up";
+        parallaxMove(direction);
     }
+
+    function parallaxTouch(d){
+        if (d == 'u')
+            direction = 'down';
+        else if (d == 'd')
+            direction = 'up';
+        parallaxMove(direction);
+    }
+
+    $('#body').detectScroll( parallaxScroll );
+    $('#page').detectSwipe( parallaxTouch );
+
        
-    function loopParallaxScroll(direction,n) {
-        evt = new Object();
-        evt = initDirection(evt,direction);
+    // ------------- ADD EVENT CLICK ------------- //
+    function loopParallaxMove(direction,n) {
         var slideDuration = 0;
         while ( n != 0){
             setTimeout(function() {
                 ticking = false;
-                parallaxScroll(evt);
+                parallaxMove(direction);
             }, slideDuration);
             slideDuration += slideDurationSetting/2;
-            if (n>0 && direction==='up') 
+            if (n>0 && direction==='down') 
               n--;
-            if (n<0 && direction==='down') 
+            else if (n<0 && direction==='up') 
               n++;
         }
     }
@@ -76,20 +99,18 @@ $('document').ready(function(){
     function parallaxTarget(targetSlideNumber){
         var n = targetSlideNumber - currentSlideNumber;
         if ( n>0 )
-          loopParallaxScroll('up',n);
+          loopParallaxMove('down',n);
         else if ( n<0 )
-          loopParallaxScroll('down',n);
+          loopParallaxMove('up',n);
     }
 
-    $('.js-scrollTo').on('click', function(evt) { // Au clic sur un élément
-        var targetSlideNumber = $(this).attr('data-target'); // Page cible
+    $('.js-scrollTo').on('click', function(evt) { 
+        var targetSlideNumber = $(this).attr('data-target');
         if( targetSlideNumber =='next')
             targetSlideNumber = currentSlideNumber + 1;
         parallaxTarget(targetSlideNumber);
     });
 
-    detectScroll('body',parallaxScroll);
-    detectSwipe('page',parallaxTouch);
 
 // ----------------------------WOW JS--------------------------------
     

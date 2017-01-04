@@ -53,31 +53,8 @@ $('document').ready(function(){
     }
 
     // ------------- ADD EVENT LISTENER ------------- //
-    function parallaxScroll(evt){
-        if (isFirefox) {
-          delta = evt.detail * (-120);
-        } else if (isIe) {
-          delta = -evt.deltaY;
-        } else {
-          delta = evt.wheelDelta;
-        }
-        if (delta <= -scrollSensitivitySetting)
-            var direction = "down";
-        else if (delta >= scrollSensitivitySetting) 
-            var direction = "up";
-        parallaxMove(direction);
-    }
-
-    function parallaxTouch(d){
-        if (d == 'u')
-            direction = 'down';
-        else if (d == 'd')
-            direction = 'up';
-        parallaxMove(direction);
-    }
-
-    $('#body').detectScroll( parallaxScroll );
-    $('#page').detectSwipe( parallaxTouch );
+    $('#body').detectScroll( parallaxMove );
+    $('#page').detectSwipe( parallaxMove );
 
        
     // ------------- ADD EVENT CLICK ------------- //

@@ -11,8 +11,21 @@ var totalSlideNumber = $(".background").length;
 $.fn.detectScroll = function(func){
     return this.each(function(){
         var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
-        if(typeof func == 'function')
-          this.addEventListener(mousewheelEvent, func, false);
+          this.addEventListener(mousewheelEvent, function(evt){
+            if (isFirefox) {
+              delta = evt.detail * (-120);
+            } else if (isIe) {
+              delta = -evt.deltaY;
+            } else {
+              delta = evt.wheelDelta;
+            }
+            if (delta <= -scrollSensitivitySetting)
+                var direction = "down";
+            else if (delta >= scrollSensitivitySetting) 
+                var direction = "up";
+            if(typeof func == 'function')
+                func(direction);
+          }, false);
     });
 }
 
@@ -53,7 +66,10 @@ $.fn.detectSwipe = function(func){
           }
 
           if (direc != "") {
-            if(typeof func == 'function') func(direc);
+            if (direc == 'u') direction = 'down';
+            else if (direc == 'd') direction = 'up';
+            if(typeof func == 'function') 
+              func(direction);
           }
           direc = "";
         },false);  

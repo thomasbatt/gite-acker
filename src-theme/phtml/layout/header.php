@@ -1,5 +1,5 @@
 <!-- <header class="header wow slideInDown <?= $content['name'] ?>" data-wow-delay="1s" data-wow-offset="10" > -->
-<header class="header <?= $content['name'] ?>">
+<header id="header" class="header <?= $content['name'] ?>">
 	<div class="header-logo">
 		<a href="<?php bloginfo('url');?>">
 <!-- LOGO SVG -->

@@ -53,8 +53,8 @@ $('document').ready(function(){
     }
 
     // ------------- ADD EVENT LISTENER ------------- //
-    $('#body').detectScroll( parallaxMove );
-    $('#page').detectSwipe( parallaxMove );
+    $('body').detectScroll( parallaxMove );
+    $('section').detectSwipe( parallaxMove );
 
        
     // ------------- ADD EVENT CLICK ------------- //

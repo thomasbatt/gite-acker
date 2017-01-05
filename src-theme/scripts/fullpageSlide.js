@@ -64,6 +64,7 @@ $.fn.detectSwipe = function(func){
             if(swipe_det.eY > swipe_det.sY) direc = "d";
             else direc = "u";
           }
+          // alert(direc);
 
           if (direc != "") {
             if (direc == 'u') direction = 'down';

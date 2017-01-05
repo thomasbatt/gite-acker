@@ -1,5 +1,5 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="80%" height="auto" viewBox="-158 -61.447 309.5 118" enable-background="new -158 -61.447 309.5 118"
+	 width="80%" height="10%" viewBox="-158 -61.447 309.5 118" enable-background="new -158 -61.447 309.5 118"
 	 xml:space="preserve">
 <g class="title">
 	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M-141.48-16.704c0.086-2.308-0.158-4.808,0.333-7.291
